@@ -27,7 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterName": MessageLookupByLibrary.simpleMessage("Full name :"),
     "enterPassword": MessageLookupByLibrary.simpleMessage("**********"),
     "entrPhone": MessageLookupByLibrary.simpleMessage("Enter your phone :"),
-    "forgetPass": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "forgPassDes": MessageLookupByLibrary.simpleMessage(
+      "Enter your email to send reset link.",
+    ),
+    "forgetPass": MessageLookupByLibrary.simpleMessage("Forget Password ?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full name"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "onborO": MessageLookupByLibrary.simpleMessage(
@@ -46,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Password :"),
     "phoneNum": MessageLookupByLibrary.simpleMessage("Your phone number :"),
+    "send": MessageLookupByLibrary.simpleMessage("Send"),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
   };

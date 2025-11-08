@@ -189,14 +189,29 @@ class S {
     );
   }
 
-  /// `Forget Password?`
+  /// `Forget Password ?`
   String get forgetPass {
     return Intl.message(
-      'Forget Password?',
+      'Forget Password ?',
       name: 'forgetPass',
       desc: '',
       args: [],
     );
+  }
+
+  /// `Enter your email to send reset link.`
+  String get forgPassDes {
+    return Intl.message(
+      'Enter your email to send reset link.',
+      name: 'forgPassDes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message('Send', name: 'send', desc: '', args: []);
   }
 }
 

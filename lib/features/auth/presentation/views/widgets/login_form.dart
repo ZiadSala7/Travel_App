@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_password_text_field.dart';
+import '../../../../../core/widgets/custom_text_button.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
+import '../forget_password_view.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -35,14 +36,11 @@ class LoginForm extends StatelessWidget {
           ),
           SizedBox(height: 30),
           Center(
-            child: TextButton(
-              onPressed: () {},
-              child: Text(
-                S.of(context).forgetPass,
-                style: AppTextStyles.text16Reg.copyWith(
-                  color: AppColors.strongOrange,
-                ),
-              ),
+            child: CustomTextButton(
+              title: S.of(context).forgetPass,
+              onPressed: () {
+                Navigator.pushNamed(context, ForgetPasswordView.id);
+              },
             ),
           ),
           SizedBox(height: 30),

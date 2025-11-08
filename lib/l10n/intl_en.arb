@@ -16,5 +16,7 @@
     "password": "Password :",
     "confirmPass": "Confirm Password :",
     "enterPassword": "**********",
-    "forgetPass": "Forget Password?"
+    "forgetPass": "Forget Password ?",
+    "forgPassDes": "Enter your email to send reset link.",
+    "send": "Send"
 }
