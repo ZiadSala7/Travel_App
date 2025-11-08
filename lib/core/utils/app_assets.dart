@@ -6,6 +6,10 @@ class AppAssets {
   /// assets/images/auth.png
   static const String assetsImagesAuth = "assets/images/auth.png";
 
+  /// Assets for assetsImagesCar
+  /// assets/images/car.png
+  static const String assetsImagesCar = "assets/images/car.png";
+
   /// Assets for assetsImagesCertification
   /// assets/images/certification.png
   static const String assetsImagesCertification = "assets/images/certification.png";
@@ -17,6 +21,18 @@ class AppAssets {
   /// Assets for assetsImagesForgPass
   /// assets/images/forgPass.png
   static const String assetsImagesForgPass = "assets/images/forgPass.png";
+
+  /// Assets for assetsImagesOnbord1
+  /// assets/images/onbord1.png
+  static const String assetsImagesOnbord1 = "assets/images/onbord1.png";
+
+  /// Assets for assetsImagesOnbord2
+  /// assets/images/onbord2.png
+  static const String assetsImagesOnbord2 = "assets/images/onbord2.png";
+
+  /// Assets for assetsImagesOnbord3
+  /// assets/images/onbord3.png
+  static const String assetsImagesOnbord3 = "assets/images/onbord3.png";
 
   /// Assets for assetsImagesOrderConfirm
   /// assets/images/orderConfirm.png

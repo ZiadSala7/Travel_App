@@ -64,4 +64,6 @@ abstract class AppColors {
   static const Color purpleAccent = Color(0xFFB71EFF);
   static const Color redAccent = Color(0xFFEA6F57);
   static const Color bronze = Color(0xFFB76E00);
+  //
+  static Color greyShade = Colors.grey.shade300;
 }
