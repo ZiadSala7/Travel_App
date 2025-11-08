@@ -118,13 +118,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Login`
+  String get login {
+    return Intl.message('Login', name: 'login', desc: '', args: []);
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
+  }
+
+  /// `Full name`
+  String get fullName {
+    return Intl.message('Full name', name: 'fullName', desc: '', args: []);
+  }
+
+  /// `Full name :`
+  String get enterName {
+    return Intl.message('Full name :', name: 'enterName', desc: '', args: []);
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message('Email', name: 'email', desc: '', args: []);
+  }
+
+  /// `Your phone number :`
+  String get phoneNum {
+    return Intl.message(
+      'Your phone number :',
+      name: 'phoneNum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your phone :`
+  String get entrPhone {
+    return Intl.message(
+      'Enter your phone :',
+      name: 'entrPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password :`
+  String get password {
+    return Intl.message('Password :', name: 'password', desc: '', args: []);
+  }
+
+  /// `Confirm Password :`
+  String get confirmPass {
+    return Intl.message(
+      'Confirm Password :',
+      name: 'confirmPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `**********`
+  String get enterPassword {
+    return Intl.message(
+      '**********',
+      name: 'enterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password?`
+  String get forgetPass {
+    return Intl.message(
+      'Forget Password?',
+      name: 'forgetPass',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
+    return const <Locale>[
+      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
+    ];
   }
 
   @override

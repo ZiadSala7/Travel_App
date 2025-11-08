@@ -18,11 +18,7 @@ class OnboardingViewBody extends StatelessWidget {
         Stack(
           children: [
             TopImage(image: onboardingModel.image),
-            Positioned(
-              top: 50,
-              right: 20,
-              child: SkipButton(onPressed: (){}),
-            ),
+            Positioned(top: 50, right: 20, child: SkipButton()),
           ],
         ),
 

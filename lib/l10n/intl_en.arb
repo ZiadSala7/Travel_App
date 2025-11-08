@@ -5,5 +5,16 @@
     "onborT": "Book Your Ideal Hotel",
     "onborTDes": "Compare prices, read reviews, and reserve the best hotels that match your budget — all in one place.",
     "onborTh": "Rent a Car Anytime",
-    "onborThDes": "Choose from a wide range of cars and enjoy smooth, flexible transportation wherever you travel."
+    "onborThDes": "Choose from a wide range of cars and enjoy smooth, flexible transportation wherever you travel.",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "fullName": "Full name",
+    "enterName": "Full name :",
+    "email": "Email",
+    "phoneNum": "Your phone number :",
+    "entrPhone": "Enter your phone :",
+    "password": "Password :",
+    "confirmPass": "Confirm Password :",
+    "enterPassword": "**********",
+    "forgetPass": "Forget Password?"
 }

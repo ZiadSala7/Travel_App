@@ -42,7 +42,9 @@ class _CustomPasswordTextFormFieldState
               : const Icon(Icons.visibility, color: AppColors.warmOrange),
         ),
         hintText: widget.title,
-        hintStyle: AppTextStyles.text16Reg.copyWith(color: AppColors.black),
+        hintStyle: AppTextStyles.text16Reg.copyWith(
+          color: AppColors.mediumGray,
+        ),
         filled: true,
         fillColor: AppColors.white,
         focusedBorder: OutlineInputBorder(
@@ -50,7 +52,7 @@ class _CustomPasswordTextFormFieldState
           borderRadius: BorderRadius.circular(10),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.deepOrange, width: 0),
+          borderSide: const BorderSide(color: AppColors.greyShade, width: 0),
           borderRadius: BorderRadius.circular(10),
         ),
       ),

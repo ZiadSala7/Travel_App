@@ -22,6 +22,10 @@ class AppAssets {
   /// assets/images/forgPass.png
   static const String assetsImagesForgPass = "assets/images/forgPass.png";
 
+  /// Assets for assetsImagesLetsGo
+  /// assets/images/letsGo.json
+  static const String assetsImagesLetsGo = "assets/images/letsGo.json";
+
   /// Assets for assetsImagesOnbord1
   /// assets/images/onbord1.png
   static const String assetsImagesOnbord1 = "assets/images/onbord1.png";

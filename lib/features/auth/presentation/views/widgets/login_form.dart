@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_password_text_field.dart';
+import '../../../../../core/widgets/custom_text_form_field.dart';
+import '../../../../../generated/l10n.dart';
+
+class LoginForm extends StatelessWidget {
+  const LoginForm({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 20),
+          // email
+          Text(S.of(context).email, style: AppTextStyles.text18Bold),
+          SizedBox(height: 15),
+          CustomTextFormField(
+            title: "example@gmail.com",
+            controller: TextEditingController(),
+          ),
+          SizedBox(height: 20),
+          // password
+          Text(S.of(context).password, style: AppTextStyles.text18Bold),
+          SizedBox(height: 15),
+          CustomPasswordTextFormField(
+            title: "**********",
+            controller: TextEditingController(),
+          ),
+          SizedBox(height: 30),
+          Center(
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                S.of(context).forgetPass,
+                style: AppTextStyles.text16Reg.copyWith(
+                  color: AppColors.strongOrange,
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 30),
+          Center(
+            child: CustomButton(
+              onPressed: () {},
+              txt: S.of(context).login,
+              icon: Icons.arrow_forward,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

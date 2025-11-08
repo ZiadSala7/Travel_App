@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+import '../../../splash/presentation/views/widgets/app_logo.dart';
+import 'login_view.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../generated/l10n.dart';
+import 'sign_up_view.dart';
+
+class AuthChooserView extends StatelessWidget {
+  static const String id = 'authChooser';
+  const AuthChooserView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: AppLogo(),
+          centerTitle: true,
+          backgroundColor: AppColors.white,
+          automaticallyImplyLeading: false,
+          bottom: TabBar(
+            indicatorColor: AppColors.deepOrange,
+            labelColor: AppColors.deepOrange,
+            tabs: [
+              Tab(text: S.of(context).login, icon: Icon(Icons.login)),
+              Tab(
+                text: S.of(context).signUp,
+                icon: Icon(Icons.app_registration_outlined),
+              ),
+            ],
+          ),
+        ),
+        body: TabBarView(children: [LoginView(), SignUpView()]),
+      ),
+    );
+  }
+}

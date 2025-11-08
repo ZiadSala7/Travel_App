@@ -26,13 +26,15 @@ class CustomTextFormField extends StatelessWidget {
         hintText: title,
         filled: true,
         fillColor: AppColors.white,
-        hintStyle: AppTextStyles.text16Reg.copyWith(color: AppColors.black),
+        hintStyle: AppTextStyles.text16Reg.copyWith(
+          color: AppColors.mediumGray,
+        ),
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: AppColors.deepOrange),
           borderRadius: BorderRadius.circular(10),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.deepOrange, width: 0),
+          borderSide: BorderSide(color: AppColors.greyShade, width: 0),
           borderRadius: BorderRadius.circular(10),
         ),
       ),
