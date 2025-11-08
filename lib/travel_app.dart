@@ -15,6 +15,7 @@ class TravelApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
       home: SplashView(),
+      locale: Locale('en'),
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,

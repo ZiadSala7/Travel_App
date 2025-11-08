@@ -17,7 +17,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 4), () {
-      Navigator.pushNamed(context, OnboardingView.id);
+      Navigator.pushReplacementNamed(context, OnboardingView.id);
     });
   }
 
