@@ -1,14 +1,13 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
+import 'travel_app.dart';
+
 void main() {
-  runApp(const TravelApp());
-}
-
-class TravelApp extends StatelessWidget {
-  const TravelApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp();
-  }
+  runApp(
+    DevicePreview(
+      enabled: true, // set to false in release mode
+      builder: (context) => const TravelApp(),
+    ),
+  );
 }
