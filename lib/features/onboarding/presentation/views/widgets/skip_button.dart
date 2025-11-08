@@ -11,7 +11,9 @@ class SkipButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,
+      onPressed: () {
+        Navigator.of(context).pushReplacementNamed('');
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.deepOrange,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

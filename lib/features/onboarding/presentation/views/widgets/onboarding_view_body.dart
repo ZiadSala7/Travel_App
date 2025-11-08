@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:travel_app/core/constants/constants.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../data/model/onboarding_model.dart';
-import '../../managers/onboarding_provider.dart';
 import 'page_indicator.dart';
 import 'skip_button.dart';
 import 'top_image.dart';
@@ -24,7 +21,7 @@ class OnboardingViewBody extends StatelessWidget {
             Positioned(
               top: 50,
               right: 20,
-              child: SkipButton(onPressed: onboardingModel.onPressed),
+              child: SkipButton(onPressed: (){}),
             ),
           ],
         ),
@@ -46,13 +43,7 @@ class OnboardingViewBody extends StatelessWidget {
         ),
 
         Spacer(),
-        Consumer<OnboardingpProvider>(
-          builder: (context, vm, _) {
-            return PageIndicator(
-              currentIndex: onboardingPageController.page!.round().toInt(),
-            );
-          },
-        ),
+        PageIndicator(currentIndex: onboardingModel.index),
         SizedBox(height: 50),
       ],
     );

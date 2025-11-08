@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,7 +13,7 @@ class OnboardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (_) => OnboardingpProvider(),
-      child: Scaffold(body: OnboardingPageView()),
+      child: Scaffold(body: FadeIn(child: OnboardingPageView())),
     );
   }
 }

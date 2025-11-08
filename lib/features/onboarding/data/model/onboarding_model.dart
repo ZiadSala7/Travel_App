@@ -5,13 +5,13 @@ import '../../../../generated/l10n.dart';
 
 class OnboardingModel {
   final String image, title, subTitle;
-  final Function() onPressed;
+  final int index;
 
   OnboardingModel({
     required this.image,
     required this.title,
     required this.subTitle,
-    required this.onPressed,
+    required this.index,
   });
 }
 
@@ -20,18 +20,18 @@ List<OnboardingModel> onboardingModels(BuildContext context) => [
     image: AppAssets.assetsImagesOnbord1,
     title: S.of(context).onborO,
     subTitle: S.of(context).onborODes,
-    onPressed: () {},
+    index: 0,
   ),
   OnboardingModel(
     image: AppAssets.assetsImagesOnbord2,
     title: S.of(context).onborT,
     subTitle: S.of(context).onborTDes,
-    onPressed: () {},
+    index: 1,
   ),
   OnboardingModel(
     image: AppAssets.assetsImagesOnbord3,
     title: S.of(context).onborTh,
     subTitle: S.of(context).onborThDes,
-    onPressed: () {},
+    index: 2,
   ),
 ];
