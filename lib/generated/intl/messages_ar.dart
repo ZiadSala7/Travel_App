@@ -21,5 +21,35 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "confirmPass": MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور :"),
+    "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "enterName": MessageLookupByLibrary.simpleMessage("الاسم الكامل :"),
+    "enterPassword": MessageLookupByLibrary.simpleMessage("**********"),
+    "entrPhone": MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك :"),
+    "forgPassDes": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني لإرسال رابط إعادة التعيين.",
+    ),
+    "forgetPass": MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+    "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "letsStart": MessageLookupByLibrary.simpleMessage("هيا لنبدأ الآن"),
+    "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "onborO": MessageLookupByLibrary.simpleMessage("اكتشف وجهات رائعة"),
+    "onborODes": MessageLookupByLibrary.simpleMessage(
+      "استكشف أفضل الأماكن السياحية حول العالم وابحث عن الوجهة المثالية لمغامرتك القادمة بسهولة.",
+    ),
+    "onborT": MessageLookupByLibrary.simpleMessage("احجز فندقك المناسب"),
+    "onborTDes": MessageLookupByLibrary.simpleMessage(
+      "قارن الأسعار، واقرأ التقييمات، واحجز الفندق الذي يناسب ميزانيتك—all في مكان واحد.",
+    ),
+    "onborTh": MessageLookupByLibrary.simpleMessage("استأجر سيارتك فورًا"),
+    "onborThDes": MessageLookupByLibrary.simpleMessage(
+      "اختر من مجموعة واسعة من السيارات واستمتع بتجربة تنقل مريحة ومرنة أينما ذهبت.",
+    ),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور :"),
+    "phoneNum": MessageLookupByLibrary.simpleMessage("رقم هاتفك :"),
+    "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+    "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+  };
 }

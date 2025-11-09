@@ -18,5 +18,9 @@
     "enterPassword": "**********",
     "forgetPass": "Forget Password ?",
     "forgPassDes": "Enter your email to send reset link.",
-    "send": "Send"
+    "send": "Send",
+    "letsStart": "Let's Get Started",
+    "": "",
+    "guest": "Continue as a Guest",
+    "continueLogin": "Continue with login"
 }

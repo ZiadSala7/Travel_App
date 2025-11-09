@@ -213,6 +213,38 @@ class S {
   String get send {
     return Intl.message('Send', name: 'send', desc: '', args: []);
   }
+
+  /// `Let's Get Started`
+  String get letsStart {
+    return Intl.message(
+      'Let\'s Get Started',
+      name: 'letsStart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the '' key
+
+  /// `Continue as a Guest`
+  String get guest {
+    return Intl.message(
+      'Continue as a Guest',
+      name: 'guest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with login`
+  String get continueLogin {
+    return Intl.message(
+      'Continue with login',
+      name: 'continueLogin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

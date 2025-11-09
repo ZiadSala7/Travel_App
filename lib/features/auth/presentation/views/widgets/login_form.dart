@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:travel_app/core/themes/theme_cubit.dart';
 
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -46,7 +48,9 @@ class LoginForm extends StatelessWidget {
           SizedBox(height: 30),
           Center(
             child: CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                context.read<ThemeCubit>().toggleTheme();
+              },
               txt: S.of(context).login,
               icon: Icons.arrow_forward,
             ),

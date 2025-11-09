@@ -25,6 +25,8 @@ class _CustomPasswordTextFormFieldState
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(color: AppColors.black),
+      cursorColor: AppColors.deepOrange,
       controller: widget.controller,
       obscureText: isClicked,
       decoration: InputDecoration(

@@ -5,6 +5,7 @@ import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
+import '../otp_verification_view.dart';
 
 class ForgetPasswordViewBody extends StatelessWidget {
   const ForgetPasswordViewBody({super.key});
@@ -35,7 +36,9 @@ class ForgetPasswordViewBody extends StatelessWidget {
             ),
             Spacer(),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(OtpVerificationView.id);
+              },
               txt: S.of(context).send,
               icon: Icons.arrow_forward,
             ),

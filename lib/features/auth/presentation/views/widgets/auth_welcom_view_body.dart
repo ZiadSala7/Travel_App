@@ -6,6 +6,7 @@ import 'package:lottie/lottie.dart';
 
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../generated/l10n.dart';
 
 class AuthWelcomViewBody extends StatefulWidget {
   const AuthWelcomViewBody({super.key});
@@ -18,7 +19,7 @@ class _AuthWelcomViewBodyState extends State<AuthWelcomViewBody> {
   int cnt = 0;
   @override
   void initState() {
-    Timer.periodic(Duration(seconds: 2), (timer) {
+    Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         cnt++;
       });
@@ -46,7 +47,7 @@ class _AuthWelcomViewBodyState extends State<AuthWelcomViewBody> {
           cnt >= 1
               ? FadeIn(
                   child: Text(
-                    "Let's Get Started",
+                    S.of(context).letsStart,
                     style: AppTextStyles.text25Bold,
                   ),
                 )

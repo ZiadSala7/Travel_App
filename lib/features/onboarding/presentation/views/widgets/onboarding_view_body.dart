@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart' show Intl;
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
@@ -18,7 +19,9 @@ class OnboardingViewBody extends StatelessWidget {
         Stack(
           children: [
             TopImage(image: onboardingModel.image),
-            Positioned(top: 50, right: 20, child: SkipButton()),
+            Intl.getCurrentLocale() == 'en'
+                ? Positioned(top: 50, right: 20, child: SkipButton())
+                : Positioned(top: 50, left: 20, child: SkipButton()),
           ],
         ),
 

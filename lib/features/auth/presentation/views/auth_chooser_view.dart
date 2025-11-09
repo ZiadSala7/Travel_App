@@ -20,7 +20,6 @@ class AuthChooserView extends StatelessWidget {
           appBar: AppBar(
             title: AppLogo(),
             centerTitle: true,
-            backgroundColor: AppColors.white,
             automaticallyImplyLeading: false,
             bottom: TabBar(
               indicatorColor: AppColors.deepOrange,

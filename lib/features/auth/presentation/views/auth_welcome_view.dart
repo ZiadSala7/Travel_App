@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'auth_chooser_view.dart';
+import 'guest_or_login_view.dart';
 import 'widgets/auth_welcom_view_body.dart';
 
 class AuthWelcomeView extends StatelessWidget {
@@ -12,7 +12,7 @@ class AuthWelcomeView extends StatelessWidget {
     return Scaffold(
       body: GestureDetector(
         onTap: () {
-          Navigator.of(context).pushReplacementNamed(AuthChooserView.id);
+          Navigator.of(context).pushReplacementNamed(GuestOrLoginView.id);
         },
         child: AuthWelcomViewBody(),
       ),

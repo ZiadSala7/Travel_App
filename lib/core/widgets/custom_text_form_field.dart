@@ -19,6 +19,8 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(color: AppColors.black),
+      cursorColor: AppColors.deepOrange,
       controller: controller,
       decoration: InputDecoration(
         prefixIcon: prefixIcon == const SizedBox() ? null : prefixIcon,
