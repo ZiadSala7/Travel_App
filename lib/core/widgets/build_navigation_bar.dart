@@ -36,7 +36,7 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
       _buildNavItem(Icons.card_travel, S.of(context).rehlaty, 1),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: const SizedBox(width: 40),
+        child: const SizedBox(width: 20),
       ), // space for FAB
       _buildNavItem(Icons.favorite_border, S.of(context).favourites, 2),
       _buildNavItem(Icons.person_outline_sharp, S.of(context).profile, 3),

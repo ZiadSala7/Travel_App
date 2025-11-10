@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../generated/l10n.dart';
+import '../../../search/presentation/views/search_view.dart';
 
 class ServiceModel {
   final String image, title;
@@ -22,18 +23,30 @@ List<ServiceModel> serviceModels(BuildContext context) => [
     image: AppAssets.assetsImagesBuild,
     title: S.of(context).hotel,
     color: AppColors.building,
-    onPressed: () {},
+    onPressed: () {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => SearchView(initialTab: 2)),
+      );
+    },
   ),
   ServiceModel(
     image: AppAssets.assetsImagesNewPlane,
     title: S.of(context).flights,
     color: AppColors.airplane,
-    onPressed: () {},
+    onPressed: () {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => SearchView(initialTab: 1)),
+      );
+    },
   ),
   ServiceModel(
     image: AppAssets.assetsImagesCarr,
     title: S.of(context).car,
     color: AppColors.carClr,
-    onPressed: () {},
+    onPressed: () {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => SearchView(initialTab: 0)),
+      );
+    },
   ),
 ];

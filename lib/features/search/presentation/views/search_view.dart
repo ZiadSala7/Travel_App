@@ -5,10 +5,28 @@ import '../../../splash/presentation/views/widgets/app_logo.dart';
 import '../../../../core/utils/app_colors.dart';
 import 'car_reservation_view.dart';
 
-class SearchView extends StatelessWidget {
-  final int index;
+class SearchView extends StatefulWidget {
+  final int initialTab;
   static const String id = 'searchView';
-  const SearchView({super.key, this.index = 0});
+  const SearchView({super.key, this.initialTab = 0});
+
+  @override
+  State<SearchView> createState() => _SearchViewState();
+}
+
+class _SearchViewState extends State<SearchView>
+    with SingleTickerProviderStateMixin {
+  late TabController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TabController(
+      length: 3,
+      vsync: this,
+      initialIndex: widget.initialTab, // ✅ هنا السحر
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +37,7 @@ class SearchView extends StatelessWidget {
           title: AppLogo(),
           centerTitle: true,
           bottom: TabBar(
+            controller: _controller,
             indicatorColor: AppColors.deepOrange,
             labelColor: AppColors.deepOrange,
             tabs: [
@@ -35,10 +54,11 @@ class SearchView extends StatelessWidget {
           ),
         ),
         body: TabBarView(
+          controller: _controller,
           children: [
             CarReservationView(),
-            CarReservationView(),
-            CarReservationView(),
+            Text("Flights here"),
+            Text('Hotels here'),
           ],
         ),
       ),

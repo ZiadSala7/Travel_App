@@ -14,14 +14,17 @@ class CustomServiceChooser extends StatelessWidget {
       height: size.height / 5,
       width: size.width / 2.7,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-      child: Card(
-        color: model.color,
-        child: Column(
-          children: [
-            Expanded(child: Image.asset(model.image)),
-            Text(model.title, style: AppTextStyles.text16Bold),
-            SizedBox(height: 10),
-          ],
+      child: InkWell(
+        onTap: model.onPressed,
+        child: Card(
+          color: model.color,
+          child: Column(
+            children: [
+              Expanded(child: Image.asset(model.image)),
+              Text(model.title, style: AppTextStyles.text16Bold),
+              SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );
