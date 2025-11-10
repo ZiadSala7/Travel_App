@@ -6,9 +6,21 @@ class AppAssets {
   /// assets/images/auth.png
   static const String assetsImagesAuth = "assets/images/auth.png";
 
+  /// Assets for assetsImagesBuild
+  /// assets/images/build.png
+  static const String assetsImagesBuild = "assets/images/build.png";
+
   /// Assets for assetsImagesCar
   /// assets/images/car.png
   static const String assetsImagesCar = "assets/images/car.png";
+
+  /// Assets for assetsImagesCaroffer
+  /// assets/images/caroffer.jpg
+  static const String assetsImagesCaroffer = "assets/images/caroffer.jpg";
+
+  /// Assets for assetsImagesCarr
+  /// assets/images/carr.png
+  static const String assetsImagesCarr = "assets/images/carr.png";
 
   /// Assets for assetsImagesCertification
   /// assets/images/certification.png
@@ -26,6 +38,14 @@ class AppAssets {
   /// assets/images/letsGo.json
   static const String assetsImagesLetsGo = "assets/images/letsGo.json";
 
+  /// Assets for assetsImagesNewPlane
+  /// assets/images/newPlane.png
+  static const String assetsImagesNewPlane = "assets/images/newPlane.png";
+
+  /// Assets for assetsImagesOffer
+  /// assets/images/offer.jpg
+  static const String assetsImagesOffer = "assets/images/offer.jpg";
+
   /// Assets for assetsImagesOnbord1
   /// assets/images/onbord1.png
   static const String assetsImagesOnbord1 = "assets/images/onbord1.png";
@@ -41,6 +61,14 @@ class AppAssets {
   /// Assets for assetsImagesOrderConfirm
   /// assets/images/orderConfirm.png
   static const String assetsImagesOrderConfirm = "assets/images/orderConfirm.png";
+
+  /// Assets for assetsImagesPlane
+  /// assets/images/plane.png
+  static const String assetsImagesPlane = "assets/images/plane.png";
+
+  /// Assets for assetsImagesPlaneee
+  /// assets/images/planeee.png
+  static const String assetsImagesPlaneee = "assets/images/planeee.png";
 
   /// Assets for assetsImagesProgramming
   /// assets/images/programming.png

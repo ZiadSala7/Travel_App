@@ -18,7 +18,11 @@ class CustomTextButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         title,
-        style: AppTextStyles.text16Reg.copyWith(color: AppColors.strongOrange),
+        style: AppTextStyles.text16Reg.copyWith(
+          color: AppColors.strongOrange,
+          decoration: TextDecoration.underline,
+          decorationColor: AppColors.airplane,
+        ),
       ),
     );
   }

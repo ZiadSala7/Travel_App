@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../managers/theme_cubit/theme_cubit.dart';
+import '../themes/light_theme.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
@@ -19,7 +22,11 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStyle(color: AppColors.black),
+      style: TextStyle(
+        color: context.read<ThemeCubit>().state == lightTheme
+            ? AppColors.black
+            : AppColors.white,
+      ),
       cursorColor: AppColors.deepOrange,
       controller: controller,
       decoration: InputDecoration(
@@ -27,7 +34,7 @@ class CustomTextFormField extends StatelessWidget {
         suffixIcon: suffixIcon == const SizedBox() ? null : suffixIcon,
         hintText: title,
         filled: true,
-        fillColor: AppColors.white,
+        fillColor: AppColors.fillClr,
         hintStyle: AppTextStyles.text16Reg.copyWith(
           color: AppColors.mediumGray,
         ),

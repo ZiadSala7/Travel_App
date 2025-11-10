@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:travel_app/core/themes/light_theme.dart';
 
+import '../managers/theme_cubit/theme_cubit.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
@@ -25,7 +28,11 @@ class _CustomPasswordTextFormFieldState
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStyle(color: AppColors.black),
+      style: TextStyle(
+        color: context.read<ThemeCubit>().state == lightTheme
+            ? AppColors.black
+            : AppColors.white,
+      ),
       cursorColor: AppColors.deepOrange,
       controller: widget.controller,
       obscureText: isClicked,
@@ -48,7 +55,7 @@ class _CustomPasswordTextFormFieldState
           color: AppColors.mediumGray,
         ),
         filled: true,
-        fillColor: AppColors.white,
+        fillColor: AppColors.fillClr,
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: AppColors.deepOrange),
           borderRadius: BorderRadius.circular(10),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../generated/l10n.dart';
+import '../../../../../core/widgets/build_navigation_bar.dart';
 import '../../../../splash/presentation/views/widgets/app_logo.dart';
 import '../auth_chooser_view.dart';
 
@@ -25,7 +26,9 @@ class GuestOrLoginViewBody extends StatelessWidget {
           FadeInUp(
             delay: Duration(milliseconds: 1200),
             child: CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, BuildNavigationBar.id);
+              },
               txt: S.of(context).guest,
               icon: Icons.person,
             ),

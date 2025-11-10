@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travel_app/core/databases/cach_helper.dart';
 import 'package:travel_app/core/di/injection.dart';
 
-import 'light_theme.dart';
-import 'dark_theme.dart';
+import '../../themes/light_theme.dart';
+import '../../themes/dark_theme.dart';
 
 class ThemeCubit extends Cubit<ThemeData> {
   ThemeCubit() : super(lightTheme) {
@@ -23,3 +23,4 @@ class ThemeCubit extends Cubit<ThemeData> {
     emit(isDark ? darkTheme : lightTheme);
   }
 }
+

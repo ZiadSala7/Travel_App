@@ -224,8 +224,6 @@ class S {
     );
   }
 
-  // skipped getter for the '' key
-
   /// `Continue as a Guest`
   String get guest {
     return Intl.message(
@@ -241,6 +239,206 @@ class S {
     return Intl.message(
       'Continue with login',
       name: 'continueLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message('Home', name: 'home', desc: '', args: []);
+  }
+
+  /// `Notification`
+  String get notification {
+    return Intl.message(
+      'Notification',
+      name: 'notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get Search {
+    return Intl.message('Search', name: 'Search', desc: '', args: []);
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message('Profile', name: 'profile', desc: '', args: []);
+  }
+
+  /// `More`
+  String get more {
+    return Intl.message('More', name: 'more', desc: '', args: []);
+  }
+
+  /// `Favourites`
+  String get favourites {
+    return Intl.message('Favourites', name: 'favourites', desc: '', args: []);
+  }
+
+  /// `Hotels`
+  String get hotel {
+    return Intl.message('Hotels', name: 'hotel', desc: '', args: []);
+  }
+
+  /// `Cars`
+  String get car {
+    return Intl.message('Cars', name: 'car', desc: '', args: []);
+  }
+
+  /// `Flights`
+  String get flights {
+    return Intl.message('Flights', name: 'flights', desc: '', args: []);
+  }
+
+  /// `Choose your service`
+  String get chooseService {
+    return Intl.message(
+      'Choose your service',
+      name: 'chooseService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Special Offers`
+  String get offers {
+    return Intl.message('Special Offers', name: 'offers', desc: '', args: []);
+  }
+
+  /// `Best Offers`
+  String get bestOffers {
+    return Intl.message('Best Offers', name: 'bestOffers', desc: '', args: []);
+  }
+
+  /// `See All`
+  String get seeAll {
+    return Intl.message('See All', name: 'seeAll', desc: '', args: []);
+  }
+
+  /// `Best Hotels`
+  String get bestHotel {
+    return Intl.message('Best Hotels', name: 'bestHotel', desc: '', args: []);
+  }
+
+  /// `My trips`
+  String get rehlaty {
+    return Intl.message('My trips', name: 'rehlaty', desc: '', args: []);
+  }
+
+  /// `Travel`
+  String get travel {
+    return Intl.message('Travel', name: 'travel', desc: '', args: []);
+  }
+
+  /// `App`
+  String get app {
+    return Intl.message('App', name: 'app', desc: '', args: []);
+  }
+
+  /// `Select your car`
+  String get selectCar {
+    return Intl.message(
+      'Select your car',
+      name: 'selectCar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Car Type`
+  String get typeOfCar {
+    return Intl.message(
+      'Select Car Type',
+      name: 'typeOfCar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Booking Service Type`
+  String get bookCarType {
+    return Intl.message(
+      'Booking Service Type',
+      name: 'bookCarType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message('City', name: 'city', desc: '', args: []);
+  }
+
+  /// `Country`
+  String get country {
+    return Intl.message('Country', name: 'country', desc: '', args: []);
+  }
+
+  /// `Country of service`
+  String get cntryServ {
+    return Intl.message(
+      'Country of service',
+      name: 'cntryServ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City of service`
+  String get ctyServ {
+    return Intl.message('City of service', name: 'ctyServ', desc: '', args: []);
+  }
+
+  /// `Pick-up Location`
+  String get pickUpLoc {
+    return Intl.message(
+      'Pick-up Location',
+      name: 'pickUpLoc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drop-off Location`
+  String get dropOffLoc {
+    return Intl.message(
+      'Drop-off Location',
+      name: 'dropOffLoc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick-up date`
+  String get pickUpDate {
+    return Intl.message('Pick-up date', name: 'pickUpDate', desc: '', args: []);
+  }
+
+  /// `Pick-up time`
+  String get pickUpTime {
+    return Intl.message('Pick-up time', name: 'pickUpTime', desc: '', args: []);
+  }
+
+  /// `Drop-off date`
+  String get dropOffDate {
+    return Intl.message(
+      'Drop-off date',
+      name: 'dropOffDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drop-off time`
+  String get dropOffTime {
+    return Intl.message(
+      'Drop-off time',
+      name: 'dropOffTime',
       desc: '',
       args: [],
     );

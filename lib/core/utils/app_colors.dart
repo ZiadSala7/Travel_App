@@ -66,4 +66,9 @@ abstract class AppColors {
   static const Color bronze = Color(0xFFB76E00);
   //
   static const Color greyShade = Color.fromARGB(116, 142, 141, 141);
+  static const Color building = Color(0xff38bdf8);
+  static const Color airplane = Color(0xfff77b39);
+  static const Color carClr = Colors.green;
+  static const Color orangeEdit = Color.fromARGB(255, 251, 162, 124);
+  static const Color fillClr = Color.fromARGB(56, 150, 148, 144);
 }
