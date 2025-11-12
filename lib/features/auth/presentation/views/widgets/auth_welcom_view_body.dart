@@ -7,6 +7,7 @@ import 'package:lottie/lottie.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
+import '../guest_or_login_view.dart';
 
 class AuthWelcomViewBody extends StatefulWidget {
   const AuthWelcomViewBody({super.key});
@@ -19,11 +20,8 @@ class _AuthWelcomViewBodyState extends State<AuthWelcomViewBody> {
   int cnt = 0;
   @override
   void initState() {
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      setState(() {
-        cnt++;
-      });
-      cnt == 3 ? timer.cancel() : null;
+    Timer(Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacementNamed(GuestOrLoginView.id);
     });
     super.initState();
   }
@@ -36,22 +34,19 @@ class _AuthWelcomViewBodyState extends State<AuthWelcomViewBody> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          cnt >= 2
-              ? FadeIn(
-                  child: Lottie.asset(
-                    AppAssets.assetsImagesLetsGo,
-                    fit: BoxFit.cover,
-                  ),
-                )
-              : SizedBox(),
-          cnt >= 1
-              ? FadeIn(
-                  child: Text(
-                    S.of(context).letsStart,
-                    style: AppTextStyles.text25Bold,
-                  ),
-                )
-              : SizedBox(),
+          FadeIn(
+            child: Lottie.asset(
+              AppAssets.assetsImagesLoading,
+              fit: BoxFit.cover,
+              height: 200,
+            ),
+          ),
+          FadeIn(
+            child: Text(
+              S.of(context).letsStart,
+              style: AppTextStyles.text25Bold,
+            ),
+          ),
         ],
       ),
     );

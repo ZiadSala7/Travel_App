@@ -284,9 +284,9 @@ class S {
     return Intl.message('Hotels', name: 'hotel', desc: '', args: []);
   }
 
-  /// `Cars`
+  /// `Cars reserve`
   String get car {
-    return Intl.message('Cars', name: 'car', desc: '', args: []);
+    return Intl.message('Cars reserve', name: 'car', desc: '', args: []);
   }
 
   /// `Flights`
@@ -442,6 +442,53 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Currency`
+  String get currency {
+    return Intl.message('Currency', name: 'currency', desc: '', args: []);
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message('Language', name: 'language', desc: '', args: []);
+  }
+
+  /// `WhatsApp`
+  String get wts {
+    return Intl.message('WhatsApp', name: 'wts', desc: '', args: []);
+  }
+
+  // skipped getter for the '' key
+
+  /// `LogOut`
+  String get logout {
+    return Intl.message('LogOut', name: 'logout', desc: '', args: []);
+  }
+
+  /// `Privacy Policy`
+  String get privacy {
+    return Intl.message('Privacy Policy', name: 'privacy', desc: '', args: []);
+  }
+
+  /// `Change your password`
+  String get changePass {
+    return Intl.message(
+      'Change your password',
+      name: 'changePass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Who we are?`
+  String get whoWe {
+    return Intl.message('Who we are?', name: 'whoWe', desc: '', args: []);
+  }
+
+  /// `Contact`
+  String get contact {
+    return Intl.message('Contact', name: 'contact', desc: '', args: []);
   }
 }
 

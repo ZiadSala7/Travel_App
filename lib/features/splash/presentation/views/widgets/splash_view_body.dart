@@ -1,7 +1,10 @@
 import 'dart:async';
 
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
+import '../../../../../core/utils/app_assets.dart';
 import '../../../../onboarding/presentation/views/onboarding_view.dart';
 import 'app_logo.dart';
 
@@ -13,16 +16,27 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody> {
+  int cnt = 0;
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 4), () {
-      Navigator.pushReplacementNamed(context, OnboardingView.id);
+    Timer.periodic(Duration(seconds: 1), (timer) {
+       setState(() {
+          cnt++;
+        });
+      if (cnt == 7) {
+        setState(() {
+          timer.cancel();
+          Navigator.pushReplacementNamed(context, OnboardingView.id);
+        });
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: AppLogo());
+    return cnt <= 4
+        ? Center(child: Lottie.asset(AppAssets.assetsImagesPlaneeee))
+        : Center(child: FadeIn(child: AppLogo()));
   }
 }

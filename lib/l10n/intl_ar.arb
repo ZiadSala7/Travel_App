@@ -29,7 +29,7 @@
     "more": "المزيد",
     "favourites": "المفضلة",
     "hotel": "الفنادق",
-    "car": "السيارات",
+    "car": "تأجير السيارات",
     "flights": "الرحلات",
     "chooseService": "اختر خدمتك",
     "offers": "العروض الخاصة",
@@ -51,5 +51,8 @@
     "pickUpDate": "تاريخ الاستلام",
     "pickUpTime": "وقت الاستلام",
     "dropOffDate": "تاريخ التسليم",
-    "dropOffTime": "وقت التسليم"
+    "dropOffTime": "وقت التسليم",
+    "currency": "العملة",
+    "language": "اللغة",
+    "wts": "واتساب"
 }

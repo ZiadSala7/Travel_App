@@ -29,7 +29,7 @@
     "more": "More",
     "favourites": "Favourites",
     "hotel": "Hotels",
-    "car": "Cars",
+    "car": "Cars reserve",
     "flights": "Flights",
     "chooseService": "Choose your service",
     "offers": "Special Offers",
@@ -51,5 +51,14 @@
     "pickUpDate": "Pick-up date",
     "pickUpTime": "Pick-up time",
     "dropOffDate": "Drop-off date",
-    "dropOffTime": "Drop-off time"
+    "dropOffTime": "Drop-off time",
+    "currency": "Currency",
+    "language": "Language",
+    "wts": "WhatsApp",
+    "": "",
+    "logout": "LogOut",
+    "privacy": "Privacy Policy",
+    "changePass": "Change your password",
+    "whoWe": "Who we are?",
+    "contact": "Contact"
 }

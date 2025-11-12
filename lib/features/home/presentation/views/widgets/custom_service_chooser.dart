@@ -17,11 +17,11 @@ class CustomServiceChooser extends StatelessWidget {
       child: InkWell(
         onTap: model.onPressed,
         child: Card(
-          color: model.color,
+          // color: model.color,
           child: Column(
             children: [
               Expanded(child: Image.asset(model.image)),
-              Text(model.title, style: AppTextStyles.text16Bold),
+              Text(model.title, style: AppTextStyles.text16Reg),
               SizedBox(height: 10),
             ],
           ),

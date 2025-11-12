@@ -30,7 +30,7 @@ List<ServiceModel> serviceModels(BuildContext context) => [
     },
   ),
   ServiceModel(
-    image: AppAssets.assetsImagesNewPlane,
+    image: AppAssets.assetsImagesNobkgrndPlane,
     title: S.of(context).flights,
     color: AppColors.airplane,
     onPressed: () {
@@ -40,9 +40,9 @@ List<ServiceModel> serviceModels(BuildContext context) => [
     },
   ),
   ServiceModel(
-    image: AppAssets.assetsImagesCarr,
+    image: AppAssets.assetsImagesNobkgrndCar,
     title: S.of(context).car,
-    color: AppColors.carClr,
+    color: AppColors.steelBlue,
     onPressed: () {
       Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => SearchView(initialTab: 0)),

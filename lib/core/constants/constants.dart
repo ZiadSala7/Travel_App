@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../features/favourites/presentation/views/favourites_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/profile/presentation/views/profile_view.dart';
+import '../../generated/l10n.dart';
 
 final onboardingPageController = PageController();
 
@@ -28,4 +29,33 @@ List<String> carServiceType = [
   "Airport drop off",
   "Hourly basic",
   "One year lease car",
+];
+
+List<String> homeViewTabs(BuildContext context) => [
+  S.of(context).flights,
+  S.of(context).hotel,
+  S.of(context).car,
+];
+
+items(BuildContext context) => [
+  {"icon": Icons.lock_outline, "title": S.of(context).changePass},
+  {"icon": Icons.phone_outlined, "title": S.of(context).contact},
+  {"icon": Icons.group_outlined, "title": S.of(context).whoWe},
+  {"icon": Icons.description_outlined, "title": S.of(context).privacy},
+  {"icon": Icons.logout_outlined, "title": S.of(context).logout},
+];
+
+drawerItems(BuildContext context) => [
+  {
+    "icon": Icons.monetization_on_outlined,
+    "title": S.of(context).currency,
+    "value": "EGP",
+  },
+  {
+    "icon": Icons.language_outlined,
+    "title": S.of(context).language,
+    "value": "عربي",
+  },
+  {"icon": Icons.flag_outlined, "title": S.of(context).country, "value": "مصر"},
+  {"icon": Icons.share_outlined, "title": S.of(context).wts},
 ];

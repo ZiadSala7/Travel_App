@@ -27,7 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "bestHotel": MessageLookupByLibrary.simpleMessage("أفضل الفنادق"),
     "bestOffers": MessageLookupByLibrary.simpleMessage("أفضل العروض"),
     "bookCarType": MessageLookupByLibrary.simpleMessage("نوع خدمة الحجز"),
-    "car": MessageLookupByLibrary.simpleMessage("السيارات"),
+    "car": MessageLookupByLibrary.simpleMessage("تأجير السيارات"),
     "chooseService": MessageLookupByLibrary.simpleMessage("اختر خدمتك"),
     "city": MessageLookupByLibrary.simpleMessage("المدينة"),
     "cntryServ": MessageLookupByLibrary.simpleMessage("دولة الخدمة"),
@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "country": MessageLookupByLibrary.simpleMessage("الدولة"),
     "ctyServ": MessageLookupByLibrary.simpleMessage("مدينة الخدمة"),
+    "currency": MessageLookupByLibrary.simpleMessage("العملة"),
     "dropOffDate": MessageLookupByLibrary.simpleMessage("تاريخ التسليم"),
     "dropOffLoc": MessageLookupByLibrary.simpleMessage("موقع التسليم"),
     "dropOffTime": MessageLookupByLibrary.simpleMessage("وقت التسليم"),
@@ -54,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "guest": MessageLookupByLibrary.simpleMessage("المتابعة كضيف"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "hotel": MessageLookupByLibrary.simpleMessage("الفنادق"),
+    "language": MessageLookupByLibrary.simpleMessage("اللغة"),
     "letsStart": MessageLookupByLibrary.simpleMessage("هيا لنبدأ الآن"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
@@ -85,5 +87,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "travel": MessageLookupByLibrary.simpleMessage("App"),
     "typeOfCar": MessageLookupByLibrary.simpleMessage("اختر نوع السيارة"),
+    "wts": MessageLookupByLibrary.simpleMessage("واتساب"),
   };
 }

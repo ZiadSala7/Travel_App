@@ -12,8 +12,8 @@ Future<void> main() async {
   await setupDependencies();
   runApp(
     DevicePreview(
-      enabled: true, // set to false in release mode
-      builder: (context) => MultiBlocProvider(
+      enabled : true,
+      builder:(_) => MultiBlocProvider(
         providers: [
           BlocProvider(create: (_) => ThemeCubit()..loadTheme()),
           BlocProvider(create: (context) => LanguageCubit()..initLanguage()),
