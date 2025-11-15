@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../managers/theme_cubit/theme_cubit.dart';
+import '../themes/light_theme.dart';
 import '../constants/constants.dart';
 import '../utils/app_colors.dart';
 import '../../generated/l10n.dart';
@@ -22,6 +25,9 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
       floatingActionButton: FloatingActionButtonBottomBar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
+        color: context.read<ThemeCubit>().state == lightTheme
+            ? AppColors.appbarClr
+            : AppColors.black,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: _buildNavItemRowList,

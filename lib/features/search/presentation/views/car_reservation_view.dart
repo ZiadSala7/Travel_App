@@ -61,6 +61,7 @@ class CarReservationView extends StatelessWidget {
           ),
           SizedBox(height: 30),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               CustomButton(
                 onPressed: () {},

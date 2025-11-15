@@ -38,6 +38,7 @@ List<String> homeViewTabs(BuildContext context) => [
 ];
 
 items(BuildContext context) => [
+  {"icon": Icons.edit_outlined, "title": S.of(context).editProf},
   {"icon": Icons.lock_outline, "title": S.of(context).changePass},
   {"icon": Icons.phone_outlined, "title": S.of(context).contact},
   {"icon": Icons.group_outlined, "title": S.of(context).whoWe},

@@ -23,7 +23,7 @@ class FlightsDateSelection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                S.of(context).departureTime,
+                S.of(context).departureDate,
                 style: AppTextStyles.text16Bold.copyWith(
                   color: AppColors.black,
                 ),
@@ -42,7 +42,7 @@ class FlightsDateSelection extends StatelessWidget {
                   spacing: 10,
                   children: [
                     Text(
-                      S.of(context).returnTime,
+                      S.of(context).returnDate,
                       style: AppTextStyles.text16Bold.copyWith(
                         color: AppColors.black,
                       ),

@@ -55,7 +55,6 @@
     "currency": "Currency",
     "language": "Language",
     "wts": "WhatsApp",
-    "": "",
     "logout": "LogOut",
     "privacy": "Privacy Policy",
     "changePass": "Change your password",
@@ -69,11 +68,11 @@
     "selectClass": "Class",
     "from": "From :",
     "to": "To :",
-    "destination": "Destination",
+    "destination": "Destination:",
     "departure": "Departure:",
     "date": "Select Date",
-    "departureTime": "Departure Date:",
-    "returnTime": "Return Date:",
+    "departureDate": "Departure Date:",
+    "returnDate": "Return Date:",
     "travellers": "Travellers",
     "travellersAndClass": "Travellers and class",
     "oneWay": "One way",
@@ -83,5 +82,9 @@
     "tc1": "Economy Class",
     "tc2": "Business Class",
     "tc3": "First Class",
-    "tc4": "Premium Economy"
+    "tc4": "Premium Economy",
+    "": "",
+    "editProf": "Edit profile",
+    "arrivalDate": "Arrival date:",
+    "guestsAndRooms": "Guests and rooms:"
 }

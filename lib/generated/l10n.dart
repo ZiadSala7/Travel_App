@@ -459,8 +459,6 @@ class S {
     return Intl.message('WhatsApp', name: 'wts', desc: '', args: []);
   }
 
-  // skipped getter for the '' key
-
   /// `LogOut`
   String get logout {
     return Intl.message('LogOut', name: 'logout', desc: '', args: []);
@@ -541,9 +539,14 @@ class S {
     return Intl.message('To :', name: 'to', desc: '', args: []);
   }
 
-  /// `Destination`
+  /// `Destination:`
   String get destination {
-    return Intl.message('Destination', name: 'destination', desc: '', args: []);
+    return Intl.message(
+      'Destination:',
+      name: 'destination',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Departure:`
@@ -557,18 +560,18 @@ class S {
   }
 
   /// `Departure Date:`
-  String get departureTime {
+  String get departureDate {
     return Intl.message(
       'Departure Date:',
-      name: 'departureTime',
+      name: 'departureDate',
       desc: '',
       args: [],
     );
   }
 
   /// `Return Date:`
-  String get returnTime {
-    return Intl.message('Return Date:', name: 'returnTime', desc: '', args: []);
+  String get returnDate {
+    return Intl.message('Return Date:', name: 'returnDate', desc: '', args: []);
   }
 
   /// `Travellers`
@@ -624,6 +627,33 @@ class S {
   /// `Premium Economy`
   String get tc4 {
     return Intl.message('Premium Economy', name: 'tc4', desc: '', args: []);
+  }
+
+  // skipped getter for the '' key
+
+  /// `Edit profile`
+  String get editProf {
+    return Intl.message('Edit profile', name: 'editProf', desc: '', args: []);
+  }
+
+  /// `Arrival date:`
+  String get arrivalDate {
+    return Intl.message(
+      'Arrival date:',
+      name: 'arrivalDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guests and rooms:`
+  String get guestsAndRooms {
+    return Intl.message(
+      'Guests and rooms:',
+      name: 'guestsAndRooms',
+      desc: '',
+      args: [],
+    );
   }
 }
 
