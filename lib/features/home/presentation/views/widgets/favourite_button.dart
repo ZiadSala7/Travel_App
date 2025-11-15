@@ -11,6 +11,7 @@ class FavouriteButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
+          // ignore: deprecated_member_use
           color: Colors.white.withOpacity(0.8),
           shape: BoxShape.circle,
         ),
