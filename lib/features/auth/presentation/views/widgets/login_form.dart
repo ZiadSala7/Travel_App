@@ -33,7 +33,7 @@ class LoginForm extends StatelessWidget {
           Text(S.of(context).password, style: AppTextStyles.text18Bold),
           SizedBox(height: 15),
           CustomPasswordTextFormField(
-            title: "**********",
+            title: S.of(context).entrPass,
             controller: TextEditingController(),
           ),
           SizedBox(height: 30),

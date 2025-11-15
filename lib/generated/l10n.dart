@@ -490,6 +490,141 @@ class S {
   String get contact {
     return Intl.message('Contact', name: 'contact', desc: '', args: []);
   }
+
+  /// `Enter your password`
+  String get entrPass {
+    return Intl.message(
+      'Enter your password',
+      name: 'entrPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number of travellers - Class`
+  String get dialogTC {
+    return Intl.message(
+      'Number of travellers - Class',
+      name: 'dialogTC',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adults`
+  String get adults {
+    return Intl.message('Adults', name: 'adults', desc: '', args: []);
+  }
+
+  /// `Children`
+  String get children {
+    return Intl.message('Children', name: 'children', desc: '', args: []);
+  }
+
+  /// `Babies`
+  String get baby {
+    return Intl.message('Babies', name: 'baby', desc: '', args: []);
+  }
+
+  /// `Class`
+  String get selectClass {
+    return Intl.message('Class', name: 'selectClass', desc: '', args: []);
+  }
+
+  /// `From :`
+  String get from {
+    return Intl.message('From :', name: 'from', desc: '', args: []);
+  }
+
+  /// `To :`
+  String get to {
+    return Intl.message('To :', name: 'to', desc: '', args: []);
+  }
+
+  /// `Destination`
+  String get destination {
+    return Intl.message('Destination', name: 'destination', desc: '', args: []);
+  }
+
+  /// `Departure:`
+  String get departure {
+    return Intl.message('Departure:', name: 'departure', desc: '', args: []);
+  }
+
+  /// `Select Date`
+  String get date {
+    return Intl.message('Select Date', name: 'date', desc: '', args: []);
+  }
+
+  /// `Departure Date:`
+  String get departureTime {
+    return Intl.message(
+      'Departure Date:',
+      name: 'departureTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Return Date:`
+  String get returnTime {
+    return Intl.message('Return Date:', name: 'returnTime', desc: '', args: []);
+  }
+
+  /// `Travellers`
+  String get travellers {
+    return Intl.message('Travellers', name: 'travellers', desc: '', args: []);
+  }
+
+  /// `Travellers and class`
+  String get travellersAndClass {
+    return Intl.message(
+      'Travellers and class',
+      name: 'travellersAndClass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One way`
+  String get oneWay {
+    return Intl.message('One way', name: 'oneWay', desc: '', args: []);
+  }
+
+  /// `Round`
+  String get round {
+    return Intl.message('Round', name: 'round', desc: '', args: []);
+  }
+
+  /// `Multicity`
+  String get multicity {
+    return Intl.message('Multicity', name: 'multicity', desc: '', args: []);
+  }
+
+  /// `Accept`
+  String get acc {
+    return Intl.message('Accept', name: 'acc', desc: '', args: []);
+  }
+
+  /// `Economy Class`
+  String get tc1 {
+    return Intl.message('Economy Class', name: 'tc1', desc: '', args: []);
+  }
+
+  /// `Business Class`
+  String get tc2 {
+    return Intl.message('Business Class', name: 'tc2', desc: '', args: []);
+  }
+
+  /// `First Class`
+  String get tc3 {
+    return Intl.message('First Class', name: 'tc3', desc: '', args: []);
+  }
+
+  /// `Premium Economy`
+  String get tc4 {
+    return Intl.message('Premium Economy', name: 'tc4', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

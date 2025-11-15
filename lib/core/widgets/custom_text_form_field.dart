@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../managers/theme_cubit/theme_cubit.dart';
-import '../themes/light_theme.dart';
 import '../utils/app_colors.dart';
-import '../utils/app_text_styles.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String title;
-  final Widget prefixIcon;
+  final IconData? prefixIcon;
   final Widget suffixIcon;
+  final bool isReserve;
   final TextEditingController controller;
   const CustomTextFormField({
     super.key,
     required this.title,
-    this.prefixIcon = const SizedBox(),
+    this.prefixIcon,
+    this.isReserve = false,
     this.suffixIcon = const SizedBox(),
     required this.controller,
   });
@@ -22,22 +20,18 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStyle(
-        color: context.read<ThemeCubit>().state == lightTheme
-            ? AppColors.black
-            : AppColors.white,
-      ),
-      cursorColor: AppColors.deepOrange,
+      style: isReserve ? TextStyle(color: AppColors.black) : null,
       controller: controller,
       decoration: InputDecoration(
-        prefixIcon: prefixIcon == const SizedBox() ? null : prefixIcon,
-        suffixIcon: suffixIcon == const SizedBox() ? null : suffixIcon,
         hintText: title,
         filled: true,
+        hintStyle: isReserve
+            ? TextStyle(color: AppColors.black)
+            : TextStyle(color: AppColors.mediumGray),
         fillColor: AppColors.fillClr,
-        hintStyle: AppTextStyles.text16Reg.copyWith(
-          color: AppColors.mediumGray,
-        ),
+        prefixIcon: prefixIcon != null
+            ? Icon(prefixIcon, color: AppColors.deepOrange)
+            : null,
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: AppColors.deepOrange),
           borderRadius: BorderRadius.circular(10),

@@ -4,7 +4,8 @@ import '../../../../../core/utils/app_colors.dart';
 
 class CustomDropDownButton extends StatefulWidget {
   final List<String> items;
-  const CustomDropDownButton({super.key, required this.items});
+  final String hint;
+  const CustomDropDownButton({super.key, required this.items, required this.hint});
 
   @override
   State<CustomDropDownButton> createState() => _CustomDropDownButtonState();
@@ -23,8 +24,12 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton<String>(
+          style: TextStyle(color: AppColors.darkGray),
           value: selectedValue,
-          hint: const Text("Select your car"),
+          hint: Text(
+           widget.hint,
+            style: TextStyle(color: AppColors.mediumGray),
+          ),
           icon: const Icon(Icons.arrow_drop_down),
           items: widget.items.map((item) {
             return DropdownMenuItem(value: item, child: Text(item));

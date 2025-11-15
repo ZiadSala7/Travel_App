@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
 
-import '../managers/theme_cubit/theme_cubit.dart';
-import '../themes/light_theme.dart';
 import '../utils/app_colors.dart';
 
 class CustomFormBuilderDateTimePicker extends StatelessWidget {
-  const CustomFormBuilderDateTimePicker({super.key});
+  final String hint;
+  final TextEditingController controller;
+
+  const CustomFormBuilderDateTimePicker({
+    super.key,
+    required this.hint,
+    required this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
     return FormBuilderDateTimePicker(
+      controller: controller,
       name: 'formBuilder',
-      style: TextStyle(
-        color: context.read<ThemeCubit>().state == lightTheme
-            ? AppColors.black
-            : AppColors.white,
-      ),
       inputType: InputType.date,
+      style: TextStyle(color: AppColors.black),
       decoration: InputDecoration(
         fillColor: AppColors.fillClr,
         filled: true,
-        hintText: "mm/dd/yyyy",
+        hintText: hint,
+        hintStyle: TextStyle(color: AppColors.mediumGray),
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: AppColors.deepOrange),
           borderRadius: BorderRadius.circular(10),
@@ -32,7 +34,10 @@ class CustomFormBuilderDateTimePicker extends StatelessWidget {
           borderSide: BorderSide(color: AppColors.greyShade, width: 0),
           borderRadius: BorderRadius.circular(10),
         ),
-        suffixIcon: const Icon(Icons.calendar_today),
+        suffixIcon: const Icon(
+          Icons.calendar_today,
+          color: AppColors.deepOrange,
+        ),
       ),
       format: DateFormat("MMMM dd, yyyy"),
     );

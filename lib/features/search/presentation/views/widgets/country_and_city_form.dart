@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
@@ -19,11 +20,16 @@ class CountryAndCityForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 10,
             children: [
-              Text(S.of(context).cntryServ, style: AppTextStyles.text16Bold),
+              Text(
+                S.of(context).cntryServ,
+                style: AppTextStyles.text16Bold.copyWith(
+                  color: AppColors.black,
+                ),
+              ),
               CustomTextFormField(
                 title: "Egypt",
                 controller: TextEditingController(),
-                prefixIcon: Icon(Icons.place),
+                prefixIcon: Icons.place,
               ),
             ],
           ),
@@ -34,11 +40,16 @@ class CountryAndCityForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(S.of(context).ctyServ, style: AppTextStyles.text16Bold),
+              Text(
+                S.of(context).ctyServ,
+                style: AppTextStyles.text16Bold.copyWith(
+                  color: AppColors.black,
+                ),
+              ),
               CustomTextFormField(
                 title: "Sohag",
                 controller: TextEditingController(),
-                prefixIcon: Icon(Icons.location_city),
+                prefixIcon: Icons.location_city,
               ),
             ],
           ),

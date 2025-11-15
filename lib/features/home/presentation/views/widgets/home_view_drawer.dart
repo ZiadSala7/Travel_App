@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../splash/presentation/views/widgets/app_logo.dart';
 
 class HomeViewDrawer extends StatelessWidget {
   const HomeViewDrawer({super.key, required this.items});
@@ -10,16 +12,23 @@ class HomeViewDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            Spacer(),
-            Column(
-              spacing: 20,
-              children: List.generate(
-                items.length,
-                (index) => Column(
+      child: Column(
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(AppAssets.assetsImagesBkgrnd3),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: AppLogo(),
+          ),
+          Column(
+            children: List.generate(
+              items.length,
+              (index) => Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
                   children: [
                     ListTile(
                       contentPadding: EdgeInsets.zero,
@@ -36,7 +45,7 @@ class HomeViewDrawer extends StatelessWidget {
                                 fontSize: 15,
                               ),
                             )
-                          : const Icon(Icons.arrow_back_ios_new, size: 16),
+                          : const Icon(Icons.arrow_forward_ios, size: 16),
                       onTap: () {},
                     ),
                     Divider(),
@@ -44,9 +53,9 @@ class HomeViewDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            Spacer(),
-          ],
-        ),
+          ),
+          Spacer(),
+        ],
       ),
     );
   }

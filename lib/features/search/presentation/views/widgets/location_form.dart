@@ -20,11 +20,16 @@ class LocationForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 10,
             children: [
-              Text(S.of(context).pickUpLoc, style: AppTextStyles.text16Bold),
+              Text(
+                S.of(context).pickUpLoc,
+                style: AppTextStyles.text16Bold.copyWith(
+                  color: AppColors.black,
+                ),
+              ),
               CustomTextFormField(
                 title: S.of(context).city,
                 controller: TextEditingController(),
-                prefixIcon: Icon(Icons.place),
+                prefixIcon: Icons.place,
               ),
             ],
           ),
@@ -53,11 +58,16 @@ class LocationForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(S.of(context).dropOffLoc, style: AppTextStyles.text16Bold),
+              Text(
+                S.of(context).dropOffLoc,
+                style: AppTextStyles.text16Bold.copyWith(
+                  color: AppColors.black,
+                ),
+              ),
               CustomTextFormField(
                 title: S.of(context).country,
                 controller: TextEditingController(),
-                prefixIcon: Icon(Icons.location_city),
+                prefixIcon: Icons.location_city,
               ),
             ],
           ),

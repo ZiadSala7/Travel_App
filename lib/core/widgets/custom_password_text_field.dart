@@ -8,12 +8,12 @@ import '../utils/app_text_styles.dart';
 
 class CustomPasswordTextFormField extends StatefulWidget {
   final String title;
-  final Widget prefixIcon;
+  final IconData? prefixIcon;
   final TextEditingController controller;
   const CustomPasswordTextFormField({
     super.key,
     required this.title,
-    this.prefixIcon = const SizedBox(),
+    this.prefixIcon,
     required this.controller,
   });
 
@@ -37,9 +37,9 @@ class _CustomPasswordTextFormFieldState
       controller: widget.controller,
       obscureText: isClicked,
       decoration: InputDecoration(
-        prefixIcon: widget.prefixIcon == const SizedBox()
-            ? null
-            : widget.prefixIcon,
+        prefixIcon: widget.prefixIcon != null
+            ? Icon(widget.prefixIcon, color: AppColors.deepOrange)
+            : null,
         suffixIcon: IconButton(
           onPressed: () {
             setState(() {

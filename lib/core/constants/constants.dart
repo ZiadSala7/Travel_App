@@ -59,3 +59,16 @@ drawerItems(BuildContext context) => [
   {"icon": Icons.flag_outlined, "title": S.of(context).country, "value": "مصر"},
   {"icon": Icons.share_outlined, "title": S.of(context).wts},
 ];
+
+List<BoxShadow> get customBoxShadowList {
+  return const [
+    BoxShadow(color: Colors.black12, blurRadius: 12, offset: Offset(0, 4)),
+  ];
+}
+
+List<String> touristClasses(BuildContext context) => [
+  S.of(context).tc1,
+  S.of(context).tc2,
+  S.of(context).tc3,
+  S.of(context).tc4,
+];
