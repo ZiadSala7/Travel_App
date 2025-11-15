@@ -13,7 +13,7 @@ class CustomCardHorizontalList extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(
-          6,
+          10,
           (index) => Padding(
             padding: EdgeInsets.only(
               left: Intl.getCurrentLocale() == 'ar' ? 15 : 0,

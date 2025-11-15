@@ -304,9 +304,9 @@ class S {
     );
   }
 
-  /// `Special Offers`
-  String get offers {
-    return Intl.message('Special Offers', name: 'offers', desc: '', args: []);
+  /// `Best Cars`
+  String get bestcars {
+    return Intl.message('Best Cars', name: 'bestcars', desc: '', args: []);
   }
 
   /// `Best Offers`

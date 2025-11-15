@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
+import '../best_service_display_view.dart';
 import 'custom_card_horizontal_list.dart';
 import 'custom_carousel_slider.dart';
 import 'title_and_see_all_button.dart';
@@ -45,8 +46,15 @@ class HomeViewBody extends StatelessWidget {
             SizedBox(height: 30),
             // special offers 👇👇
             TitleAndSeeAllButton(
-              title: S.of(context).offers,
-              seeAllOnPressed: () {},
+              title: S.of(context).bestcars,
+              seeAllOnPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        BestServiceDisplayView(title: 'All Hotels'),
+                  ),
+                );
+              },
             ),
             SizedBox(height: 15),
             CustomCardHorizontalList(list: []),

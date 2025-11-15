@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "baby": MessageLookupByLibrary.simpleMessage("Babies"),
     "bestHotel": MessageLookupByLibrary.simpleMessage("Best Hotels"),
     "bestOffers": MessageLookupByLibrary.simpleMessage("Best Offers"),
+    "bestcars": MessageLookupByLibrary.simpleMessage("Best Cars"),
     "bookCarType": MessageLookupByLibrary.simpleMessage("Booking Service Type"),
     "car": MessageLookupByLibrary.simpleMessage("Cars reserve"),
     "changePass": MessageLookupByLibrary.simpleMessage("Change your password"),
@@ -79,7 +80,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "more": MessageLookupByLibrary.simpleMessage("More"),
     "multicity": MessageLookupByLibrary.simpleMessage("Multicity"),
     "notification": MessageLookupByLibrary.simpleMessage("Notification"),
-    "offers": MessageLookupByLibrary.simpleMessage("Special Offers"),
     "onborO": MessageLookupByLibrary.simpleMessage(
       "Discover Beautiful Destinations",
     ),

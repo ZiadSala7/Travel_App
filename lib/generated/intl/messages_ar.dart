@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "baby": MessageLookupByLibrary.simpleMessage("الرضّع"),
     "bestHotel": MessageLookupByLibrary.simpleMessage("أفضل الفنادق"),
     "bestOffers": MessageLookupByLibrary.simpleMessage("أفضل العروض"),
+    "bestcars": MessageLookupByLibrary.simpleMessage("أفضل السيارات"),
     "bookCarType": MessageLookupByLibrary.simpleMessage("نوع خدمة الحجز"),
     "car": MessageLookupByLibrary.simpleMessage("تأجير السيارات"),
     "changePass": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
@@ -75,7 +76,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "multicity": MessageLookupByLibrary.simpleMessage("وجهات متعددة"),
     "notification": MessageLookupByLibrary.simpleMessage("الإشعارات"),
-    "offers": MessageLookupByLibrary.simpleMessage("العروض الخاصة"),
     "onborO": MessageLookupByLibrary.simpleMessage("اكتشف وجهات رائعة"),
     "onborODes": MessageLookupByLibrary.simpleMessage(
       "استكشف أفضل الأماكن السياحية حول العالم وابحث عن الوجهة المثالية لمغامرتك القادمة بسهولة.",

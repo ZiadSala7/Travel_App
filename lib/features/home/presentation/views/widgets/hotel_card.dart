@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/constants.dart';
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_image_network.dart';
 import 'favourite_button.dart';
 import 'rating_row.dart';
@@ -14,6 +15,7 @@ class HotelCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
+        margin: EdgeInsets.all(5),
         width: 300,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
@@ -40,19 +42,21 @@ class HotelCard extends StatelessWidget {
             ratingRow(5),
             const SizedBox(height: 6),
             // TITLE
-            const Text(
+            Text(
               "Malon Greens",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+              style: AppTextStyles.text18Bold.copyWith(color: AppColors.black),
             ),
             const SizedBox(height: 4),
             // LOCATION ROW
             Row(
-              children: const [
+              children: [
                 Icon(Icons.location_on, size: 18, color: Colors.grey),
                 SizedBox(width: 4),
                 Text(
                   "Mumbai, Maharashtra",
-                  style: TextStyle(color: Colors.grey, fontSize: 13),
+                  style: AppTextStyles.text16Reg.copyWith(
+                    color: AppColors.mediumGray,
+                  ),
                 ),
               ],
             ),
