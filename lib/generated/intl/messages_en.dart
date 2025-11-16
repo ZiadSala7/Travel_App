@@ -112,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectCar": MessageLookupByLibrary.simpleMessage("Select your car"),
     "selectClass": MessageLookupByLibrary.simpleMessage("Class"),
     "send": MessageLookupByLibrary.simpleMessage("Send"),
+    "showDetails": MessageLookupByLibrary.simpleMessage("Show Details"),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "tc1": MessageLookupByLibrary.simpleMessage("Economy Class"),

@@ -86,5 +86,6 @@
     "": "",
     "editProf": "Edit profile",
     "arrivalDate": "Arrival date:",
-    "guestsAndRooms": "Guests and rooms:"
+    "guestsAndRooms": "Guests and rooms:",
+    "showDetails": "Show Details"
 }

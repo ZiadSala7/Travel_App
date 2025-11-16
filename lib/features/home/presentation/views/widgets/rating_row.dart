@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/app_colors.dart';
+
 Row ratingRow(int? rating) {
   rating = rating ?? 4;
   return Row(
@@ -8,7 +10,8 @@ Row ratingRow(int? rating) {
       Row(
         children: List.generate(
           rating,
-          (index) => const Icon(Icons.star, color: Colors.amber, size: 18),
+          (index) =>
+              const Icon(Icons.star, color: AppColors.airplane, size: 18),
         ),
       ),
       Row(

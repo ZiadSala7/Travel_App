@@ -27,7 +27,7 @@ class HotelCard extends StatelessWidget {
             Stack(
               children: [
                 CustomImageNetwork(path: imageNetwork),
-                // Heart icon (top right)
+                // Heart icon (top right) => onPressed? add to favourites list
                 FavouriteButton(),
               ],
             ),
