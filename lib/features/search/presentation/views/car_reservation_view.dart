@@ -34,6 +34,7 @@ class CarReservationView extends StatelessWidget {
           CustomDropDownButton(
             items: typeOfCar,
             hint: S.of(context).bookCarType,
+            onSelected: (String selectedClass) {},
           ),
           SizedBox(height: 30),
           Text(
@@ -44,6 +45,7 @@ class CarReservationView extends StatelessWidget {
           CustomDropDownButton(
             items: carServiceType,
             hint: S.of(context).selectCar,
+            onSelected: (String selectedClass) {},
           ),
           SizedBox(height: 30),
           CountryAndCityForm(),

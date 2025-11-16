@@ -15,6 +15,8 @@ class TravellersAndClassChooser extends StatefulWidget {
 
 class _TravellersAndClassChooserState extends State<TravellersAndClassChooser> {
   int cnt = 1;
+  String selectedClass = "";
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -22,9 +24,10 @@ class _TravellersAndClassChooserState extends State<TravellersAndClassChooser> {
         showModalBottomSheet(
           context: context,
           builder: (context) => TravellersAndClassDialog(
-            onSubmit: (int travellers) {
+            onSubmit: (int travellers, String slctedClass) {
               setState(() {
                 cnt = travellers;
+                selectedClass = slctedClass;
               });
             },
           ),
@@ -42,7 +45,7 @@ class _TravellersAndClassChooserState extends State<TravellersAndClassChooser> {
           children: [
             Icon(Icons.person, color: AppColors.deepOrange),
             Text(
-              " ${S.of(context).travellers},: $cnt ${S.of(context).selectClass} : ",
+              " ${S.of(context).travellers},: $cnt ${S.of(context).selectClass} : $selectedClass",
               style: AppTextStyles.text16med.copyWith(
                 color: AppColors.mediumGray,
               ),

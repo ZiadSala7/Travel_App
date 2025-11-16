@@ -5,7 +5,13 @@ import '../../../../../core/utils/app_colors.dart';
 class CustomDropDownButton extends StatefulWidget {
   final List<String> items;
   final String hint;
-  const CustomDropDownButton({super.key, required this.items, required this.hint});
+  final Function(String selectedClass) onSelected;
+  const CustomDropDownButton({
+    super.key,
+    required this.items,
+    required this.hint,
+    required this.onSelected,
+  });
 
   @override
   State<CustomDropDownButton> createState() => _CustomDropDownButtonState();
@@ -27,7 +33,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
           style: TextStyle(color: AppColors.darkGray),
           value: selectedValue,
           hint: Text(
-           widget.hint,
+            widget.hint,
             style: TextStyle(color: AppColors.mediumGray),
           ),
           icon: const Icon(Icons.arrow_drop_down),
@@ -37,6 +43,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
           onChanged: (value) {
             setState(() {
               selectedValue = value;
+              widget.onSelected(value!);
             });
           },
         ),

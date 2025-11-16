@@ -7,19 +7,22 @@ class CustomTextFormField extends StatelessWidget {
   final IconData? prefixIcon;
   final Widget suffixIcon;
   final bool isReserve;
-  final TextEditingController controller;
+  final TextEditingController? controller;
+  final Function(String value)? onChange;
   const CustomTextFormField({
     super.key,
     required this.title,
     this.prefixIcon,
     this.isReserve = false,
     this.suffixIcon = const SizedBox(),
-    required this.controller,
+    this.controller,
+    this.onChange,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: onChange,
       style: isReserve ? TextStyle(color: AppColors.black) : null,
       controller: controller,
       decoration: InputDecoration(

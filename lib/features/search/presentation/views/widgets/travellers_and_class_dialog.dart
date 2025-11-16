@@ -12,12 +12,13 @@ import 'custom_drop_down_button.dart';
 import 'dialog_travellers_list_tile.dart';
 
 class TravellersAndClassDialog extends StatelessWidget {
-  final Function(int travellers) onSubmit;
+  final Function(int travellers, String selectedClass) onSubmit;
   const TravellersAndClassDialog({super.key, required this.onSubmit});
 
   @override
   Widget build(BuildContext context) {
     int adults = 0, children = 0, babies = 0;
+    String defaultFlightClass = S.of(context).tc1;
     return Dialog(
       backgroundColor: context.read<ThemeCubit>().state == lightTheme
           ? AppColors.white
@@ -61,6 +62,9 @@ class TravellersAndClassDialog extends StatelessWidget {
                 CustomDropDownButton(
                   items: touristClasses(context),
                   hint: S.of(context).selectClass,
+                  onSelected: (String selectedClass) {
+                    defaultFlightClass = selectedClass;
+                  },
                 ),
               ],
             ),
@@ -69,7 +73,7 @@ class TravellersAndClassDialog extends StatelessWidget {
           CustomButton(
             onPressed: () {
               int travellers = adults + children + babies;
-              onSubmit(travellers);
+              onSubmit(travellers, defaultFlightClass);
               Navigator.of(context).pop();
             },
             txt: S.of(context).Search,
