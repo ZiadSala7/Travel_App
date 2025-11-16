@@ -73,3 +73,6 @@ List<String> touristClasses(BuildContext context) => [
   S.of(context).tc3,
   S.of(context).tc4,
 ];
+
+String imageNetwork =
+    "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg";

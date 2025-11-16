@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/constants.dart';
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/functions/custom_container_box_decoration.dart';
 import '../../../../../core/widgets/custom_image_network.dart';
+import 'custom_price_per_time.dart';
 import 'favourite_button.dart';
 import 'rating_row.dart';
+import 'title_and_location_section.dart';
 
 class HotelCard extends StatelessWidget {
   const HotelCard({super.key});
@@ -18,21 +19,14 @@ class HotelCard extends StatelessWidget {
         margin: EdgeInsets.all(5),
         width: 300,
         padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          color: AppColors.white,
-          borderRadius: BorderRadius.circular(18),
-          boxShadow: customBoxShadowList,
-        ),
+        decoration: customContainerBoxDecoration(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // IMAGE + HEART BUTTON
             Stack(
               children: [
-                CustomImageNetwork(
-                  path:
-                      "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg",
-                ),
+                CustomImageNetwork(path: imageNetwork),
                 // Heart icon (top right)
                 FavouriteButton(),
               ],
@@ -41,26 +35,13 @@ class HotelCard extends StatelessWidget {
             // ⭐ RATING ROW
             ratingRow(5),
             const SizedBox(height: 6),
-            // TITLE
-            Text(
-              "Malon Greens",
-              style: AppTextStyles.text18Bold.copyWith(color: AppColors.black),
-            ),
-            const SizedBox(height: 4),
-            // LOCATION ROW
-            Row(
-              children: [
-                Icon(Icons.location_on, size: 18, color: Colors.grey),
-                SizedBox(width: 4),
-                Text(
-                  "Mumbai, Maharashtra",
-                  style: AppTextStyles.text16Reg.copyWith(
-                    color: AppColors.mediumGray,
-                  ),
-                ),
-              ],
-            ),
+            // TITLE AND LOCATION SECTION
+            TitleAndLocationSection(),
             const SizedBox(height: 10),
+            Divider(thickness: 0.7),
+            const SizedBox(height: 10),
+            // PRICE SECTION
+            CustomPricePerTime(),
           ],
         ),
       ),
