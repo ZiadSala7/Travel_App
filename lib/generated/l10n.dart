@@ -665,6 +665,96 @@ class S {
       args: [],
     );
   }
+
+  /// `14 years or above`
+  String get adultAge {
+    return Intl.message(
+      '14 years or above',
+      name: 'adultAge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2-13 years`
+  String get childAge {
+    return Intl.message('2-13 years', name: 'childAge', desc: '', args: []);
+  }
+
+  /// `< 2 years`
+  String get babyAge {
+    return Intl.message('< 2 years', name: 'babyAge', desc: '', args: []);
+  }
+
+  /// `Overview`
+  String get overview {
+    return Intl.message('Overview', name: 'overview', desc: '', args: []);
+  }
+
+  /// `Amenities & Services`
+  String get amenities {
+    return Intl.message(
+      'Amenities & Services',
+      name: 'amenities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `WiFi`
+  String get wifi {
+    return Intl.message('WiFi', name: 'wifi', desc: '', args: []);
+  }
+
+  /// `Restaurants`
+  String get restaurants {
+    return Intl.message('Restaurants', name: 'restaurants', desc: '', args: []);
+  }
+
+  /// `Parking`
+  String get parking {
+    return Intl.message('Parking', name: 'parking', desc: '', args: []);
+  }
+
+  /// `Gym`
+  String get gym {
+    return Intl.message('Gym', name: 'gym', desc: '', args: []);
+  }
+
+  /// `Breakfast`
+  String get breakfast {
+    return Intl.message('Breakfast', name: 'breakfast', desc: '', args: []);
+  }
+
+  /// `TV`
+  String get tv {
+    return Intl.message('TV', name: 'tv', desc: '', args: []);
+  }
+
+  /// `Private Bathroom`
+  String get privateBathroom {
+    return Intl.message(
+      'Private Bathroom',
+      name: 'privateBathroom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comfort Beds`
+  String get comfortBeds {
+    return Intl.message(
+      'Comfort Beds',
+      name: 'comfortBeds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book Now`
+  String get bookNow {
+    return Intl.message('Book Now', name: 'bookNow', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

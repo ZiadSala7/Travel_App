@@ -45,7 +45,7 @@ class _TravellersAndClassChooserState extends State<TravellersAndClassChooser> {
           children: [
             Icon(Icons.person, color: AppColors.deepOrange),
             Text(
-              " ${S.of(context).travellers},: $cnt ${S.of(context).selectClass} : $selectedClass",
+              " ${S.of(context).travellers}: $cnt ${S.of(context).selectClass} : $selectedClass",
               style: AppTextStyles.text16med.copyWith(
                 color: AppColors.mediumGray,
               ),

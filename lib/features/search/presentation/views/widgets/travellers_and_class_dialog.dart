@@ -17,7 +17,7 @@ class TravellersAndClassDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int adults = 0, children = 0, babies = 0;
+    int adults = 1, children = 0, babies = 0;
     String defaultFlightClass = S.of(context).tc1;
     return Dialog(
       backgroundColor: context.read<ThemeCubit>().state == lightTheme
@@ -36,6 +36,7 @@ class TravellersAndClassDialog extends StatelessWidget {
             onChange: (int cnt) {
               adults = cnt;
             },
+            desc: S.of(context).adultAge,
           ),
           Divider(),
           DialogTravellersListTile(
@@ -44,6 +45,7 @@ class TravellersAndClassDialog extends StatelessWidget {
             onChange: (int cnt) {
               children = cnt;
             },
+            desc: S.of(context).childAge,
           ),
           Divider(),
           DialogTravellersListTile(
@@ -52,6 +54,7 @@ class TravellersAndClassDialog extends StatelessWidget {
             onChange: (int cnt) {
               babies = cnt;
             },
+            desc: S.of(context).babyAge,
           ),
           SizedBox(height: 15),
           Padding(

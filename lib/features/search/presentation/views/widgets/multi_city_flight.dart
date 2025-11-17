@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../home/presentation/views/widgets/show_details_button.dart';
 import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
 import '../../../../../core/widgets/custom_button.dart';
-import '../../../../../core/widgets/custom_text_button.dart';
 import '../../../../../generated/l10n.dart';
 import 'multi_city_trip.dart';
 import 'travellers_and_class_chooser.dart';
@@ -39,13 +39,14 @@ class _MulticityFlightState extends State<MulticityFlight> {
         ),
         SizedBox(height: 20),
         Center(
-          child: CustomTextButton(
+          child: ShowDetailsButton(
             onPressed: () {
               setState(() {
                 cnt++;
               });
             },
-            title: "Add trip",
+            txt: "Add trip",
+            icon: Icons.add,
           ),
         ),
         SizedBox(height: 20),

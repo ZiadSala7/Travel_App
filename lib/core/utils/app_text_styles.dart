@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
+  // font size 14
+  static const text14Reg = TextStyle(fontSize: 14, fontWeight: FontWeight.w300);
+  static const text14med = TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+  static const text14Bold = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+  );
   // font size 16
   static const text16Reg = TextStyle(fontSize: 16, fontWeight: FontWeight.w300);
   static const text16med = TextStyle(fontSize: 16, fontWeight: FontWeight.w500);

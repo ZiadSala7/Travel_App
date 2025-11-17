@@ -4,7 +4,14 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
 class TitleAndLocationSection extends StatelessWidget {
-  const TitleAndLocationSection({super.key});
+  final String? title, location;
+  final bool? isDetail;
+  const TitleAndLocationSection({
+    super.key,
+    this.title,
+    this.location,
+    this.isDetail = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +20,23 @@ class TitleAndLocationSection extends StatelessWidget {
       children: [
         // TITLE
         Text(
-          "Malon Greens",
-          style: AppTextStyles.text18Bold.copyWith(color: AppColors.black),
+          title ?? "Malon Greens",
+          style: AppTextStyles.text20Bold.copyWith(
+            color: isDetail != true ? AppColors.black : null,
+          ),
         ),
         const SizedBox(height: 4),
         // LOCATION ROW
         Row(
           children: [
-            Icon(Icons.location_on, size: 18, color: Colors.grey),
+            Icon(
+              Icons.location_on_outlined,
+              size: 22,
+              color: AppColors.airplane,
+            ),
             SizedBox(width: 4),
             Text(
-              "Mumbai, Maharashtra",
+              location ?? "Mumbai, Maharashtra",
               style: AppTextStyles.text16Reg.copyWith(
                 color: AppColors.mediumGray,
               ),

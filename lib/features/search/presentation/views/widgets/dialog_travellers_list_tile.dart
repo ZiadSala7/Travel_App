@@ -5,13 +5,13 @@ import '../../../../../core/utils/app_text_styles.dart';
 
 class DialogTravellersListTile extends StatefulWidget {
   final int range;
-  final String title;
+  final String title, desc;
   final Function(int cnt) onChange;
   const DialogTravellersListTile({
     super.key,
     required this.range,
     required this.title,
-    required this.onChange,
+    required this.onChange, required this.desc,
   });
 
   @override
@@ -34,7 +34,19 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(widget.title, style: AppTextStyles.text18Reg),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(widget.title, style: AppTextStyles.text18Reg),
+              Text(
+                widget.desc,
+                style: AppTextStyles.text16Reg.copyWith(
+                  fontSize: 14,
+                  color: AppColors.mediumGray,
+                ),
+              ),
+            ],
+          ),
           Row(
             spacing: 10,
             children: [

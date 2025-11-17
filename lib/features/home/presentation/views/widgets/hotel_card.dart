@@ -13,37 +13,34 @@ class HotelCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: Container(
-        margin: EdgeInsets.all(5),
-        width: 300,
-        padding: const EdgeInsets.all(12),
-        decoration: customContainerBoxDecoration(),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // IMAGE + HEART BUTTON
-            Stack(
-              children: [
-                CustomImageNetwork(path: imageNetwork),
-                // Heart icon (top right) => onPressed? add to favourites list
-                FavouriteButton(),
-              ],
-            ),
-            const SizedBox(height: 12),
-            // ⭐ RATING ROW
-            ratingRow(5),
-            const SizedBox(height: 6),
-            // TITLE AND LOCATION SECTION
-            TitleAndLocationSection(),
-            const SizedBox(height: 10),
-            Divider(thickness: 0.7),
-            const SizedBox(height: 10),
-            // PRICE SECTION
-            CustomPricePerTime(),
-          ],
-        ),
+    return Container(
+      margin: EdgeInsets.all(5),
+      width: 300,
+      padding: const EdgeInsets.all(12),
+      decoration: customContainerBoxDecoration(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // IMAGE + HEART BUTTON
+          Stack(
+            children: [
+              CustomImageNetwork(path: imageNetwork),
+              // Heart icon (top right) => onPressed? add to favourites list
+              FavouriteButton(),
+            ],
+          ),
+          const SizedBox(height: 12),
+          // ⭐ RATING ROW
+          ratingRow(5),
+          const SizedBox(height: 6),
+          // TITLE AND LOCATION SECTION
+          TitleAndLocationSection(),
+          const SizedBox(height: 10),
+          Divider(thickness: 0.7),
+          const SizedBox(height: 10),
+          // PRICE SECTION
+          CustomPricePerTime(),
+        ],
       ),
     );
   }

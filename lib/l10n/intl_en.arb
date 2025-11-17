@@ -87,5 +87,19 @@
     "editProf": "Edit profile",
     "arrivalDate": "Arrival date:",
     "guestsAndRooms": "Guests and rooms:",
-    "showDetails": "Show Details"
+    "showDetails": "Show Details",
+    "adultAge": "14 years or above",
+    "childAge": "2-13 years",
+    "babyAge": "< 2 years",
+    "overview": "Overview",
+    "amenities": "Amenities & Services",
+    "wifi": "WiFi",
+    "restaurants": "Restaurants",
+    "parking": "Parking",
+    "gym": "Gym",
+    "breakfast": "Breakfast",
+    "tv": "TV",
+    "privateBathroom": "Private Bathroom",
+    "comfortBeds": "Comfort Beds",
+    "bookNow": "Book Now"
 }
