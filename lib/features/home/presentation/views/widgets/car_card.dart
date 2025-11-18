@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constants/constants.dart';
 import '../../../../../core/functions/custom_container_box_decoration.dart';
-import '../../../../../core/widgets/custom_image_network.dart';
-import '../../../../details/presentation/views/hotel_details_view.dart';
+import '../../../../../core/utils/app_assets.dart';
+import 'car_passengers_and_doors.dart';
 import 'custom_price_per_time.dart';
-import 'favourite_button.dart';
-import 'rating_row.dart';
 import 'title_and_location_section.dart';
 
-class HotelCard extends StatelessWidget {
-  const HotelCard({super.key});
+class CarCard extends StatelessWidget {
+  const CarCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,29 +22,34 @@ class HotelCard extends StatelessWidget {
           // IMAGE + HEART BUTTON
           Stack(
             children: [
-              CustomImageNetwork(path: networkImgHotel),
-              // Heart icon (top right) => onPressed? add to favourites list
-              FavouriteButton(),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(14),
+                child: Image.asset(
+                  AppAssets.assetsImagesOnlineCar,
+                  height: 160,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 12),
-          // ⭐ RATING ROW
-          ratingRow(5),
+          // PASSENGERS AND
           const SizedBox(height: 6),
           // TITLE AND LOCATION SECTION
-          TitleAndLocationSection(),
-          const SizedBox(height: 10),
+          TitleAndLocationSection(
+            title: "Toyota Corolla",
+            location: "Pickup location:\nCharles de Gaulle Airport, paris",
+          ),
+          const SizedBox(height: 15),
+          CarPassengersAndDoors(),
           Divider(thickness: 0.7),
           const SizedBox(height: 10),
           // PRICE SECTION
           CustomPricePerTime(
-            price: "1,450 EGP",
-            perTime: ' per night',
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => HotelDetailsView()),
-              );
-            },
+            price: '500 EGP',
+            perTime: ' per day',
+            onPressed: () {},
           ),
         ],
       ),

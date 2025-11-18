@@ -58,6 +58,10 @@ class AppAssets {
   /// assets/images/flag.png
   static const String assetsImagesFlag = "assets/images/flag.png";
 
+  /// Assets for assetsImagesFlight
+  /// assets/images/flight.png
+  static const String assetsImagesFlight = "assets/images/flight.png";
+
   /// Assets for assetsImagesForgPass
   /// assets/images/forgPass.png
   static const String assetsImagesForgPass = "assets/images/forgPass.png";
@@ -101,6 +105,10 @@ class AppAssets {
   /// Assets for assetsImagesOnbord3
   /// assets/images/onbord3.png
   static const String assetsImagesOnbord3 = "assets/images/onbord3.png";
+
+  /// Assets for assetsImagesOnlineCar
+  /// assets/images/onlineCar.png
+  static const String assetsImagesOnlineCar = "assets/images/onlineCar.png";
 
   /// Assets for assetsImagesOrderConfirm
   /// assets/images/orderConfirm.png

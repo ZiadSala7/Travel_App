@@ -74,8 +74,10 @@ List<String> touristClasses(BuildContext context) => [
   S.of(context).tc4,
 ];
 
-String imageNetwork =
+String networkImgHotel =
     "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg";
+
+String networkImgCar = "https://www.hajjumrahtech.com/images/flight-bg.jpg";
 
 String overView =
     "A hotel is a commercial establishment that provides accommodation, food, and various services to travelers and guests. Hotels vary widely in size, style, and quality—ranging from small family-run inns to large luxury resorts. Their main purpose is to offer a comfortable, safe, and convenient place for people to stay temporarily.";

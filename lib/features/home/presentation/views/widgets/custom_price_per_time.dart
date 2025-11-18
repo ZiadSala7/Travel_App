@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/features/details/presentation/views/hotel_details_view.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
@@ -7,7 +6,13 @@ import '../../../../../generated/l10n.dart';
 import 'show_details_button.dart';
 
 class CustomPricePerTime extends StatelessWidget {
-  const CustomPricePerTime({super.key});
+  final String price, perTime;
+  final Function() onPressed;
+  const CustomPricePerTime({
+    super.key,
+    required this.price,
+    required this.perTime, required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +23,11 @@ class CustomPricePerTime extends StatelessWidget {
         Row(
           children: [
             Text(
-              "1,450 EGP",
+              price,
               style: AppTextStyles.text20Bold.copyWith(color: AppColors.black),
             ),
             Text(
-              " per night",
+              perTime,
               style: AppTextStyles.text16Reg.copyWith(
                 color: AppColors.mediumGray,
                 fontSize: 14,
@@ -32,11 +37,7 @@ class CustomPricePerTime extends StatelessWidget {
         ),
         Flexible(
           child: ShowDetailsButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => HotelDetailsView()),
-              );
-            },
+            onPressed: onPressed,
             txt: S.of(context).showDetails,
             icon: Icons.arrow_forward,
           ),

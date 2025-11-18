@@ -14,7 +14,7 @@ class HotelImageSection extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height / 2.5,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(imageNetwork),
+            image: NetworkImage(networkImgHotel),
             fit: BoxFit.fill,
           ),
         ),

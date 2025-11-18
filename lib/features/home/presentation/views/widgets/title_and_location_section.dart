@@ -37,7 +37,7 @@ class TitleAndLocationSection extends StatelessWidget {
             SizedBox(width: 4),
             Text(
               location ?? "Mumbai, Maharashtra",
-              style: AppTextStyles.text16Reg.copyWith(
+              style: AppTextStyles.text14Reg.copyWith(
                 color: AppColors.mediumGray,
               ),
             ),
