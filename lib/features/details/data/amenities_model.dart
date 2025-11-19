@@ -29,3 +29,13 @@ List<AmenitiesModel> carAmenities(BuildContext context) => [
   AmenitiesModel(title: S.of(context).gps),
   AmenitiesModel(title: S.of(context).bluetooth),
 ];
+
+List<AmenitiesModel> flightAmenities(BuildContext context) => [
+  AmenitiesModel(title: S.of(context).wifi, icon: Icons.wifi),
+  AmenitiesModel(title: S.of(context).entertainment, icon: Icons.tv_outlined),
+  AmenitiesModel(
+    title: S.of(context).powerOutiet,
+    icon: Icons.electric_bolt_sharp,
+  ),
+  AmenitiesModel(title: S.of(context).meals, icon: Icons.restaurant),
+];

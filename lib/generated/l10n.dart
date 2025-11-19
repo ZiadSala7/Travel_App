@@ -790,6 +790,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Arrival`
+  String get arrival {
+    return Intl.message('Arrival', name: 'arrival', desc: '', args: []);
+  }
+
+  /// `Entertainment`
+  String get entertainment {
+    return Intl.message(
+      'Entertainment',
+      name: 'entertainment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Power Outiet`
+  String get powerOutiet {
+    return Intl.message(
+      'Power Outiet',
+      name: 'powerOutiet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meals`
+  String get meals {
+    return Intl.message('Meals', name: 'meals', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

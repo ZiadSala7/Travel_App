@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import '../../../../../core/managers/language_cubit/language_cubit.dart';
 import '../../../../../core/functions/custom_container_box_decoration.dart';
 import '../../../../../core/utils/app_assets.dart';
+import '../../../../details/presentation/views/flight_details_view.dart';
 import 'country_positioned.dart';
 import 'custom_price_per_time.dart';
 import 'flight_class_and_rate.dart';
@@ -51,10 +50,11 @@ class FlightCard extends StatelessWidget {
             price: '500 EGP',
             perTime: ' per person',
             onPressed: () {
-              // Navigator.of(context).push(
-              //   MaterialPageRoute(builder: (context) => const CarDetailsView()),
-              // );
-              context.read<LanguageCubit>().changeLanguage();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const FlightDetailsView(),
+                ),
+              );
             },
           ),
         ],

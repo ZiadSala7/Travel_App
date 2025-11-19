@@ -106,5 +106,9 @@
     "automatic": "Automatic",
     "gps": "GPS",
     "bluetooth": "Bluetooth",
-    "bestFlights": "Best Flights"
+    "bestFlights": "Best Flights",
+    "arrival": "Arrival",
+    "entertainment": "Entertainment",
+    "powerOutiet": "Power Outiet",
+    "meals": "Meals"
 }

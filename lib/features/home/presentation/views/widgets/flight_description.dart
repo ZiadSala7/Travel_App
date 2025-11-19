@@ -4,7 +4,8 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
 class FlightDescriptionSection extends StatelessWidget {
-  const FlightDescriptionSection({super.key});
+  final double width;
+  const FlightDescriptionSection({super.key, this.width = 50});
 
   @override
   Widget build(BuildContext context) {
@@ -42,11 +43,14 @@ class FlightDescriptionSection extends StatelessWidget {
                 fontSize: 12,
               ),
             ),
-            const Row(
+            Row(
               children: [
-                Icon(Icons.circle, color: AppColors.deepOrange, size: 10),
-                SizedBox(width: 50, child: Divider(endIndent: 3, indent: 3)),
-                Icon(
+                const Icon(Icons.circle, color: AppColors.deepOrange, size: 10),
+                SizedBox(
+                  width: width,
+                  child: const Divider(endIndent: 3, indent: 3),
+                ),
+                const Icon(
                   Icons.flight_outlined,
                   color: AppColors.deepOrange,
                   size: 15,
@@ -66,7 +70,7 @@ class FlightDescriptionSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "17:30",
+              "17:45",
               style: AppTextStyles.text20Bold.copyWith(color: AppColors.black),
             ),
             Text(
