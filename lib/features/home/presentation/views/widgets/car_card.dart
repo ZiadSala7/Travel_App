@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/functions/custom_container_box_decoration.dart';
 import '../../../../../core/utils/app_assets.dart';
+import '../../../../details/presentation/views/car_details_view.dart';
 import 'car_passengers_and_doors.dart';
 import 'custom_price_per_time.dart';
 import 'title_and_location_section.dart';
@@ -49,7 +50,11 @@ class CarCard extends StatelessWidget {
           CustomPricePerTime(
             price: '500 EGP',
             perTime: ' per day',
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const CarDetailsView()),
+              );
+            },
           ),
         ],
       ),

@@ -755,6 +755,31 @@ class S {
   String get bookNow {
     return Intl.message('Book Now', name: 'bookNow', desc: '', args: []);
   }
+
+  /// `Air Conditioning`
+  String get airCond {
+    return Intl.message(
+      'Air Conditioning',
+      name: 'airCond',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Automatic`
+  String get automatic {
+    return Intl.message('Automatic', name: 'automatic', desc: '', args: []);
+  }
+
+  /// `GPS`
+  String get gps {
+    return Intl.message('GPS', name: 'gps', desc: '', args: []);
+  }
+
+  /// `Bluetooth`
+  String get bluetooth {
+    return Intl.message('Bluetooth', name: 'bluetooth', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

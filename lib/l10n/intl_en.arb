@@ -101,5 +101,9 @@
     "tv": "TV",
     "privateBathroom": "Private Bathroom",
     "comfortBeds": "Comfort Beds",
-    "bookNow": "Book Now"
+    "bookNow": "Book Now",
+    "airCond": "Air Conditioning",
+    "automatic": "Automatic",
+    "gps": "GPS",
+    "bluetooth": "Bluetooth"
 }

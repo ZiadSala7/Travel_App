@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
-import '../../../data/hotel_service_model.dart';
+import '../../../data/amenities_model.dart';
 
-class AmenitiesCard extends StatelessWidget {
-  const AmenitiesCard({super.key, required this.amenity});
+class HotelAmenitiesCard extends StatelessWidget {
+  const HotelAmenitiesCard({super.key, required this.amenity});
 
-  final HotelServiceModel amenity;
+  final AmenitiesModel amenity;
 
   @override
   Widget build(BuildContext context) {

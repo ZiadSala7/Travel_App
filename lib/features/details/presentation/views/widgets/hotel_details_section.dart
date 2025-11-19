@@ -6,14 +6,14 @@ import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../home/presentation/views/widgets/rating_row.dart';
 import '../../../../home/presentation/views/widgets/title_and_location_section.dart';
-import '../../../data/hotel_service_model.dart';
-import 'amenities_card.dart';
+import '../../../data/amenities_model.dart';
+import 'hotel_amenities_card.dart';
 import 'drop_down_list_tile.dart';
 
 class HotelDetailsSection extends StatelessWidget {
   const HotelDetailsSection({super.key, required this.amenitiesAndServices});
 
-  final List<HotelServiceModel> amenitiesAndServices;
+  final List<AmenitiesModel> amenitiesAndServices;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class HotelDetailsSection extends StatelessWidget {
                 childAspectRatio: 3.5 / 4,
               ),
               itemBuilder: (context, index) =>
-                  AmenitiesCard(amenity: amenitiesAndServices[index]),
+                  HotelAmenitiesCard(amenity: amenitiesAndServices[index]),
             ),
             title: S.of(context).amenities,
           ),

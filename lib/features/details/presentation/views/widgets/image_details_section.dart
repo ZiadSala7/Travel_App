@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/constants/constants.dart';
 import 'bottom_rounded_clipper.dart';
 
-class HotelImageSection extends StatelessWidget {
-  const HotelImageSection({super.key});
+class ImageDetailsSection extends StatelessWidget {
+  final String image;
+  const ImageDetailsSection({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +13,7 @@ class HotelImageSection extends StatelessWidget {
       child: Container(
         height: MediaQuery.sizeOf(context).height / 2.5,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: NetworkImage(networkImgHotel),
-            fit: BoxFit.fill,
-          ),
+          image: DecorationImage(image: NetworkImage(image), fit: BoxFit.fill),
         ),
         child: Stack(
           children: [
