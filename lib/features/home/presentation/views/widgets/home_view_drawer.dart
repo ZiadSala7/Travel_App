@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 
 import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
 import '../../../../../core/themes/light_theme.dart';
-import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../splash/presentation/views/widgets/app_logo.dart';
@@ -21,15 +20,7 @@ class HomeViewDrawer extends StatelessWidget {
           : AppColors.black,
       child: Column(
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(AppAssets.assetsImagesBkgrnd3),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: AppLogo(),
-          ),
+          const DrawerHeader(decoration: BoxDecoration(), child: AppLogo()),
           Column(
             children: List.generate(
               items.length,
