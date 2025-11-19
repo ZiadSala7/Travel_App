@@ -20,7 +20,7 @@
     "forgPassDes": "Enter your email to send reset link.",
     "send": "Send",
     "letsStart": "Let's Get Started",
-    "guest": "Continue as a Guest",
+    "asAGuest": "Continue as a Guest",
     "continueLogin": "Continue with login",
     "home": "Home",
     "notification": "Notification",
@@ -110,5 +110,8 @@
     "arrival": "Arrival",
     "entertainment": "Entertainment",
     "powerOutiet": "Power Outiet",
-    "meals": "Meals"
+    "meals": "Meals",
+    "guest": "Guests",
+    "rooms": "Rooms",
+    "numGuestsRooms": "Number of Guests and Rooms"
 }

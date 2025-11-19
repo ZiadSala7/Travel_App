@@ -29,7 +29,7 @@ class GuestOrLoginViewBody extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, BuildNavigationBar.id);
               },
-              txt: S.of(context).guest,
+              txt: S.of(context).asAGuest,
               icon: Icons.person,
             ),
           ),

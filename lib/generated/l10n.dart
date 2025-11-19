@@ -225,10 +225,10 @@ class S {
   }
 
   /// `Continue as a Guest`
-  String get guest {
+  String get asAGuest {
     return Intl.message(
       'Continue as a Guest',
-      name: 'guest',
+      name: 'asAGuest',
       desc: '',
       args: [],
     );
@@ -819,6 +819,26 @@ class S {
   /// `Meals`
   String get meals {
     return Intl.message('Meals', name: 'meals', desc: '', args: []);
+  }
+
+  /// `Guests`
+  String get guest {
+    return Intl.message('Guests', name: 'guest', desc: '', args: []);
+  }
+
+  /// `Rooms`
+  String get rooms {
+    return Intl.message('Rooms', name: 'rooms', desc: '', args: []);
+  }
+
+  /// `Number of Guests and Rooms`
+  String get numGuestsRooms {
+    return Intl.message(
+      'Number of Guests and Rooms',
+      name: 'numGuestsRooms',
+      desc: '',
+      args: [],
+    );
   }
 }
 

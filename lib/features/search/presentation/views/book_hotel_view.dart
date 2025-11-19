@@ -7,6 +7,7 @@ import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../generated/l10n.dart';
 import 'widgets/book_hotel_date_selector.dart';
+import 'widgets/num_of_guests_and_rooms_chooser.dart';
 
 class BookHotelView extends StatelessWidget {
   const BookHotelView({super.key});
@@ -44,21 +45,7 @@ class BookHotelView extends StatelessWidget {
               style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
             ),
             const SizedBox(height: 10),
-            Container(
-              padding: const EdgeInsets.all(10),
-              height: 50,
-              decoration: BoxDecoration(
-                color: AppColors.fillClr,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(width: 1, color: AppColors.greyShade),
-              ),
-              child: Text(
-                "1 Guests, 2 Rooms",
-                style: AppTextStyles.text16med.copyWith(
-                  color: AppColors.mediumGray,
-                ),
-              ),
-            ),
+            const NumOfGuestsAndRoomsChooser(),
             const SizedBox(height: 20),
             CustomButton(
               onPressed: () {},
