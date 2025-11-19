@@ -22,10 +22,10 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[_currentIndex],
-      floatingActionButton:const FloatingActionButtonBottomBar(),
+      floatingActionButton: const FloatingActionButtonBottomBar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        color: context.read<ThemeCubit>().state == lightTheme
+        color: context.watch<ThemeCubit>().state == lightTheme
             ? AppColors.appbarClr
             : AppColors.black,
         child: Row(

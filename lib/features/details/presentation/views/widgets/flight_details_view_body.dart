@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../home/presentation/views/widgets/flight_description.dart';
@@ -20,8 +21,16 @@ class FlightDetailsViewBody extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 50),
+            const SizedBox(height: 15),
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: const Icon(Icons.arrow_back, color: AppColors.black),
+            ),
+            const SizedBox(height: 20),
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: Image.asset(AppAssets.assetsImagesFlight),

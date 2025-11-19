@@ -17,7 +17,7 @@ class CustomAmenitiesCard extends StatelessWidget {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             if (amenity.icon != null)
               Icon(amenity.icon, color: AppColors.airplane),

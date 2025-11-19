@@ -13,7 +13,12 @@ class FlightClassAndRate extends StatelessWidget {
       children: [
         Column(
           children: [
-            const Text("Boeing 777"),
+            Text(
+              "Boeing 777",
+              style: AppTextStyles.text14med.copyWith(
+                color: AppColors.mediumGray,
+              ),
+            ),
             Text(
               "Economy",
               style: AppTextStyles.text14med.copyWith(
