@@ -4,8 +4,8 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../data/amenities_model.dart';
 
-class HotelAmenitiesCard extends StatelessWidget {
-  const HotelAmenitiesCard({super.key, required this.amenity});
+class CustomAmenitiesCard extends StatelessWidget {
+  const CustomAmenitiesCard({super.key, required this.amenity});
 
   final AmenitiesModel amenity;
 
@@ -19,7 +19,8 @@ class HotelAmenitiesCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(amenity.icon, color: AppColors.airplane),
+            if (amenity.icon != null)
+              Icon(amenity.icon, color: AppColors.airplane),
             Flexible(
               child: Text(
                 amenity.title,

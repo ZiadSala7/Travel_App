@@ -7,7 +7,7 @@ import '../../../../../generated/l10n.dart';
 import '../../../../home/presentation/views/widgets/rating_row.dart';
 import '../../../../home/presentation/views/widgets/title_and_location_section.dart';
 import '../../../data/amenities_model.dart';
-import 'hotel_amenities_card.dart';
+import 'custom_amenities_card.dart';
 import 'drop_down_list_tile.dart';
 
 class HotelDetailsSection extends StatelessWidget {
@@ -48,7 +48,7 @@ class HotelDetailsSection extends StatelessWidget {
                 childAspectRatio: 3.5 / 4,
               ),
               itemBuilder: (context, index) =>
-                  HotelAmenitiesCard(amenity: amenitiesAndServices[index]),
+                  CustomAmenitiesCard(amenity: amenitiesAndServices[index]),
             ),
             title: S.of(context).amenities,
           ),
