@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "automatic": MessageLookupByLibrary.simpleMessage("Automatic"),
     "baby": MessageLookupByLibrary.simpleMessage("Babies"),
     "babyAge": MessageLookupByLibrary.simpleMessage("< 2 years"),
+    "bestFlights": MessageLookupByLibrary.simpleMessage("Best Flights"),
     "bestHotel": MessageLookupByLibrary.simpleMessage("Best Hotels"),
     "bestOffers": MessageLookupByLibrary.simpleMessage("Best Offers"),
     "bestcars": MessageLookupByLibrary.simpleMessage("Best Cars"),

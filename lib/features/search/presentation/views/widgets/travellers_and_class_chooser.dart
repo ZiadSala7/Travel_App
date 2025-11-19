@@ -34,7 +34,7 @@ class _TravellersAndClassChooserState extends State<TravellersAndClassChooser> {
         );
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         height: 50,
         decoration: BoxDecoration(
           color: AppColors.fillClr,
@@ -43,7 +43,7 @@ class _TravellersAndClassChooserState extends State<TravellersAndClassChooser> {
         ),
         child: Row(
           children: [
-            Icon(Icons.person, color: AppColors.deepOrange),
+            const Icon(Icons.person, color: AppColors.deepOrange),
             Text(
               " ${S.of(context).travellers}: $cnt ${S.of(context).selectClass} : $selectedClass",
               style: AppTextStyles.text16med.copyWith(

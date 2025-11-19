@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'car_card.dart';
+import 'flight_card.dart';
 
-class BestCarsList extends StatelessWidget {
+class BestFlightsList extends StatelessWidget {
   final List list;
-  const BestCarsList({super.key, required this.list});
+  const BestFlightsList({super.key, required this.list});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class BestCarsList extends StatelessWidget {
               left: Intl.getCurrentLocale() == 'ar' ? 15 : 0,
               right: Intl.getCurrentLocale() == 'en' ? 15 : 0,
             ),
-            child: const CarCard(),
+            child: const FlightCard(),
           ),
         ),
       ),

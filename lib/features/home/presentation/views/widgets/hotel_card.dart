@@ -15,8 +15,8 @@ class HotelCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(5),
-      width: 300,
+      margin: const EdgeInsets.all(5),
+      width: 350,
       padding: const EdgeInsets.all(12),
       decoration: customContainerBoxDecoration(),
       child: Column(
@@ -27,7 +27,7 @@ class HotelCard extends StatelessWidget {
             children: [
               CustomImageNetwork(path: networkImgHotel),
               // Heart icon (top right) => onPressed? add to favourites list
-              FavouriteButton(),
+              const FavouriteButton(),
             ],
           ),
           const SizedBox(height: 12),
@@ -35,9 +35,9 @@ class HotelCard extends StatelessWidget {
           ratingRow(5),
           const SizedBox(height: 6),
           // TITLE AND LOCATION SECTION
-          TitleAndLocationSection(),
+          const TitleAndLocationSection(),
           const SizedBox(height: 10),
-          Divider(thickness: 0.7),
+          const Divider(thickness: 0.7),
           const SizedBox(height: 10),
           // PRICE SECTION
           CustomPricePerTime(
@@ -45,7 +45,7 @@ class HotelCard extends StatelessWidget {
             perTime: ' per night',
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => HotelDetailsView()),
+                MaterialPageRoute(builder: (context) => const HotelDetailsView()),
               );
             },
           ),

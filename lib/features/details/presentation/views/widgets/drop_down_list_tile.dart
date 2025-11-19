@@ -35,7 +35,7 @@ class _DropDownListTileState extends State<DropDownListTile> {
               !isClicked ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up,
             ),
           ),
-          isClicked ? widget.widget : SizedBox(),
+          isClicked ? widget.widget :const SizedBox(),
         ],
       ),
     );

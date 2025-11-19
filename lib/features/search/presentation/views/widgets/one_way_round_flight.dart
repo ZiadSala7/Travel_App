@@ -33,7 +33,7 @@ class OneWayOrRoundFlight extends StatelessWidget {
           S.of(context).departure,
           style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         CustomTextFormField(
           title: S.of(context).from,
           prefixIcon: Icons.flight_takeoff,
@@ -45,7 +45,7 @@ class OneWayOrRoundFlight extends StatelessWidget {
           S.of(context).destination,
           style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         CustomTextFormField(
           title: S.of(context).to,
           prefixIcon: Icons.flight_land,
@@ -60,9 +60,9 @@ class OneWayOrRoundFlight extends StatelessWidget {
           S.of(context).travellersAndClass,
           style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         // ====================
-        TravellersAndClassChooser(),
+        const TravellersAndClassChooser(),
         const SizedBox(height: 20),
         // ====================
         SizedBox(

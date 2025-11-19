@@ -20,18 +20,18 @@ class CustomFormBuilderDateTimePicker extends StatelessWidget {
       controller: controller,
       name: 'formBuilder',
       inputType: InputType.date,
-      style: TextStyle(color: AppColors.black),
+      style: const TextStyle(color: AppColors.black),
       decoration: InputDecoration(
         fillColor: AppColors.fillClr,
         filled: true,
         hintText: hint,
-        hintStyle: TextStyle(color: AppColors.mediumGray),
+        hintStyle: const TextStyle(color: AppColors.mediumGray),
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: AppColors.deepOrange),
           borderRadius: BorderRadius.circular(10),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.greyShade, width: 0),
+          borderSide: const BorderSide(color: AppColors.greyShade, width: 0),
           borderRadius: BorderRadius.circular(10),
         ),
         suffixIcon: const Icon(

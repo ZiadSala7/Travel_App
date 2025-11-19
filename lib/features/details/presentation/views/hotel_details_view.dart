@@ -19,7 +19,7 @@ class HotelDetailsView extends StatelessWidget {
           icon: Icons.arrow_forward,
         ),
       ),
-      body: HotelDetailsViewBody(),
+      body:const  HotelDetailsViewBody(),
     );
   }
 }

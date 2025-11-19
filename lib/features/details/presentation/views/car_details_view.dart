@@ -18,7 +18,7 @@ class CarDetailsView extends StatelessWidget {
           icon: Icons.arrow_forward,
         ),
       ),
-      body: CarDetailsViewBody(),
+      body: const CarDetailsViewBody(),
     );
   }
 }

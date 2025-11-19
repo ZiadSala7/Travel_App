@@ -15,7 +15,7 @@ class ForgetPasswordView extends StatelessWidget {
         title: Text(S.of(context).forgetPass, style: AppTextStyles.text22Bold),
         centerTitle: true,
       ),
-      body: ForgetPasswordViewBody(),
+      body: const ForgetPasswordViewBody(),
     );
   }
 }

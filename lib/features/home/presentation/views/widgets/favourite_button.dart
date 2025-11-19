@@ -18,7 +18,7 @@ class FavouriteButton extends StatelessWidget {
         child: FittedBox(
           child: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.favorite_border, size: 20),
+            icon: const Icon(Icons.favorite_border, size: 20),
             color: Colors.grey,
           ),
         ),

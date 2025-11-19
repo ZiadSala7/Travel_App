@@ -24,7 +24,7 @@ class BestServiceDisplayView extends StatelessWidget {
             centerTitle: true,
           ),
           SliverAppBar(
-            actions: [IconButton(onPressed: () {}, icon: Icon(Icons.sort))],
+            actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.sort))],
             automaticallyImplyLeading: false,
             pinned: true,
             snap: false,
@@ -41,7 +41,7 @@ class BestServiceDisplayView extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: List.generate(10, (index) => HotelCard()),
+                children: List.generate(10, (index) => const HotelCard()),
               ),
             ),
           ),

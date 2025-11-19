@@ -21,7 +21,7 @@ class HomeViewDrawer extends StatelessWidget {
           : AppColors.black,
       child: Column(
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(AppAssets.assetsImagesBkgrnd3),
@@ -55,13 +55,13 @@ class HomeViewDrawer extends StatelessWidget {
                           : const Icon(Icons.arrow_forward_ios, size: 16),
                       onTap: () {},
                     ),
-                    Divider(),
+                    const Divider(),
                   ],
                 ),
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

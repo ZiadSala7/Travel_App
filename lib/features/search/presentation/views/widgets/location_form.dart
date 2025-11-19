@@ -37,12 +37,12 @@ class LocationForm extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: AppColors.black,
               borderRadius: BorderRadius.circular(100),
             ),
-            child: RotatedBox(
+            child: const RotatedBox(
               quarterTurns: 1,
               child: Icon(
                 Icons.import_export_sharp,

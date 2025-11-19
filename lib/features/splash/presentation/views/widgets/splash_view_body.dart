@@ -20,7 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 1), (timer) {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
        setState(() {
           cnt++;
         });
@@ -37,6 +37,6 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   Widget build(BuildContext context) {
     return cnt <= 4
         ? Center(child: Lottie.asset(AppAssets.assetsImagesPlaneeee))
-        : Center(child: FadeIn(child: AppLogo()));
+        : Center(child: FadeIn(child: const AppLogo()));
   }
 }

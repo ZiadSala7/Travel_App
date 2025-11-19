@@ -31,7 +31,7 @@ class PickUpOrDropOffDateTime extends StatelessWidget {
                   color: AppColors.black,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomFormBuilderDateTimePicker(
                 hint: 'mm/dd/yyyy',
                 controller: TextEditingController(),
@@ -52,7 +52,7 @@ class PickUpOrDropOffDateTime extends StatelessWidget {
                   color: AppColors.black,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomTextFormField(
                 title: "8:00",
                 controller: TextEditingController(),

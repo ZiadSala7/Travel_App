@@ -23,14 +23,14 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: onChange,
-      style: isReserve ? TextStyle(color: AppColors.black) : null,
+      style: isReserve ? const TextStyle(color: AppColors.black) : null,
       controller: controller,
       decoration: InputDecoration(
         hintText: title,
         filled: true,
         hintStyle: isReserve
-            ? TextStyle(color: AppColors.black)
-            : TextStyle(color: AppColors.mediumGray),
+            ? const TextStyle(color: AppColors.black)
+            : const TextStyle(color: AppColors.mediumGray),
         fillColor: AppColors.fillClr,
         prefixIcon: prefixIcon != null
             ? Icon(prefixIcon, color: AppColors.deepOrange)
@@ -40,7 +40,7 @@ class CustomTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.greyShade, width: 0),
+          borderSide: const BorderSide(color: AppColors.greyShade, width: 0),
           borderRadius: BorderRadius.circular(10),
         ),
       ),

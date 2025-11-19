@@ -32,7 +32,7 @@ class _FlightFormCardState extends State<FlightFormCard> {
               toController: toController,
               widget: widget,
             )
-          : MulticityFlight(),
+          : const MulticityFlight(),
     );
   }
 }

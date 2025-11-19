@@ -20,23 +20,23 @@ class LoginForm extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           // email
           Text(S.of(context).email, style: AppTextStyles.text18Bold),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CustomTextFormField(
             title: "example@gmail.com",
             controller: TextEditingController(),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           // password
           Text(S.of(context).password, style: AppTextStyles.text18Bold),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CustomPasswordTextFormField(
             title: S.of(context).entrPass,
             controller: TextEditingController(),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Center(
             child: CustomTextButton(
               title: S.of(context).forgetPass,
@@ -45,7 +45,7 @@ class LoginForm extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Center(
             child: CustomButton(
               onPressed: () {

@@ -16,7 +16,7 @@ class ProfileImageEmailAndName extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.all(2),
+            padding: const EdgeInsets.all(2),
             height: 130,
             width: 130,
             decoration: BoxDecoration(
@@ -30,7 +30,7 @@ class ProfileImageEmailAndName extends StatelessWidget {
               ),
             ),
           ),
-          Column(
+          const Column(
             spacing: 5,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

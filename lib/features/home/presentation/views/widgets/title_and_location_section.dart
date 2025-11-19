@@ -29,12 +29,12 @@ class TitleAndLocationSection extends StatelessWidget {
         // LOCATION ROW
         Row(
           children: [
-            Icon(
+            const Icon(
               Icons.location_on_outlined,
               size: 22,
               color: AppColors.airplane,
             ),
-            SizedBox(width: 4),
+            const SizedBox(width: 4),
             Text(
               location ?? "Mumbai, Maharashtra",
               style: AppTextStyles.text14Reg.copyWith(

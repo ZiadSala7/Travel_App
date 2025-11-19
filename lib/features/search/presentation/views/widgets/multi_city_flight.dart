@@ -37,7 +37,7 @@ class _MulticityFlightState extends State<MulticityFlight> {
             ),
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Center(
           child: ShowDetailsButton(
             onPressed: () {
@@ -49,8 +49,8 @@ class _MulticityFlightState extends State<MulticityFlight> {
             icon: Icons.add,
           ),
         ),
-        SizedBox(height: 20),
-        TravellersAndClassChooser(),
+        const SizedBox(height: 20),
+        const TravellersAndClassChooser(),
         const SizedBox(height: 20),
         // ====================
         SizedBox(

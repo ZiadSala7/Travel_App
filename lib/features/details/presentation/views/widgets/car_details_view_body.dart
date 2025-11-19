@@ -24,7 +24,7 @@ class CarDetailsViewBody extends StatelessWidget {
             clipper: BottomRoundedClipper(),
             child: Container(
               height: MediaQuery.sizeOf(context).height / 2.5,
-              decoration: BoxDecoration(
+              decoration:const  BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(AppAssets.assetsImagesOnlineCar),
                   fit: BoxFit.fill,
@@ -39,7 +39,7 @@ class CarDetailsViewBody extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
-                      icon: Icon(Icons.arrow_back),
+                      icon: const Icon(Icons.arrow_back),
                     ),
                   ),
                 ],
@@ -55,8 +55,8 @@ class CarDetailsViewBody extends StatelessWidget {
                   "Toyota Corolla",
                   style: AppTextStyles.text20Bold.copyWith(),
                 ),
-                SizedBox(height: 15),
-                Row(
+                const SizedBox(height: 15),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
@@ -88,8 +88,8 @@ class CarDetailsViewBody extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
-                Divider(thickness: 0.7),
+                const SizedBox(height: 10),
+                const Divider(thickness: 0.7),
                 DropDownListTile(
                   widget: Text(
                     "Reliable and furel-efficient for city drivers and short trips",
@@ -99,14 +99,14 @@ class CarDetailsViewBody extends StatelessWidget {
                   ),
                   title: S.of(context).overview,
                 ),
-                Divider(thickness: 0.7),
+                const Divider(thickness: 0.7),
                 DropDownListTile(
                   widget: GridView.builder(
                     padding: EdgeInsets.zero, // ← prevents extra top padding
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: amenitiesCar.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       childAspectRatio: 6 / 4,
                     ),
@@ -115,7 +115,7 @@ class CarDetailsViewBody extends StatelessWidget {
                   ),
                   title: S.of(context).amenities,
                 ),
-                Divider(thickness: 0.7),
+                const Divider(thickness: 0.7),
               ],
             ),
           ),

@@ -59,8 +59,8 @@ class FavouriteHotelCard extends StatelessWidget {
           const SizedBox(height: 10),
 
           // ───────── RATING ROW ─────────
-          Row(
-            children: const [
+          const Row(
+            children: [
               Icon(Icons.star, color: Colors.amber, size: 18),
               SizedBox(width: 4),
               Text(
@@ -89,8 +89,8 @@ class FavouriteHotelCard extends StatelessWidget {
           const SizedBox(height: 6),
 
           // ───────── LOCATION ROW ─────────
-          Row(
-            children: const [
+          const Row(
+            children: [
               Icon(Icons.location_on_outlined, size: 18, color: Colors.grey),
               SizedBox(width: 4),
               Text(
@@ -99,9 +99,7 @@ class FavouriteHotelCard extends StatelessWidget {
               ),
             ],
           ),
-
           const SizedBox(height: 6),
-
           // ───────── DESCRIPTION (Ellipsis) ─────────
           const Text(
             "Casual dhaba with palm frond covered roof...",

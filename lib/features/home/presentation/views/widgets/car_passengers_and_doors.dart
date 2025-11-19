@@ -15,7 +15,7 @@ class CarPassengersAndDoors extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(Icons.person_2_outlined, color: AppColors.airplane),
+            const Icon(Icons.person_2_outlined, color: AppColors.airplane),
             Text(
               "4",
               style: AppTextStyles.text14Reg.copyWith(color: AppColors.black),
@@ -25,7 +25,7 @@ class CarPassengersAndDoors extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(Icons.wallet_travel_rounded, color: AppColors.airplane),
+            const Icon(Icons.wallet_travel_rounded, color: AppColors.airplane),
             Text(
               "4",
               style: AppTextStyles.text14Reg.copyWith(color: AppColors.black),

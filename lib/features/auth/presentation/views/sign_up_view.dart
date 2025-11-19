@@ -10,7 +10,7 @@ class SignUpView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: ListView(children: [SizedBox(height: 20), SignUpForm()]),
+      child: ListView(children: const [SizedBox(height: 20), SignUpForm()]),
     );
   }
 }

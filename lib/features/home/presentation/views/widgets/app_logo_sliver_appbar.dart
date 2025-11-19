@@ -7,7 +7,7 @@ class AppLogoSliverAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverAppBar(
+    return const SliverAppBar(
       pinned: true,
       floating: false,
       snap: false,

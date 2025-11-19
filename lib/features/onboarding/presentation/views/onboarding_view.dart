@@ -13,7 +13,7 @@ class OnboardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (_) => OnboardingpProvider(),
-      child: Scaffold(body: FadeIn(child: OnboardingPageView())),
+      child: Scaffold(body: FadeIn(child: const OnboardingPageView())),
     );
   }
 }

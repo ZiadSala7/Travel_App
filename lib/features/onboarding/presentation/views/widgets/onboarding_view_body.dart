@@ -20,8 +20,8 @@ class OnboardingViewBody extends StatelessWidget {
           children: [
             TopImage(image: onboardingModel.image),
             Intl.getCurrentLocale() == 'en'
-                ? Positioned(top: 50, right: 20, child: SkipButton())
-                : Positioned(top: 50, left: 20, child: SkipButton()),
+                ? const Positioned(top: 50, right: 20, child: SkipButton())
+                : const Positioned(top: 50, left: 20, child: SkipButton()),
           ],
         ),
 
@@ -33,7 +33,7 @@ class OnboardingViewBody extends StatelessWidget {
         ),
         const SizedBox(height: 30),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Text(
             onboardingModel.subTitle,
             textAlign: TextAlign.center,
@@ -41,9 +41,9 @@ class OnboardingViewBody extends StatelessWidget {
           ),
         ),
 
-        Spacer(),
+        const Spacer(),
         PageIndicator(currentIndex: onboardingModel.index),
-        SizedBox(height: 50),
+        const SizedBox(height: 50),
       ],
     );
   }

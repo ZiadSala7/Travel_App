@@ -30,11 +30,11 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton<String>(
-          style: TextStyle(color: AppColors.darkGray),
+          style: const TextStyle(color: AppColors.darkGray),
           value: selectedValue,
           hint: Text(
             widget.hint,
-            style: TextStyle(color: AppColors.mediumGray),
+            style: const TextStyle(color: AppColors.mediumGray),
           ),
           icon: const Icon(Icons.arrow_drop_down),
           items: widget.items.map((item) {

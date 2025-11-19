@@ -19,7 +19,7 @@ class BestHotelsList extends StatelessWidget {
               left: Intl.getCurrentLocale() == 'ar' ? 15 : 0,
               right: Intl.getCurrentLocale() == 'en' ? 15 : 0,
             ),
-            child: HotelCard(),
+            child: const HotelCard(),
           ),
         ),
       ),

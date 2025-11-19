@@ -22,7 +22,7 @@ class CustomServiceChooser extends StatelessWidget {
             children: [
               Expanded(child: Image.asset(model.image)),
               Text(model.title, style: AppTextStyles.text16Reg),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
             ],
           ),
         ),

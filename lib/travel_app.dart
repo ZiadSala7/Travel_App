@@ -21,8 +21,8 @@ class TravelApp extends StatelessWidget {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
               onGenerateRoute: onGenerateRoutes,
-              home: SplashView(),
-              locale: state is EnglishLanguage ? Locale('en') : Locale('ar'),
+              home: const SplashView(),
+              locale: state is EnglishLanguage ? const Locale('en') : const Locale('ar'),
               localizationsDelegates: [
                 S.delegate,
                 GlobalMaterialLocalizations.delegate,

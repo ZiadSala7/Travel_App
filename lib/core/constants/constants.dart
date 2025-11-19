@@ -7,7 +7,7 @@ import '../../generated/l10n.dart';
 
 final onboardingPageController = PageController();
 
-List<Widget> pages = [HomeView(), Scaffold(), FavouritesView(), ProfileView()];
+List<Widget> pages = const [HomeView(), Scaffold(), FavouritesView(), ProfileView()];
 
 List<String> typeOfCar = [
   "Sedan",

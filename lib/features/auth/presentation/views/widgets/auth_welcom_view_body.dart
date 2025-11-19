@@ -19,7 +19,7 @@ class _AuthWelcomViewBodyState extends State<AuthWelcomViewBody> {
   int cnt = 0;
   @override
   void initState() {
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacementNamed(GuestOrLoginView.id);
     });
     super.initState();

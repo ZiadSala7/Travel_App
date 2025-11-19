@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../../core/managers/language_cubit/language_cubit.dart';
 import '../../../../../core/functions/custom_container_box_decoration.dart';
 import '../../../../../core/utils/app_assets.dart';
-import '../../../../details/presentation/views/car_details_view.dart';
-import 'car_passengers_and_doors.dart';
+import 'country_positioned.dart';
 import 'custom_price_per_time.dart';
-import 'title_and_location_section.dart';
+import 'flight_class_and_rate.dart';
+import 'flight_description.dart';
 
-class CarCard extends StatelessWidget {
-  const CarCard({super.key});
+class FlightCard extends StatelessWidget {
+  const FlightCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,40 +22,39 @@ class CarCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // IMAGE + HEART BUTTON
+          // IMAGE + location
           Stack(
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(14),
                 child: Image.asset(
-                  AppAssets.assetsImagesOnlineCar,
+                  AppAssets.assetsImagesFlight,
                   height: 160,
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
               ),
+              const CountryPositioned(),
             ],
           ),
           const SizedBox(height: 12),
-          // PASSENGERS AND
-          const SizedBox(height: 6),
-          // TITLE AND LOCATION SECTION
-         const  TitleAndLocationSection(
-            title: "Toyota Corolla",
-            location: "Pickup location:\nCharles de Gaulle Airport, paris",
-          ),
+          // DESCRIPTION SECTION
+          const FlightDescriptionSection(),
           const SizedBox(height: 15),
-          const CarPassengersAndDoors(),
           const Divider(thickness: 0.7),
           const SizedBox(height: 10),
+          // CLASS AND RATE
+          const FlightClassAndRate(),
+          const SizedBox(height: 15),
           // PRICE SECTION
           CustomPricePerTime(
             price: '500 EGP',
-            perTime: ' per day',
+            perTime: ' per person',
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const CarDetailsView()),
-              );
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(builder: (context) => const CarDetailsView()),
+              // );
+              context.read<LanguageCubit>().changeLanguage();
             },
           ),
         ],

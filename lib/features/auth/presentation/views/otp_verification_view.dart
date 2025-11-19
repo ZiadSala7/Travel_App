@@ -7,6 +7,6 @@ class OtpVerificationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: FadeIn(child: SizedBox()));
+    return Scaffold(body: FadeIn(child: const SizedBox()));
   }
 }

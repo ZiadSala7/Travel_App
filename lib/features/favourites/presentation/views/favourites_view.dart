@@ -20,8 +20,8 @@ class FavouritesView extends StatelessWidget {
         child: ListView(
           children: List.generate(
             4,
-            (index) => Padding(
-              padding: const EdgeInsets.only(bottom: 15),
+            (index) =>const Padding(
+              padding:  EdgeInsets.only(bottom: 15),
               child: FavouriteHotelCard(),
             ),
           ),

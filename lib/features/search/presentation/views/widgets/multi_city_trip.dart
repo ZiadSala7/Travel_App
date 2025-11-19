@@ -15,18 +15,18 @@ class MultiCityTrip extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        MultiCityTripDepartureAndDestination(),
-        SizedBox(height: 20),
+        const MultiCityTripDepartureAndDestination(),
+        const SizedBox(height: 20),
         Text(
           S.of(context).departureDate,
           style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         CustomFormBuilderDateTimePicker(
           hint: S.of(context).date,
           controller: TextEditingController(),
         ),
-        SizedBox(height: 15),
+        const SizedBox(height: 15),
         Center(
           child: Container(
             decoration: BoxDecoration(
@@ -35,7 +35,7 @@ class MultiCityTrip extends StatelessWidget {
             ),
             child: IconButton(
               onPressed: onPressed,
-              icon: Icon(Icons.clear, color: AppColors.white),
+              icon: const Icon(Icons.clear, color: AppColors.white),
             ),
           ),
         ),

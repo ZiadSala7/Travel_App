@@ -14,27 +14,27 @@ class ForgetPasswordViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(S.of(context).forgPassDes, style: AppTextStyles.text16Reg),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Align(
               alignment: Intl.getCurrentLocale() == 'en'
                   ? Alignment.topLeft
                   : Alignment.topRight,
               child: Text(S.of(context).email, style: AppTextStyles.text16Reg),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             CustomTextFormField(
               title: "example@gmail.com",
               controller: TextEditingController(),
             ),
-            Spacer(),
+            const Spacer(),
             CustomButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(OtpVerificationView.id);
@@ -42,7 +42,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
               txt: S.of(context).send,
               icon: Icons.arrow_forward,
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
           ],
         ),
       ),

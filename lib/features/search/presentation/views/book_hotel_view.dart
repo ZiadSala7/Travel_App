@@ -16,8 +16,8 @@ class BookHotelView extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         height: 420,
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(20),
@@ -26,26 +26,26 @@ class BookHotelView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               S.of(context).destination,
               style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             CustomTextFormField(
               title: S.of(context).destination,
               controller: TextEditingController(),
             ),
-            SizedBox(height: 20),
-            BookHotelDateSelector(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
+            const BookHotelDateSelector(),
+            const SizedBox(height: 20),
             Text(
               S.of(context).guestsAndRooms,
               style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               height: 50,
               decoration: BoxDecoration(
                 color: AppColors.fillClr,
@@ -59,7 +59,7 @@ class BookHotelView extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             CustomButton(
               onPressed: () {},
               txt: S.of(context).Search,

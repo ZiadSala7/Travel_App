@@ -105,5 +105,6 @@
     "airCond": "Air Conditioning",
     "automatic": "Automatic",
     "gps": "GPS",
-    "bluetooth": "Bluetooth"
+    "bluetooth": "Bluetooth",
+    "bestFlights": "Best Flights"
 }

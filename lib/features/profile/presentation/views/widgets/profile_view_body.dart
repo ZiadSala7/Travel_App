@@ -12,7 +12,7 @@ class ProfileViewBody extends StatelessWidget {
     return Column(
       spacing: 15,
       children: [
-        ProfileImageEmailAndName(),
+        const ProfileImageEmailAndName(),
         Expanded(
           child: ListView.separated(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),

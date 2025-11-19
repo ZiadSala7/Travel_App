@@ -19,8 +19,8 @@ class HomeView extends StatelessWidget {
       drawer: HomeViewDrawer(items: items),
       body: CustomScrollView(
         slivers: [
-          AppLogoSliverAppBar(),
-          SliverAppBar(
+          const AppLogoSliverAppBar(),
+          const SliverAppBar(
             automaticallyImplyLeading: false,
             pinned: false,
             floating: false,
@@ -29,7 +29,7 @@ class HomeView extends StatelessWidget {
             expandedHeight: 10,
           ),
           ChooseServiceSliverAppBar(services: services),
-          SliverToBoxAdapter(child: HomeViewBody()),
+          const SliverToBoxAdapter(child: HomeViewBody()),
         ],
       ),
     );

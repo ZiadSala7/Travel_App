@@ -19,21 +19,21 @@ class AuthChooserView extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: AppLogo(),
+            title: const AppLogo(),
             centerTitle: true,
             bottom: TabBar(
               indicatorColor: AppColors.deepOrange,
               labelColor: AppColors.deepOrange,
               tabs: [
-                Tab(text: S.of(context).login, icon: Icon(Icons.login)),
+                Tab(text: S.of(context).login, icon: const Icon(Icons.login)),
                 Tab(
                   text: S.of(context).signUp,
-                  icon: Icon(Icons.app_registration_outlined),
+                  icon: const Icon(Icons.app_registration_outlined),
                 ),
               ],
             ),
           ),
-          body: TabBarView(children: [LoginView(), SignUpView()]),
+          body: const TabBarView(children: [LoginView(), SignUpView()]),
         ),
       ),
     );

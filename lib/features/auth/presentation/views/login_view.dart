@@ -9,7 +9,7 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: ListView(children: [LoginForm()]),
+      child: ListView(children: const [LoginForm()]),
     );
   }
 }

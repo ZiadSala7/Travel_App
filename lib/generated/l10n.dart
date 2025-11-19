@@ -780,6 +780,16 @@ class S {
   String get bluetooth {
     return Intl.message('Bluetooth', name: 'bluetooth', desc: '', args: []);
   }
+
+  /// `Best Flights`
+  String get bestFlights {
+    return Intl.message(
+      'Best Flights',
+      name: 'bestFlights',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

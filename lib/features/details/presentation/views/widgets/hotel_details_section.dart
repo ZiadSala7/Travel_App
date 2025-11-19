@@ -23,10 +23,10 @@ class HotelDetailsSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ratingRow(5),
-          SizedBox(height: 15),
-          TitleAndLocationSection(isDetail: true),
-          SizedBox(height: 10),
-          Divider(thickness: 0.7),
+          const SizedBox(height: 15),
+          const TitleAndLocationSection(isDetail: true),
+          const SizedBox(height: 10),
+          const Divider(thickness: 0.7),
           DropDownListTile(
             widget: Text(
               overView,
@@ -36,14 +36,14 @@ class HotelDetailsSection extends StatelessWidget {
             ),
             title: S.of(context).overview,
           ),
-          Divider(thickness: 0.7),
+          const Divider(thickness: 0.7),
           DropDownListTile(
             widget: GridView.builder(
               padding: EdgeInsets.zero, // ← prevents extra top padding
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: amenitiesAndServices.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 childAspectRatio: 3.5 / 4,
               ),
@@ -52,7 +52,7 @@ class HotelDetailsSection extends StatelessWidget {
             ),
             title: S.of(context).amenities,
           ),
-          Divider(thickness: 0.7),
+          const Divider(thickness: 0.7),
         ],
       ),
     );

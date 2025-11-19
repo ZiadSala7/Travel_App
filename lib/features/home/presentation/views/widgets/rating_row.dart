@@ -14,11 +14,11 @@ Row ratingRow(int? rating) {
               const Icon(Icons.star, color: AppColors.airplane, size: 18),
         ),
       ),
-      Row(
+      const Row(
         children: [
-          const Text("5.0", style: TextStyle(fontWeight: FontWeight.bold)),
-          const SizedBox(width: 4),
-          const Text(
+          Text("5.0", style: TextStyle(fontWeight: FontWeight.bold)),
+          SizedBox(width: 4),
+          Text(
             "(120 Reviews)",
             style: TextStyle(color: Colors.grey, fontSize: 12),
           ),

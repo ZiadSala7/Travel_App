@@ -58,12 +58,12 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
                   });
                 },
                 icon: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     color: AppColors.airplane,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Icon(Icons.add, color: AppColors.white),
+                  child: const Icon(Icons.add, color: AppColors.white),
                 ),
               ),
               Text(
@@ -78,12 +78,12 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
                   });
                 },
                 icon: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     color: AppColors.airplane,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Icon(Icons.remove, color: AppColors.white),
+                  child: const Icon(Icons.remove, color: AppColors.white),
                 ),
               ),
             ],

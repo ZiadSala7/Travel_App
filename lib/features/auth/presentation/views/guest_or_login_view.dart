@@ -8,6 +8,6 @@ class GuestOrLoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: GuestOrLoginViewBody());
+    return const Scaffold(body: GuestOrLoginViewBody());
   }
 }

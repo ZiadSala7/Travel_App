@@ -27,9 +27,9 @@ class TravellersAndClassDialog extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Text(S.of(context).dialogTC, style: AppTextStyles.text22Bold),
-          Divider(),
+          const Divider(),
           DialogTravellersListTile(
             range: 1,
             title: S.of(context).adults,
@@ -38,7 +38,7 @@ class TravellersAndClassDialog extends StatelessWidget {
             },
             desc: S.of(context).adultAge,
           ),
-          Divider(),
+          const Divider(),
           DialogTravellersListTile(
             range: 0,
             title: S.of(context).children,
@@ -47,7 +47,7 @@ class TravellersAndClassDialog extends StatelessWidget {
             },
             desc: S.of(context).childAge,
           ),
-          Divider(),
+          const Divider(),
           DialogTravellersListTile(
             range: 0,
             title: S.of(context).baby,
@@ -56,7 +56,7 @@ class TravellersAndClassDialog extends StatelessWidget {
             },
             desc: S.of(context).babyAge,
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
@@ -72,7 +72,7 @@ class TravellersAndClassDialog extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           CustomButton(
             onPressed: () {
               int travellers = adults + children + babies;

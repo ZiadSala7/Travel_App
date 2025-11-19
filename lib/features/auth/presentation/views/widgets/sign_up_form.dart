@@ -18,44 +18,44 @@ class SignUpForm extends StatelessWidget {
         children: [
           // full name
           Text(S.of(context).fullName, style: AppTextStyles.text18Bold),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CustomTextFormField(
             title: S.of(context).enterName,
             controller: TextEditingController(),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           // email
           Text(S.of(context).email, style: AppTextStyles.text18Bold),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CustomTextFormField(
             title: "example@gmail.com",
             controller: TextEditingController(),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           // phone number
           Text(S.of(context).phoneNum, style: AppTextStyles.text18Bold),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CustomTextFormField(
             title: S.of(context).entrPhone,
             controller: TextEditingController(),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           // password
           Text(S.of(context).password, style: AppTextStyles.text18Bold),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CustomPasswordTextFormField(
             title: S.of(context).entrPass,
             controller: TextEditingController(),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           // confirm password
           Text(S.of(context).confirmPass, style: AppTextStyles.text18Bold),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           CustomPasswordTextFormField(
             title: S.of(context).entrPass,
             controller: TextEditingController(),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Center(
             child: CustomButton(
               onPressed: () {},

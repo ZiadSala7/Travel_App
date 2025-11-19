@@ -20,11 +20,11 @@ class GuestOrLoginViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           FadeInDown(
-            delay: Duration(milliseconds: 600),
+            delay: const Duration(milliseconds: 600),
             child: const AppLogo(),
           ),
           FadeInUp(
-            delay: Duration(milliseconds: 1200),
+            delay: const Duration(milliseconds: 1200),
             child: CustomButton(
               onPressed: () {
                 Navigator.pushNamed(context, BuildNavigationBar.id);
@@ -34,7 +34,7 @@ class GuestOrLoginViewBody extends StatelessWidget {
             ),
           ),
           FadeInUp(
-            delay: Duration(milliseconds: 1800),
+            delay: const Duration(milliseconds: 1800),
             child: CustomButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(AuthChooserView.id);

@@ -15,30 +15,30 @@ import '../../features/splash/presentation/views/splash_view.dart';
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.id:
-      return MaterialPageRoute(builder: (context) => SplashView());
+      return MaterialPageRoute(builder: (context) => const SplashView());
     case OnboardingView.id:
-      return MaterialPageRoute(builder: (context) => OnboardingView());
+      return MaterialPageRoute(builder: (context) => const OnboardingView());
     case AuthWelcomeView.id:
-      return MaterialPageRoute(builder: (context) => AuthWelcomeView());
+      return MaterialPageRoute(builder: (context) => const AuthWelcomeView());
     case AuthChooserView.id:
-      return MaterialPageRoute(builder: (context) => AuthChooserView());
+      return MaterialPageRoute(builder: (context) => const AuthChooserView());
     case ForgetPasswordView.id:
       return MaterialPageRoute(
-        builder: (context) => FadeIn(child: ForgetPasswordView()),
+        builder: (context) => FadeIn(child: const ForgetPasswordView()),
       );
     case OtpVerificationView.id:
-      return MaterialPageRoute(builder: (context) => OtpVerificationView());
+      return MaterialPageRoute(builder: (context) => const OtpVerificationView());
     case BuildNavigationBar.id:
-      return MaterialPageRoute(builder: (context) => BuildNavigationBar());
+      return MaterialPageRoute(builder: (context) => const BuildNavigationBar());
     case SearchView.id:
-      return MaterialPageRoute(builder: (context) => SearchView());
+      return MaterialPageRoute(builder: (context) => const SearchView());
 
     case GuestOrLoginView.id:
-      return MaterialPageRoute(builder: (context) => GuestOrLoginView());
+      return MaterialPageRoute(builder: (context) => const GuestOrLoginView());
     case FavouritesView.id:
-      return MaterialPageRoute(builder: (context) => FavouritesView());
+      return MaterialPageRoute(builder: (context) => const FavouritesView());
 
     default:
-      return MaterialPageRoute(builder: (context) => Scaffold());
+      return MaterialPageRoute(builder: (context) => const Scaffold());
   }
 }

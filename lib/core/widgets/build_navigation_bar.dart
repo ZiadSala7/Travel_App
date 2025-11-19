@@ -22,7 +22,7 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[_currentIndex],
-      floatingActionButton: FloatingActionButtonBottomBar(),
+      floatingActionButton:const FloatingActionButtonBottomBar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: context.read<ThemeCubit>().state == lightTheme
@@ -40,9 +40,9 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
     return [
       _buildNavItem(Icons.home, S.of(context).home, 0),
       _buildNavItem(Icons.card_travel, S.of(context).rehlaty, 1),
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: const SizedBox(width: 20),
+      const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: SizedBox(width: 20),
       ), // space for FAB
       _buildNavItem(Icons.favorite_border, S.of(context).favourites, 2),
       _buildNavItem(Icons.person_outline_sharp, S.of(context).profile, 3),

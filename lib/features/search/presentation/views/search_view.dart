@@ -36,7 +36,7 @@ class _SearchViewState extends State<SearchView>
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: AppLogo(),
+          title: const AppLogo(),
           centerTitle: true,
           bottom: TabBar(
             controller: _controller,
@@ -47,7 +47,7 @@ class _SearchViewState extends State<SearchView>
         ),
         body: TabBarView(
           controller: _controller,
-          children: [CarReservationView(), BookFlightView(), BookHotelView()],
+          children: [const CarReservationView(), const BookFlightView(), const BookHotelView()],
         ),
       ),
     );

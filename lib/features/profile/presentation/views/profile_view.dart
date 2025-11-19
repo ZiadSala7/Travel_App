@@ -14,7 +14,7 @@ class ProfileView extends StatelessWidget {
         title: Text(S.of(context).profile, style: AppTextStyles.text22Bold),
         centerTitle: true,
       ),
-      body: ProfileViewBody(),
+      body: const ProfileViewBody(),
     );
   }
 }

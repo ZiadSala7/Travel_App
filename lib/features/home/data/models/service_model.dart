@@ -25,7 +25,7 @@ List<ServiceModel> serviceModels(BuildContext context) => [
     color: AppColors.building,
     onPressed: () {
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => SearchView(initialTab: 2)),
+        MaterialPageRoute(builder: (context) => const SearchView(initialTab: 2)),
       );
     },
   ),
@@ -35,7 +35,7 @@ List<ServiceModel> serviceModels(BuildContext context) => [
     color: AppColors.airplane,
     onPressed: () {
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => SearchView(initialTab: 1)),
+        MaterialPageRoute(builder: (context) => const SearchView(initialTab: 1)),
       );
     },
   ),
@@ -45,7 +45,7 @@ List<ServiceModel> serviceModels(BuildContext context) => [
     color: AppColors.steelBlue,
     onPressed: () {
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => SearchView(initialTab: 0)),
+        MaterialPageRoute(builder: (context) => const SearchView(initialTab: 0)),
       );
     },
   ),

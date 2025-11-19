@@ -16,8 +16,8 @@ class CarReservationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(20),
@@ -25,43 +25,43 @@ class CarReservationView extends StatelessWidget {
       ),
       child: ListView(
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             S.of(context).selectCar,
             style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           CustomDropDownButton(
             items: typeOfCar,
             hint: S.of(context).bookCarType,
             onSelected: (String selectedClass) {},
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Text(
             S.of(context).typeOfCar,
             style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           CustomDropDownButton(
             items: carServiceType,
             hint: S.of(context).selectCar,
             onSelected: (String selectedClass) {},
           ),
-          SizedBox(height: 30),
-          CountryAndCityForm(),
-          SizedBox(height: 30),
-          LocationForm(),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
+          const CountryAndCityForm(),
+          const SizedBox(height: 30),
+          const LocationForm(),
+          const SizedBox(height: 30),
           PickUpOrDropOffDateTime(
             fstTitle: S.of(context).pickUpDate,
             scdTitle: S.of(context).pickUpTime,
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           PickUpOrDropOffDateTime(
             fstTitle: S.of(context).dropOffDate,
             scdTitle: S.of(context).dropOffTime,
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [

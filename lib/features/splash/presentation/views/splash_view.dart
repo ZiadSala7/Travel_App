@@ -9,6 +9,6 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: FadeInDown(child: SplashViewBody()));
+    return Scaffold(body: FadeInDown(child: const SplashViewBody()));
   }
 }
