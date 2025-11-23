@@ -54,6 +54,7 @@
     "dropOffTime": "Drop-off time",
     "currency": "Currency",
     "language": "Language",
+    "langChanger": "Eng",
     "wts": "WhatsApp",
     "logout": "LogOut",
     "privacy": "Privacy Policy",
@@ -83,7 +84,6 @@
     "tc2": "Business Class",
     "tc3": "First Class",
     "tc4": "Premium Economy",
-    "": "",
     "editProf": "Edit profile",
     "arrivalDate": "Arrival date:",
     "guestsAndRooms": "Guests and rooms:",
@@ -113,5 +113,9 @@
     "meals": "Meals",
     "guest": "Guests",
     "rooms": "Rooms",
-    "numGuestsRooms": "Number of Guests and Rooms"
+    "numGuestsRooms": "Number of Guests and Rooms",
+    "promocode": "Promo code",
+    "theme": "Theme",
+    "lightTheme": "Light",
+    "darkTheme": "Dark"
 }

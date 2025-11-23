@@ -454,6 +454,11 @@ class S {
     return Intl.message('Language', name: 'language', desc: '', args: []);
   }
 
+  /// `Eng`
+  String get langChanger {
+    return Intl.message('Eng', name: 'langChanger', desc: '', args: []);
+  }
+
   /// `WhatsApp`
   String get wts {
     return Intl.message('WhatsApp', name: 'wts', desc: '', args: []);
@@ -628,8 +633,6 @@ class S {
   String get tc4 {
     return Intl.message('Premium Economy', name: 'tc4', desc: '', args: []);
   }
-
-  // skipped getter for the '' key
 
   /// `Edit profile`
   String get editProf {
@@ -839,6 +842,26 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Promo code`
+  String get promocode {
+    return Intl.message('Promo code', name: 'promocode', desc: '', args: []);
+  }
+
+  /// `Theme`
+  String get theme {
+    return Intl.message('Theme', name: 'theme', desc: '', args: []);
+  }
+
+  /// `Light`
+  String get lightTheme {
+    return Intl.message('Light', name: 'lightTheme', desc: '', args: []);
+  }
+
+  /// `Dark`
+  String get darkTheme {
+    return Intl.message('Dark', name: 'darkTheme', desc: '', args: []);
   }
 }
 

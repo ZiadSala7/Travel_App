@@ -2,12 +2,21 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../core/utils/app_text_styles.dart';
+import 'widgets/car_card.dart';
+import 'widgets/flight_card.dart';
 import 'widgets/hotel_card.dart';
 
 class BestServiceDisplayView extends StatelessWidget {
   final String title;
+  final List list;
+  final int servId;
   static const String id = 'bestServDisplay';
-  const BestServiceDisplayView({super.key, required this.title});
+  const BestServiceDisplayView({
+    super.key,
+    required this.title,
+    required this.list,
+    required this.servId,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +33,9 @@ class BestServiceDisplayView extends StatelessWidget {
             centerTitle: true,
           ),
           SliverAppBar(
-            actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.sort))],
+            actions: [
+              IconButton(onPressed: () {}, icon: const Icon(Icons.sort)),
+            ],
             automaticallyImplyLeading: false,
             pinned: true,
             snap: false,
@@ -41,7 +52,14 @@ class BestServiceDisplayView extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: List.generate(10, (index) => const HotelCard()),
+                children: List.generate(
+                  10,
+                  (index) => servId == 1
+                      ? const HotelCard()
+                      : servId == 2
+                      ? const FlightCard()
+                      : const CarCard(),
+                ),
               ),
             ),
           ),

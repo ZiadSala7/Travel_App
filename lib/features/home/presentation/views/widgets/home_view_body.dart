@@ -43,8 +43,11 @@ class HomeViewBody extends StatelessWidget {
               seeAllOnPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) =>
-                        const BestServiceDisplayView(title: 'All Hotels'),
+                    builder: (context) => const BestServiceDisplayView(
+                      title: 'All Hotels',
+                      list: [],
+                      servId: 1,
+                    ),
                   ),
                 );
               },
@@ -55,7 +58,17 @@ class HomeViewBody extends StatelessWidget {
             // best cars 👇👇
             TitleAndSeeAllButton(
               title: S.of(context).bestcars,
-              seeAllOnPressed: () {},
+              seeAllOnPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const BestServiceDisplayView(
+                      title: 'All Hotels',
+                      list: [],
+                      servId: 3,
+                    ),
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 15),
             const BestCarsList(list: []),
@@ -63,7 +76,17 @@ class HomeViewBody extends StatelessWidget {
             // best flights 👇👇
             TitleAndSeeAllButton(
               title: S.of(context).bestFlights,
-              seeAllOnPressed: () {},
+              seeAllOnPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const BestServiceDisplayView(
+                      title: 'All Hotels',
+                      list: [],
+                      servId: 2,
+                    ),
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 15),
             const BestFlightsList(list: []),

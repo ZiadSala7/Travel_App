@@ -44,7 +44,7 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
         padding: EdgeInsets.symmetric(horizontal: 15),
         child: SizedBox(width: 20),
       ), // space for FAB
-      _buildNavItem(Icons.favorite_border, S.of(context).favourites, 2),
+      _buildNavItem(Icons.qr_code_outlined, S.of(context).promocode, 2),
       _buildNavItem(Icons.person_outline_sharp, S.of(context).profile, 3),
     ];
   }
