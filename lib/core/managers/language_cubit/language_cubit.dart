@@ -9,14 +9,14 @@ class LanguageCubit extends Cubit<LanguageStates> {
 
   final prefs = getIt.get<CacheHelper>();
   Future initLanguage() async {
-    final isArabic = prefs.getBool('language') ?? false;
-    emit(isArabic ? ArabicLanguage() : EnglishLanguage());
+    final currentLanguage = prefs.getString('language') ?? 'en';
+    emit(currentLanguage == 'ar' ? ArabicLanguage() : EnglishLanguage());
   }
 
   Future changeLanguage() async {
-    var isArabic = prefs.getBool('language') ?? false;
-    isArabic = !isArabic;
-    prefs.setBool('language', isArabic);
-    emit(isArabic ? ArabicLanguage() : EnglishLanguage());
+    String currentLanguage = prefs.getString('language') ?? 'en';
+    currentLanguage = currentLanguage == 'ar' ? 'en' : 'ar';
+    prefs.setString('language', currentLanguage);
+    emit(currentLanguage == 'ar' ? ArabicLanguage() : EnglishLanguage());
   }
 }

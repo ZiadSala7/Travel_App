@@ -863,6 +863,23 @@ class S {
   String get darkTheme {
     return Intl.message('Dark', name: 'darkTheme', desc: '', args: []);
   }
+
+  // skipped getter for the '' key
+
+  /// `Phone number`
+  String get phoneCont {
+    return Intl.message('Phone number', name: 'phoneCont', desc: '', args: []);
+  }
+
+  /// `Web site`
+  String get website {
+    return Intl.message('Web site', name: 'website', desc: '', args: []);
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

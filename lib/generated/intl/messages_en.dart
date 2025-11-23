@@ -79,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "entertainment": MessageLookupByLibrary.simpleMessage("Entertainment"),
     "entrPass": MessageLookupByLibrary.simpleMessage("Enter your password"),
     "entrPhone": MessageLookupByLibrary.simpleMessage("Enter your phone :"),
+    "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
     "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
     "flights": MessageLookupByLibrary.simpleMessage("Flights"),
     "forgPassDes": MessageLookupByLibrary.simpleMessage(
@@ -124,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "overview": MessageLookupByLibrary.simpleMessage("Overview"),
     "parking": MessageLookupByLibrary.simpleMessage("Parking"),
     "password": MessageLookupByLibrary.simpleMessage("Password :"),
+    "phoneCont": MessageLookupByLibrary.simpleMessage("Phone number"),
     "phoneNum": MessageLookupByLibrary.simpleMessage("Your phone number :"),
     "pickUpDate": MessageLookupByLibrary.simpleMessage("Pick-up date"),
     "pickUpLoc": MessageLookupByLibrary.simpleMessage("Pick-up Location"),
@@ -158,6 +160,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tv": MessageLookupByLibrary.simpleMessage("TV"),
     "typeOfCar": MessageLookupByLibrary.simpleMessage("Select Car Type"),
+    "website": MessageLookupByLibrary.simpleMessage("Web site"),
     "whoWe": MessageLookupByLibrary.simpleMessage("Who we are?"),
     "wifi": MessageLookupByLibrary.simpleMessage("WiFi"),
     "wts": MessageLookupByLibrary.simpleMessage("WhatsApp"),

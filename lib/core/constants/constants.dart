@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
+import '../../features/faq/presentation/views/faq_view.dart';
 import '../managers/theme_cubit/theme_cubit.dart';
 import '../themes/light_theme.dart';
 import '../../features/home/presentation/views/contact_view.dart';
@@ -16,7 +18,7 @@ final onboardingPageController = PageController();
 // pages for build navigation bar
 List<Widget> pages = const [
   HomeView(),
-  Scaffold(),
+  FAQsScreen(),
   FavouritesView(),
   ProfileView(),
 ];
@@ -71,7 +73,7 @@ drawerItems(BuildContext context) => [
     "onPressed": () {},
   },
   {
-    "icon": Icons.language_outlined,
+    "icon": FontAwesomeIcons.language,
     "title": S.of(context).language,
     "value": S.of(context).langChanger,
     "onPressed": () {
@@ -102,6 +104,21 @@ drawerItems(BuildContext context) => [
     "onPressed": () {
       context.read<ThemeCubit>().toggleTheme();
     },
+  },
+];
+
+// drawer items for home view drawer
+contactViewItems(BuildContext context) => [
+  {
+    "icon": FontAwesomeIcons.whatsapp,
+    "title": S.of(context).wts,
+    "onPressed": () {},
+  },
+  {"icon": Icons.phone, "title": S.of(context).phoneCont, "onPressed": () {}},
+  {
+    "icon": FontAwesomeIcons.facebook,
+    "title": S.of(context).facebook,
+    "onPressed": () {},
   },
 ];
 

@@ -117,5 +117,9 @@
     "promocode": "Promo code",
     "theme": "Theme",
     "lightTheme": "Light",
-    "darkTheme": "Dark"
+    "darkTheme": "Dark",
+    "": "",
+    "phoneCont": "Phone number",
+    "website": "Web site",
+    "facebook": "Facebook"
 }
