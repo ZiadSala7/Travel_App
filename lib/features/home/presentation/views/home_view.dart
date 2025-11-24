@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/constants.dart';
 import '../../data/models/service_model.dart';
 import 'widgets/app_logo_sliver_appbar.dart';
 import 'widgets/choose_service_sliver_appbar.dart';
@@ -14,9 +13,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<ServiceModel> services = serviceModels(context);
-    var items = drawerItems(context);
     return Scaffold(
-      drawer: HomeViewDrawer(items: items),
+      drawer: const HomeViewDrawer(),
       body: CustomScrollView(
         slivers: [
           const AppLogoSliverAppBar(),

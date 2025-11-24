@@ -880,6 +880,126 @@ class S {
   String get facebook {
     return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
   }
+
+  /// `Egypt`
+  String get egypt {
+    return Intl.message('Egypt', name: 'egypt', desc: '', args: []);
+  }
+
+  /// `Algeria`
+  String get country_DZ {
+    return Intl.message('Algeria', name: 'country_DZ', desc: '', args: []);
+  }
+
+  /// `Bahrain`
+  String get country_BH {
+    return Intl.message('Bahrain', name: 'country_BH', desc: '', args: []);
+  }
+
+  /// `Comoros`
+  String get country_KM {
+    return Intl.message('Comoros', name: 'country_KM', desc: '', args: []);
+  }
+
+  /// `Djibouti`
+  String get country_DJ {
+    return Intl.message('Djibouti', name: 'country_DJ', desc: '', args: []);
+  }
+
+  /// `Egypt`
+  String get country_EG {
+    return Intl.message('Egypt', name: 'country_EG', desc: '', args: []);
+  }
+
+  /// `Iraq`
+  String get country_IQ {
+    return Intl.message('Iraq', name: 'country_IQ', desc: '', args: []);
+  }
+
+  /// `Jordan`
+  String get country_JO {
+    return Intl.message('Jordan', name: 'country_JO', desc: '', args: []);
+  }
+
+  /// `Kuwait`
+  String get country_KW {
+    return Intl.message('Kuwait', name: 'country_KW', desc: '', args: []);
+  }
+
+  /// `Lebanon`
+  String get country_LB {
+    return Intl.message('Lebanon', name: 'country_LB', desc: '', args: []);
+  }
+
+  /// `Libya`
+  String get country_LY {
+    return Intl.message('Libya', name: 'country_LY', desc: '', args: []);
+  }
+
+  /// `Mauritania`
+  String get country_MR {
+    return Intl.message('Mauritania', name: 'country_MR', desc: '', args: []);
+  }
+
+  /// `Morocco`
+  String get country_MA {
+    return Intl.message('Morocco', name: 'country_MA', desc: '', args: []);
+  }
+
+  /// `Oman`
+  String get country_OM {
+    return Intl.message('Oman', name: 'country_OM', desc: '', args: []);
+  }
+
+  /// `Palestine`
+  String get country_PS {
+    return Intl.message('Palestine', name: 'country_PS', desc: '', args: []);
+  }
+
+  /// `Qatar`
+  String get country_QA {
+    return Intl.message('Qatar', name: 'country_QA', desc: '', args: []);
+  }
+
+  /// `Saudi Arabia`
+  String get country_SA {
+    return Intl.message('Saudi Arabia', name: 'country_SA', desc: '', args: []);
+  }
+
+  /// `Somalia`
+  String get country_SO {
+    return Intl.message('Somalia', name: 'country_SO', desc: '', args: []);
+  }
+
+  /// `Sudan`
+  String get country_SD {
+    return Intl.message('Sudan', name: 'country_SD', desc: '', args: []);
+  }
+
+  /// `Syria`
+  String get country_SY {
+    return Intl.message('Syria', name: 'country_SY', desc: '', args: []);
+  }
+
+  /// `Tunisia`
+  String get country_TN {
+    return Intl.message('Tunisia', name: 'country_TN', desc: '', args: []);
+  }
+
+  /// `United Arab Emirates`
+  String get country_AE {
+    return Intl.message(
+      'United Arab Emirates',
+      name: 'country_AE',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yemen`
+  String get country_YE {
+    return Intl.message('Yemen', name: 'country_YE', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

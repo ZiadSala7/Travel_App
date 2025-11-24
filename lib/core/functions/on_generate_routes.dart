@@ -6,6 +6,7 @@ import '../../features/auth/presentation/views/auth_welcome_view.dart';
 import '../../features/auth/presentation/views/forget_password_view.dart';
 import '../../features/auth/presentation/views/guest_or_login_view.dart';
 import '../../features/auth/presentation/views/otp_verification_view.dart';
+import '../../features/country/presentation/views/country_view.dart';
 import '../../features/favourites/presentation/views/favourites_view.dart';
 import '../../features/home/presentation/views/contact_view.dart';
 import '../../features/search/presentation/views/search_view.dart';
@@ -54,6 +55,9 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     // contact view
     case ContactView.id:
       return MaterialPageRoute(builder: (context) => const ContactView());
+    // country view
+    case CountryView.id:
+      return MaterialPageRoute(builder: (context) => const CountryView());
     // default view
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());

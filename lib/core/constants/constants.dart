@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
+import '../../features/country/presentation/managers/country_chooser_cubit/country_cubit.dart';
+import '../../features/country/presentation/views/country_view.dart';
 import '../../features/faq/presentation/views/faq_view.dart';
 import '../managers/theme_cubit/theme_cubit.dart';
 import '../themes/light_theme.dart';
@@ -78,13 +80,16 @@ drawerItems(BuildContext context) => [
     "value": S.of(context).langChanger,
     "onPressed": () {
       context.read<LanguageCubit>().changeLanguage();
+      context.read<CountryCubit>().initCountry(context);
     },
   },
   {
     "icon": Icons.flag_outlined,
     "title": S.of(context).country,
-    "value": "مصر",
-    "onPressed": () {},
+    "value": context.watch<CountryCubit>().initialCountry,
+    "onPressed": () {
+      Navigator.of(context).pushNamed(CountryView.id);
+    },
   },
   {
     "icon": Icons.phone_outlined,
