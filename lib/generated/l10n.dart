@@ -1000,6 +1000,16 @@ class S {
   String get country_YE {
     return Intl.message('Yemen', name: 'country_YE', desc: '', args: []);
   }
+
+  /// `Choose your country`
+  String get chooseCountry {
+    return Intl.message(
+      'Choose your country',
+      name: 'chooseCountry',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -47,6 +47,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "changePass": MessageLookupByLibrary.simpleMessage("Change your password"),
     "childAge": MessageLookupByLibrary.simpleMessage("2-13 years"),
     "children": MessageLookupByLibrary.simpleMessage("Children"),
+    "chooseCountry": MessageLookupByLibrary.simpleMessage(
+      "Choose your country",
+    ),
     "chooseService": MessageLookupByLibrary.simpleMessage(
       "Choose your service",
     ),

@@ -2,6 +2,7 @@ import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../generated/l10n.dart';
 import '../managers/country_chooser_cubit/country_cubit.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -15,7 +16,13 @@ class CountryView extends StatelessWidget {
   Widget build(BuildContext context) {
     var countryName = arabCountriesMap(context);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          S.of(context).chooseCountry,
+          style: AppTextStyles.text22Bold,
+        ),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),

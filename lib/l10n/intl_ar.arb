@@ -142,5 +142,6 @@
     "country_SY": "سوريا",
     "country_TN": "تونس",
     "country_AE": "الإمارات",
-    "country_YE": "اليمن"
+    "country_YE": "اليمن",
+    "chooseCountry": "اخنر دولتك"
 }

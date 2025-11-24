@@ -144,5 +144,6 @@
     "country_SY": "Syria",
     "country_TN": "Tunisia",
     "country_AE": "United Arab Emirates",
-    "country_YE": "Yemen"
+    "country_YE": "Yemen",
+    "chooseCountry": "Choose your country"
 }
