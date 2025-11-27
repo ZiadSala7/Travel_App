@@ -7,8 +7,8 @@ import '../../features/auth/presentation/views/forget_password_view.dart';
 import '../../features/auth/presentation/views/guest_or_login_view.dart';
 import '../../features/auth/presentation/views/otp_verification_view.dart';
 import '../../features/country/presentation/views/country_view.dart';
-import '../../features/favourites/presentation/views/favourites_view.dart';
 import '../../features/home/presentation/views/contact_view.dart';
+import '../../features/promocode/presentation/views/promo_code_view.dart';
 import '../../features/search/presentation/views/search_view.dart';
 import '../widgets/build_navigation_bar.dart';
 import '../../features/onboarding/presentation/views/onboarding_view.dart';
@@ -50,8 +50,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case GuestOrLoginView.id:
       return MaterialPageRoute(builder: (context) => const GuestOrLoginView());
     // favourite view
-    case FavouritesView.id:
-      return MaterialPageRoute(builder: (context) => const FavouritesView());
+    case PromoCodeView.id:
+      return MaterialPageRoute(builder: (context) => const PromoCodeView());
     // contact view
     case ContactView.id:
       return MaterialPageRoute(builder: (context) => const ContactView());

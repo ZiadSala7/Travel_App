@@ -51,3 +51,28 @@ Map<String, String> arabCountriesMap(BuildContext context) => {
   "AE": S.of(context).country_AE,
   "YE": S.of(context).country_YE,
 };
+
+Map<String, String> choosenArabCountriesMap(BuildContext context) => {
+  "DZ": "الجزائر",
+  "BH": "البحرين",
+  "KM": "جزر القمر",
+  "DJ": "جيبوتي",
+  "EG": "مصر",
+  "IQ": "العراق",
+  "JO": "الأردن",
+  "KW": "الكويت",
+  "LB": "لبنان",
+  "LY": "ليبيا",
+  "MR": "موريتانيا",
+  "MA": "المغرب",
+  "OM": "عُمان",
+  "PS": "فلسطين",
+  "QA": "قطر",
+  "SA": "السعودية",
+  "SO": "الصومال",
+  "SD": "السودان",
+  "SY": "سوريا",
+  "TN": "تونس",
+  "AE": "الإمارات",
+  "YE": "اليمن",
+};

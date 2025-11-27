@@ -5,11 +5,11 @@ import 'package:provider/provider.dart';
 import '../../features/country/presentation/managers/country_chooser_cubit/country_cubit.dart';
 import '../../features/country/presentation/views/country_view.dart';
 import '../../features/faq/presentation/views/faq_view.dart';
+import '../../features/promocode/presentation/views/promo_code_view.dart';
 import '../managers/theme_cubit/theme_cubit.dart';
 import '../themes/light_theme.dart';
 import '../../features/home/presentation/views/contact_view.dart';
 import '../managers/language_cubit/language_cubit.dart';
-import '../../features/favourites/presentation/views/favourites_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/profile/presentation/views/profile_view.dart';
 import '../../generated/l10n.dart';
@@ -21,7 +21,7 @@ final onboardingPageController = PageController();
 List<Widget> pages = const [
   HomeView(),
   FAQsScreen(),
-  FavouritesView(),
+  PromoCodeView(),
   ProfileView(),
 ];
 
