@@ -17,7 +17,6 @@
     "confirmPass": "Confirm Password :",
     "enterPassword": "**********",
     "forgetPass": "Forget Password ?",
-    "forgPassDes": "Enter your email to send reset link.",
     "send": "Send",
     "letsStart": "Let's Get Started",
     "asAGuest": "Continue as a Guest",
@@ -118,10 +117,11 @@
     "theme": "Theme",
     "lightTheme": "Light",
     "darkTheme": "Dark",
-    "": "",
     "phoneCont": "Phone number",
     "website": "Web site",
     "facebook": "Facebook",
+    "copy": "COPY",
+    "copied": "COPIED ✅",
     "egypt": "Egypt",
     "country_DZ": "Algeria",
     "country_BH": "Bahrain",
@@ -145,5 +145,10 @@
     "country_TN": "Tunisia",
     "country_AE": "United Arab Emirates",
     "country_YE": "Yemen",
-    "chooseCountry": "Choose your country"
+    "chooseCountry": "Choose your country",
+    "forgPassDesc": "Choose how you want to reset your password.",
+    "sendResetCode": "Send Reset Code",
+    "resetYoutPass": "Reset your password",
+    "phone": "Phone",
+    "enterYourPhoneNum": "Enter your phone number"
 }

@@ -11,7 +11,7 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read<CountryCubit>().initCountry(context);
+    context.watch<CountryCubit>().initCountry(context);
     return Scaffold(body: FadeInDown(child: const SplashViewBody()));
   }
 }

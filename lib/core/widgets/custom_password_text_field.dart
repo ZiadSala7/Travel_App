@@ -10,11 +10,13 @@ class CustomPasswordTextFormField extends StatefulWidget {
   final String title;
   final IconData? prefixIcon;
   final TextEditingController controller;
+  final String? Function(String?)? validator;
   const CustomPasswordTextFormField({
     super.key,
     required this.title,
     this.prefixIcon,
     required this.controller,
+    this.validator,
   });
 
   @override
@@ -28,6 +30,7 @@ class _CustomPasswordTextFormFieldState
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: widget.validator,
       style: TextStyle(
         color: context.read<ThemeCubit>().state == lightTheme
             ? AppColors.black

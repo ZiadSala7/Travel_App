@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:travel_app/features/country/presentation/managers/country_chooser_cubit/country_states.dart';
 
+import 'features/country/presentation/managers/country_chooser_cubit/country_states.dart';
 import 'core/managers/language_cubit/language_cubit.dart';
 import 'core/managers/language_cubit/language_states.dart';
 import 'core/functions/on_generate_routes.dart';
@@ -20,7 +20,7 @@ class TravelApp extends StatelessWidget {
       builder: (context, theme) {
         return BlocBuilder<LanguageCubit, LanguageStates>(
           builder: (context, langState) {
-            return BlocBuilder<CountryCubit, CountryStates>(
+            return BlocConsumer<CountryCubit, CountryStates>(
               builder: (context, countryState) {
                 return MaterialApp(
                   debugShowCheckedModeBanner: false,
@@ -39,6 +39,7 @@ class TravelApp extends StatelessWidget {
                   theme: theme,
                 );
               },
+              listener: (context, countryState) {},
             );
           },
         );

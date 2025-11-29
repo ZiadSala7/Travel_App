@@ -8,11 +8,13 @@ class LanguageCubit extends Cubit<LanguageStates> {
   LanguageCubit() : super(EnglishLanguage());
 
   final prefs = getIt.get<CacheHelper>();
+  // initialization for the current language
   Future initLanguage() async {
     final currentLanguage = prefs.getString('language') ?? 'en';
     emit(currentLanguage == 'ar' ? ArabicLanguage() : EnglishLanguage());
   }
 
+  // changing the current language
   Future changeLanguage() async {
     String currentLanguage = prefs.getString('language') ?? 'en';
     currentLanguage = currentLanguage == 'ar' ? 'en' : 'ar';

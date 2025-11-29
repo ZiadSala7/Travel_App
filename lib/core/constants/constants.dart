@@ -80,7 +80,7 @@ drawerItems(BuildContext context) => [
     "value": S.of(context).langChanger,
     "onPressed": () {
       context.read<LanguageCubit>().changeLanguage();
-      context.read<CountryCubit>().initCountry(context);
+      context.watch<CountryCubit>().restartCountry();
     },
   },
   {

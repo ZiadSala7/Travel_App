@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import '../../../../../core/constants/constants.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../generated/l10n.dart';
 
 Row promoCodeTitleAndButton(
   dynamic widget,
   VoidCallback copyCode,
   bool isCopied,
+  BuildContext context
 ) {
   return Row(
     children: <Widget>[
@@ -57,7 +59,7 @@ Row promoCodeTitleAndButton(
               Icon(isCopied ? Icons.check : Icons.copy, size: 18),
               const SizedBox(width: 8),
               Text(
-                isCopied ? 'COPIED!' : 'COPY',
+                isCopied ? S.of(context).copied : S.of(context).copy,
                 style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,

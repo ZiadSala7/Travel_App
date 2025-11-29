@@ -199,16 +199,6 @@ class S {
     );
   }
 
-  /// `Enter your email to send reset link.`
-  String get forgPassDes {
-    return Intl.message(
-      'Enter your email to send reset link.',
-      name: 'forgPassDes',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Send`
   String get send {
     return Intl.message('Send', name: 'send', desc: '', args: []);
@@ -864,8 +854,6 @@ class S {
     return Intl.message('Dark', name: 'darkTheme', desc: '', args: []);
   }
 
-  // skipped getter for the '' key
-
   /// `Phone number`
   String get phoneCont {
     return Intl.message('Phone number', name: 'phoneCont', desc: '', args: []);
@@ -879,6 +867,16 @@ class S {
   /// `Facebook`
   String get facebook {
     return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
+
+  /// `COPY`
+  String get copy {
+    return Intl.message('COPY', name: 'copy', desc: '', args: []);
+  }
+
+  /// `COPIED ✅`
+  String get copied {
+    return Intl.message('COPIED ✅', name: 'copied', desc: '', args: []);
   }
 
   /// `Egypt`
@@ -1006,6 +1004,51 @@ class S {
     return Intl.message(
       'Choose your country',
       name: 'chooseCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose how you want to reset your password.`
+  String get forgPassDesc {
+    return Intl.message(
+      'Choose how you want to reset your password.',
+      name: 'forgPassDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Reset Code`
+  String get sendResetCode {
+    return Intl.message(
+      'Send Reset Code',
+      name: 'sendResetCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset your password`
+  String get resetYoutPass {
+    return Intl.message(
+      'Reset your password',
+      name: 'resetYoutPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message('Phone', name: 'phone', desc: '', args: []);
+  }
+
+  /// `Enter your phone number`
+  String get enterYourPhoneNum {
+    return Intl.message(
+      'Enter your phone number',
+      name: 'enterYourPhoneNum',
       desc: '',
       args: [],
     );

@@ -8,10 +8,15 @@ import '../../../../core/utils/app_text_styles.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../data/country_model.dart';
 
-class CountryView extends StatelessWidget {
+class CountryView extends StatefulWidget {
   static const String id = 'countryView';
   const CountryView({super.key});
 
+  @override
+  State<CountryView> createState() => _CountryViewState();
+}
+
+class _CountryViewState extends State<CountryView> {
   @override
   Widget build(BuildContext context) {
     var countryName = arabCountriesMap(context);
@@ -50,6 +55,7 @@ class CountryView extends StatelessWidget {
                     onTap: () {
                       context.read<CountryCubit>().changeCountry(
                         arabCountryCodes[index],
+                        context,
                       );
                       Navigator.of(context).pop();
                     },

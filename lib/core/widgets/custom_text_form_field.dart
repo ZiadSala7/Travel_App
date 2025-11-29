@@ -9,6 +9,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool isReserve;
   final TextEditingController? controller;
   final Function(String value)? onChange;
+  final String? Function(String?)? validator;
   const CustomTextFormField({
     super.key,
     required this.title,
@@ -17,11 +18,13 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIcon = const SizedBox(),
     this.controller,
     this.onChange,
+    this.validator,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: validator,
       onChanged: onChange,
       style: isReserve ? const TextStyle(color: AppColors.black) : null,
       controller: controller,

@@ -16,7 +16,8 @@ class PromoCodeCard extends StatefulWidget {
     super.key,
     required this.promoCode,
     required this.description,
-    this.imageUrl, required this.title, // Make sure to include it in the constructor
+    this.imageUrl,
+    required this.title, // Make sure to include it in the constructor
   });
 
   @override
@@ -83,7 +84,7 @@ class _PromoCodeCardState extends State<PromoCodeCard> {
                   ),
                 ),
                 const SizedBox(height: 12),
-                promoCodeTitleAndButton(widget, _copyCode, _isCopied),
+                promoCodeTitleAndButton(widget, _copyCode, _isCopied, context),
                 const SizedBox(height: 16),
                 CustomPaint(
                   size: const Size.fromHeight(1),

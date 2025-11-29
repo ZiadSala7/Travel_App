@@ -11,20 +11,27 @@ class CountryCubit extends Cubit<CountryStates> {
 
   String initialCountry = '';
   final prefs = getIt.get<CacheHelper>();
-   Map<String, dynamic>? countriesNames;
+  Map<String, dynamic>? countriesNames;
 
   // initialization for the found country ... if found
   initCountry(BuildContext context) {
     countriesNames = arabCountriesMap(context);
     initialCountry =
-        countriesNames![prefs.getString("country")] ?? countriesNames!['EG'];
+        countriesNames![prefs.getString("crntCntry")] ?? countriesNames!['EG'];
     emit(InitCountryState());
   }
 
   // toggle or change the current country to another one
-  changeCountry(String key) {
-    prefs.setString("country", key);
+  changeCountry(String key, BuildContext context) {
+    countriesNames = arabCountriesMap(context);
+    prefs.setString("crntCntry", key);
     initialCountry = countriesNames![key];
     emit(CountryChanged());
+  }
+
+  // restart country context
+  restartCountry() {
+    initialCountry = countriesNames![prefs.getString("crntCntry")];
+     emit(CountryChanged());
   }
 }
