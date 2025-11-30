@@ -20,7 +20,7 @@ class TravelApp extends StatelessWidget {
       builder: (context, theme) {
         return BlocBuilder<LanguageCubit, LanguageStates>(
           builder: (context, langState) {
-            return BlocConsumer<CountryCubit, CountryStates>(
+            return BlocConsumer<CountryCubit, CountryState>(
               builder: (context, countryState) {
                 return MaterialApp(
                   debugShowCheckedModeBanner: false,

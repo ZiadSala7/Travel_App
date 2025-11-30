@@ -1053,6 +1053,56 @@ class S {
       args: [],
     );
   }
+
+  /// `US Dollar`
+  String get currency_usd {
+    return Intl.message('US Dollar', name: 'currency_usd', desc: '', args: []);
+  }
+
+  /// `Euro`
+  String get currency_eur {
+    return Intl.message('Euro', name: 'currency_eur', desc: '', args: []);
+  }
+
+  /// `Egyptian Pound`
+  String get currency_egp {
+    return Intl.message(
+      'Egyptian Pound',
+      name: 'currency_egp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saudi Riyal`
+  String get currency_sar {
+    return Intl.message(
+      'Saudi Riyal',
+      name: 'currency_sar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Emirati Dirham`
+  String get currency_aed {
+    return Intl.message(
+      'Emirati Dirham',
+      name: 'currency_aed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Currency`
+  String get chooseCurrency {
+    return Intl.message(
+      'Choose Currency',
+      name: 'chooseCurrency',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

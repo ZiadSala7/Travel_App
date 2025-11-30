@@ -1,8 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../country/presentation/managers/country_chooser_cubit/country_cubit.dart';
 import 'widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
@@ -11,7 +9,6 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<CountryCubit>().initCountry(context);
     return Scaffold(body: FadeInDown(child: const SplashViewBody()));
   }
 }

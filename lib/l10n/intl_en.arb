@@ -150,5 +150,11 @@
     "sendResetCode": "Send Reset Code",
     "resetYoutPass": "Reset your password",
     "phone": "Phone",
-    "enterYourPhoneNum": "Enter your phone number"
+    "enterYourPhoneNum": "Enter your phone number",
+    "currency_usd": "US Dollar",
+    "currency_eur": "Euro",
+    "currency_egp": "Egyptian Pound",
+    "currency_sar": "Saudi Riyal",
+    "currency_aed": "Emirati Dirham",
+    "chooseCurrency": "Choose Currency"
 }

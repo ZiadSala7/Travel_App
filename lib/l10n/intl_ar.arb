@@ -149,5 +149,11 @@
     "sendResetCode": "إرسال رمز إعادة التعيين",
     "resetYoutPass": "إعادة تعيين كلمة المرور",
     "phone": "رقم الهاتف",
-    "enterYourPhoneNum": "أدخل رقم هاتفك"
+    "enterYourPhoneNum": "أدخل رقم هاتفك",
+    "currency_usd": "دولار أمريكي",
+    "currency_eur": "يورو",
+    "currency_egp": "جنيه مصري",
+    "currency_sar": "ريال سعودي",
+    "currency_aed": "درهم إماراتي",
+    "chooseCurrency": "اختر العملة"
 }

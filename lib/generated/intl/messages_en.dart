@@ -50,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chooseCountry": MessageLookupByLibrary.simpleMessage(
       "Choose your country",
     ),
+    "chooseCurrency": MessageLookupByLibrary.simpleMessage("Choose Currency"),
     "chooseService": MessageLookupByLibrary.simpleMessage(
       "Choose your service",
     ),
@@ -88,6 +89,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "country_YE": MessageLookupByLibrary.simpleMessage("Yemen"),
     "ctyServ": MessageLookupByLibrary.simpleMessage("City of service"),
     "currency": MessageLookupByLibrary.simpleMessage("Currency"),
+    "currency_aed": MessageLookupByLibrary.simpleMessage("Emirati Dirham"),
+    "currency_egp": MessageLookupByLibrary.simpleMessage("Egyptian Pound"),
+    "currency_eur": MessageLookupByLibrary.simpleMessage("Euro"),
+    "currency_sar": MessageLookupByLibrary.simpleMessage("Saudi Riyal"),
+    "currency_usd": MessageLookupByLibrary.simpleMessage("US Dollar"),
     "darkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
     "date": MessageLookupByLibrary.simpleMessage("Select Date"),
     "departure": MessageLookupByLibrary.simpleMessage("Departure:"),

@@ -35,9 +35,28 @@ class SignUpForm extends StatelessWidget {
           // phone number
           Text(S.of(context).phoneNum, style: AppTextStyles.text18Bold),
           const SizedBox(height: 15),
-          CustomTextFormField(
-            title: S.of(context).entrPhone,
-            controller: TextEditingController(),
+          SizedBox(
+            height: 50,
+            child: Row(
+              spacing: 10,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: CustomTextFormField(
+                    title: S.of(context).entrPhone,
+                    controller: TextEditingController(),
+                  ),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: CustomTextFormField(
+                    title: S.of(context).entrPhone,
+                    controller: TextEditingController(),
+                  ),
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 20),
           // password
