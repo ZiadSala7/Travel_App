@@ -111,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "entrPass": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
     "entrPhone": MessageLookupByLibrary.simpleMessage("أدخل رقم هاتفك :"),
     "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
+    "faq": MessageLookupByLibrary.simpleMessage("FAQ"),
     "favourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
     "flights": MessageLookupByLibrary.simpleMessage("الرحلات"),
     "forgPassDesc": MessageLookupByLibrary.simpleMessage(
@@ -125,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "gym": MessageLookupByLibrary.simpleMessage("نادي رياضي"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "hotel": MessageLookupByLibrary.simpleMessage("الفنادق"),
+    "howCanHelp": MessageLookupByLibrary.simpleMessage("كيف يمكننا مساعدتك؟"),
     "langChanger": MessageLookupByLibrary.simpleMessage("عربي"),
     "language": MessageLookupByLibrary.simpleMessage("اللغة"),
     "letsStart": MessageLookupByLibrary.simpleMessage("هيا لنبدأ الآن"),
@@ -163,6 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "privateBathroom": MessageLookupByLibrary.simpleMessage("حمّام خاص"),
     "profile": MessageLookupByLibrary.simpleMessage("بياناتي"),
     "promocode": MessageLookupByLibrary.simpleMessage("كود الخصم"),
+    "qAbout": MessageLookupByLibrary.simpleMessage("أسئلة عن"),
     "rehlaty": MessageLookupByLibrary.simpleMessage("رحلاتي"),
     "resetYoutPass": MessageLookupByLibrary.simpleMessage(
       "إعادة تعيين كلمة المرور",
@@ -186,6 +189,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tc4": MessageLookupByLibrary.simpleMessage("سياحي ممتاز"),
     "theme": MessageLookupByLibrary.simpleMessage("المظهر"),
     "to": MessageLookupByLibrary.simpleMessage("إلى:"),
+    "topQ": MessageLookupByLibrary.simpleMessage("أهم الأسئلة"),
     "travel": MessageLookupByLibrary.simpleMessage("App"),
     "travellers": MessageLookupByLibrary.simpleMessage("المسافرون"),
     "travellersAndClass": MessageLookupByLibrary.simpleMessage(
@@ -193,6 +197,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tv": MessageLookupByLibrary.simpleMessage("تلفاز"),
     "typeOfCar": MessageLookupByLibrary.simpleMessage("اختر نوع السيارة"),
+    "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "website": MessageLookupByLibrary.simpleMessage("الموقع الإلكتروني"),
     "whoWe": MessageLookupByLibrary.simpleMessage("من نحن؟"),
     "wifi": MessageLookupByLibrary.simpleMessage("واي فاي"),

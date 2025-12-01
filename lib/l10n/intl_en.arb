@@ -156,5 +156,10 @@
     "currency_egp": "Egyptian Pound",
     "currency_sar": "Saudi Riyal",
     "currency_aed": "Emirati Dirham",
-    "chooseCurrency": "Choose Currency"
+    "chooseCurrency": "Choose Currency",
+    "faq": "FAQ",
+    "howCanHelp": "How can we help you?",
+    "topQ": "Top Questions",
+    "viewAll": "View all",
+    "qAbout": "Questions about"
 }

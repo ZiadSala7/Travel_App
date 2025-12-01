@@ -1103,6 +1103,36 @@ class S {
       args: [],
     );
   }
+
+  /// `FAQ`
+  String get faq {
+    return Intl.message('FAQ', name: 'faq', desc: '', args: []);
+  }
+
+  /// `How can we help you?`
+  String get howCanHelp {
+    return Intl.message(
+      'How can we help you?',
+      name: 'howCanHelp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Top Questions`
+  String get topQ {
+    return Intl.message('Top Questions', name: 'topQ', desc: '', args: []);
+  }
+
+  /// `View all`
+  String get viewAll {
+    return Intl.message('View all', name: 'viewAll', desc: '', args: []);
+  }
+
+  /// `Questions about`
+  String get qAbout {
+    return Intl.message('Questions about', name: 'qAbout', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

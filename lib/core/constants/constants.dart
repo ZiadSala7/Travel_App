@@ -22,7 +22,7 @@ final onboardingPageController = PageController();
 // pages for build navigation bar
 List<Widget> pages = const [
   HomeView(),
-  FAQsScreen(),
+  FAQsView(),
   PromoCodeView(),
   ProfileView(),
 ];
@@ -192,3 +192,58 @@ String networkImgHotel =
 // testing overview utill api
 String overView =
     "A hotel is a commercial establishment that provides accommodation, food, and various services to travelers and guests. Hotels vary widely in size, style, and quality—ranging from small family-run inns to large luxury resorts. Their main purpose is to offer a comfortable, safe, and convenient place for people to stay temporarily.";
+
+
+final categories = [
+  {
+    "title": "Flights",
+    "subtitle": "Booking & Check-in",
+    "color": const Color(0xFFE3F0FF),
+    "icon": Icons.flight_takeoff,
+  },
+  {
+    "title": "Hotels",
+    "subtitle": "Stay & Reservations",
+    "color": const Color(0xFFE8FFE9),
+    "icon": Icons.hotel,
+  },
+  {
+    "title": "Cars",
+    "subtitle": "Rental & Policies",
+    "color": const Color(0xFFFFF1E7),
+    "icon": Icons.directions_car,
+  },
+];
+
+final faqs = [
+  {
+    "q": "How do I book a flight?",
+    "a":
+        "Choose your destination, travel date and passengers, then select your preferred flight and complete payment.",
+  },
+  {
+    "q": "Can I change my hotel reservation?",
+    "a":
+        "Yes, most hotels allow free modification before check-in. Check your booking details for policy information.",
+  },
+  {
+    "q": "What documents are needed to rent a car?",
+    "a":
+        "A valid driving license, national ID or passport, and a credit card may be required depending on the rental company.",
+  },
+  {
+    "q": "How can I get a refund for my flight?",
+    "a":
+        "Refund policies depend on the airline and your ticket type. Open your booking details to check refund eligibility.",
+  },
+  {
+    "q": "Do hotels require a deposit?",
+    "a":
+        "Some hotels ask for a security deposit at check-in. It is usually refunded at checkout if no charges apply.",
+  },
+  {
+    "q": "Is insurance included in car rentals?",
+    "a":
+        "Basic insurance is usually included. Additional insurance can be added during booking for extra coverage.",
+  },
+];

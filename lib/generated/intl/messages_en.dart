@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "entrPass": MessageLookupByLibrary.simpleMessage("Enter your password"),
     "entrPhone": MessageLookupByLibrary.simpleMessage("Enter your phone :"),
     "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+    "faq": MessageLookupByLibrary.simpleMessage("FAQ"),
     "favourites": MessageLookupByLibrary.simpleMessage("Favourites"),
     "flights": MessageLookupByLibrary.simpleMessage("Flights"),
     "forgPassDesc": MessageLookupByLibrary.simpleMessage(
@@ -131,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "gym": MessageLookupByLibrary.simpleMessage("Gym"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
     "hotel": MessageLookupByLibrary.simpleMessage("Hotels"),
+    "howCanHelp": MessageLookupByLibrary.simpleMessage("How can we help you?"),
     "langChanger": MessageLookupByLibrary.simpleMessage("Eng"),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
     "letsStart": MessageLookupByLibrary.simpleMessage("Let\'s Get Started"),
@@ -173,6 +175,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "privateBathroom": MessageLookupByLibrary.simpleMessage("Private Bathroom"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "promocode": MessageLookupByLibrary.simpleMessage("Promo code"),
+    "qAbout": MessageLookupByLibrary.simpleMessage("Questions about"),
     "rehlaty": MessageLookupByLibrary.simpleMessage("My trips"),
     "resetYoutPass": MessageLookupByLibrary.simpleMessage(
       "Reset your password",
@@ -195,6 +198,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tc4": MessageLookupByLibrary.simpleMessage("Premium Economy"),
     "theme": MessageLookupByLibrary.simpleMessage("Theme"),
     "to": MessageLookupByLibrary.simpleMessage("To :"),
+    "topQ": MessageLookupByLibrary.simpleMessage("Top Questions"),
     "travel": MessageLookupByLibrary.simpleMessage("Travel"),
     "travellers": MessageLookupByLibrary.simpleMessage("Travellers"),
     "travellersAndClass": MessageLookupByLibrary.simpleMessage(
@@ -202,6 +206,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tv": MessageLookupByLibrary.simpleMessage("TV"),
     "typeOfCar": MessageLookupByLibrary.simpleMessage("Select Car Type"),
+    "viewAll": MessageLookupByLibrary.simpleMessage("View all"),
     "website": MessageLookupByLibrary.simpleMessage("Web site"),
     "whoWe": MessageLookupByLibrary.simpleMessage("Who we are?"),
     "wifi": MessageLookupByLibrary.simpleMessage("WiFi"),

@@ -155,5 +155,10 @@
     "currency_egp": "جنيه مصري",
     "currency_sar": "ريال سعودي",
     "currency_aed": "درهم إماراتي",
-    "chooseCurrency": "اختر العملة"
+    "chooseCurrency": "اختر العملة",
+    "faq": "FAQ",
+    "howCanHelp": "كيف يمكننا مساعدتك؟",
+    "topQ": "أهم الأسئلة",
+    "viewAll": "عرض الكل",
+    "qAbout": "أسئلة عن"
 }
