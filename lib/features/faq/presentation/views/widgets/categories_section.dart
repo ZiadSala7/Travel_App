@@ -28,7 +28,7 @@ class CategoriesSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(c["icon"] as IconData, size: 28),
+                Icon(c["icon"] as IconData, size: 28, color: AppColors.black),
                 const SizedBox(height: 12),
                 Text(
                   S.of(context).qAbout,
@@ -36,7 +36,12 @@ class CategoriesSection extends StatelessWidget {
                     color: AppColors.mediumGray,
                   ),
                 ),
-                Text(c["subtitle"] as String, style: AppTextStyles.text16Bold),
+                Text(
+                  c["subtitle"] as String,
+                  style: AppTextStyles.text16Bold.copyWith(
+                    color: AppColors.black,
+                  ),
+                ),
               ],
             ),
           );

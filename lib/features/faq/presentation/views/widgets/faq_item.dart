@@ -7,7 +7,11 @@ class ExpandableFAQItem extends StatefulWidget {
   final String question;
   final String answer;
 
-  const ExpandableFAQItem({super.key, required this.question, required this.answer});
+  const ExpandableFAQItem({
+    super.key,
+    required this.question,
+    required this.answer,
+  });
 
   @override
   State<ExpandableFAQItem> createState() => ExpandableFAQItemState();
@@ -45,7 +49,7 @@ class ExpandableFAQItemState extends State<ExpandableFAQItem> {
             padding: const EdgeInsets.all(12.0),
             child: Text(
               widget.answer,
-              style: TextStyle(color: Colors.grey.shade700),
+              style: const TextStyle(color: AppColors.mediumGray),
             ),
           ),
         ],

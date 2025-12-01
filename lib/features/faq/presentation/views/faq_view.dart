@@ -13,13 +13,6 @@ class FAQsView extends StatelessWidget {
       appBar: AppBar(
         title: Text(S.of(context).faq, style: AppTextStyles.text22Bold),
         centerTitle: true,
-        leading: const Icon(Icons.arrow_back),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 12),
-            child: Icon(Icons.search),
-          ),
-        ],
       ),
       body: const FAQViewBody(),
     );
