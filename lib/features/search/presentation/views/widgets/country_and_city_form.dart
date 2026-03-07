@@ -27,7 +27,8 @@ class CountryAndCityForm extends StatelessWidget {
                 ),
               ),
               CustomTextFormField(
-                title: "Egypt",
+                style: const TextStyle(color: AppColors.black),
+                title: S.of(context).country,
                 controller: TextEditingController(),
                 prefixIcon: Icons.place,
               ),
@@ -47,7 +48,8 @@ class CountryAndCityForm extends StatelessWidget {
                 ),
               ),
               CustomTextFormField(
-                title: "Sohag",
+                style: const TextStyle(color: AppColors.black),
+                title: S.of(context).city,
                 controller: TextEditingController(),
                 prefixIcon: Icons.location_city,
               ),

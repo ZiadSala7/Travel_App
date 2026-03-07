@@ -6,10 +6,6 @@ class AppAssets {
   /// assets/images/airplane.json
   static const String assetsImagesAirplane = "assets/images/airplane.json";
 
-  /// Assets for assetsImagesAr
-  /// assets/images/ar.json
-  static const String assetsImagesAr = "assets/images/ar.json";
-
   /// Assets for assetsImagesAuth
   /// assets/images/auth.png
   static const String assetsImagesAuth = "assets/images/auth.png";
@@ -57,10 +53,6 @@ class AppAssets {
   /// Assets for assetsImagesCurrency
   /// assets/images/currency.png
   static const String assetsImagesCurrency = "assets/images/currency.png";
-
-  /// Assets for assetsImagesEn
-  /// assets/images/en.json
-  static const String assetsImagesEn = "assets/images/en.json";
 
   /// Assets for assetsImagesFlag
   /// assets/images/flag.png
@@ -145,6 +137,14 @@ class AppAssets {
   /// Assets for assetsImagesRocetLauncher
   /// assets/images/rocetLauncher.json
   static const String assetsImagesRocetLauncher = "assets/images/rocetLauncher.json";
+
+  /// Assets for assetsImagesSaferBeE
+  /// assets/images/saferBe_e.png
+  static const String assetsImagesSaferBeE = "assets/images/saferBe_e.png";
+
+  /// Assets for assetsImagesSagferBeA
+  /// assets/images/sagferBe_a.png
+  static const String assetsImagesSagferBeA = "assets/images/sagferBe_a.png";
 
   /// Assets for assetsImagesSplashing
   /// assets/images/splashing.json

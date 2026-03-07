@@ -14,7 +14,7 @@ class CarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(5),
-      width: 350,
+      width: 280,
       padding: const EdgeInsets.all(12),
       decoration: customContainerBoxDecoration(),
       child: Column(
@@ -38,7 +38,7 @@ class CarCard extends StatelessWidget {
           // PASSENGERS AND
           const SizedBox(height: 6),
           // TITLE AND LOCATION SECTION
-         const  TitleAndLocationSection(
+          const TitleAndLocationSection(
             title: "Toyota Corolla",
             location: "Pickup location:\nCharles de Gaulle Airport, paris",
           ),

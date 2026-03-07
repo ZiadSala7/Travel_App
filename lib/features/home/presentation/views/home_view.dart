@@ -18,14 +18,6 @@ class HomeView extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           const AppLogoSliverAppBar(),
-          const SliverAppBar(
-            automaticallyImplyLeading: false,
-            pinned: false,
-            floating: false,
-            snap: false,
-            toolbarHeight: 10,
-            expandedHeight: 10,
-          ),
           ChooseServiceSliverAppBar(services: services),
           const SliverToBoxAdapter(child: HomeViewBody()),
         ],

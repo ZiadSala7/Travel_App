@@ -7,7 +7,7 @@ import '../../../../../generated/l10n.dart';
 import 'multi_city_trip_departure_and_destination.dart';
 
 class MultiCityTrip extends StatelessWidget {
-  final Function() onPressed;
+  final void Function()? onPressed;
   const MultiCityTrip({super.key, required this.onPressed});
 
   @override

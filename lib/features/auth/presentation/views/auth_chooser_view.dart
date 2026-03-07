@@ -19,7 +19,7 @@ class AuthChooserView extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: const AppLogo(),
+            title: const AppLogo(height: 60),
             centerTitle: true,
             bottom: TabBar(
               indicatorColor: AppColors.deepOrange,

@@ -161,5 +161,12 @@
     "howCanHelp": "How can we help you?",
     "topQ": "Top Questions",
     "viewAll": "View all",
-    "qAbout": "Questions about"
+    "qAbout": "Questions about",
+    "addTrip": "Add Trip",
+    "resetViaEmail": "Reset via Email",
+    "resetViaPhone": "Reset via Phone",
+    "viaEmailDesc": "We will send a reset link to your email address",
+    "viaPhoneDesc": "We will send a verification code to your phone",
+    "cntinue": "Continue",
+    "backToLogin": "Back to Login"
 }

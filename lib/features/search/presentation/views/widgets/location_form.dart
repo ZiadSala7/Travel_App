@@ -27,6 +27,7 @@ class LocationForm extends StatelessWidget {
                 ),
               ),
               CustomTextFormField(
+                style: const TextStyle(color: AppColors.black),
                 title: S.of(context).city,
                 controller: TextEditingController(),
                 prefixIcon: Icons.place,
@@ -65,6 +66,7 @@ class LocationForm extends StatelessWidget {
                 ),
               ),
               CustomTextFormField(
+                style: const TextStyle(color: AppColors.black),
                 title: S.of(context).country,
                 controller: TextEditingController(),
                 prefixIcon: Icons.location_city,

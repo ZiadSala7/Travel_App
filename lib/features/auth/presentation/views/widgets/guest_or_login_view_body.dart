@@ -21,7 +21,7 @@ class GuestOrLoginViewBody extends StatelessWidget {
         children: [
           FadeInDown(
             delay: const Duration(milliseconds: 600),
-            child: const AppLogo(),
+            child: const AppLogo(height: 100,),
           ),
           FadeInUp(
             delay: const Duration(milliseconds: 1200),

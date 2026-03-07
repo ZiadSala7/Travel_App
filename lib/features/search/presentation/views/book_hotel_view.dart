@@ -34,6 +34,7 @@ class BookHotelView extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             CustomTextFormField(
+              style: const TextStyle(color: AppColors.black),
               title: S.of(context).destination,
               controller: TextEditingController(),
             ),

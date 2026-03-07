@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../data/models/service_model.dart';
 
@@ -9,20 +10,36 @@ class CustomServiceChooser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.sizeOf(context);
-    return Container(
-      height: size.height / 5,
-      width: size.width / 2.7,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-      child: InkWell(
-        onTap: model.onPressed,
-        child: Card(
-          // color: model.color,
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    return InkWell(
+      onTap: model.onPressed,
+      borderRadius: BorderRadius.circular(14),
+      child: Ink(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: isDark ? AppColors.darkGray : AppColors.lightGray,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(child: Image.asset(model.image)),
-              Text(model.title, style: AppTextStyles.text16Reg),
-              const SizedBox(height: 10),
+              Expanded(
+                child: Image.asset(model.image, fit: BoxFit.contain),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                model.title,
+                style: AppTextStyles.text14med.copyWith(
+                  color: theme.colorScheme.onSurface,
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           ),
         ),

@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
-import '../../../../../core/themes/light_theme.dart';
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/app_text_styles.dart';
-import '../../../../../generated/l10n.dart';
+import '../../../../../core/managers/language_cubit/language_cubit.dart';
+import '../../../../../core/managers/language_cubit/language_states.dart';
+import '../../../../../core/utils/app_assets.dart';
 
 class AppLogo extends StatelessWidget {
-  const AppLogo({super.key});
+  final double height;
+  const AppLogo({super.key, required this.height});
 
   @override
   Widget build(BuildContext context) {
+    var langeCubit = context.watch<LanguageCubit>();
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          S.of(context).travel,
-          style: AppTextStyles.text30Bold.copyWith(
-            color: context.read<ThemeCubit>().state == lightTheme
-                ? AppColors.deepBlue
-                : AppColors.white,
-          ),
-        ),
-        Text(
-          S.of(context).app,
-          style: AppTextStyles.text30Bold.copyWith(color: AppColors.deepOrange),
+        Image.asset(
+          langeCubit.state is EnglishLanguage
+              ? AppAssets.assetsImagesSagferBeA
+              : AppAssets.assetsImagesSaferBeE,
+          height: height,
         ),
       ],
     );

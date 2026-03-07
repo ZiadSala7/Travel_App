@@ -28,43 +28,50 @@ class OneWayOrRoundFlight extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // ================
+        /// ======Departure==========
         Text(
           S.of(context).departure,
           style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
         ),
         const SizedBox(height: 10),
         CustomTextFormField(
+          style: const TextStyle(color: AppColors.black),
           title: S.of(context).from,
           prefixIcon: Icons.flight_takeoff,
           controller: fromController,
         ),
         const SizedBox(height: 12),
-        // ==============
+
+        /// ======Destination========
         Text(
           S.of(context).destination,
           style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
         ),
         const SizedBox(height: 10),
         CustomTextFormField(
+          style: const TextStyle(color: AppColors.black),
           title: S.of(context).to,
           prefixIcon: Icons.flight_land,
           controller: toController,
         ),
         const SizedBox(height: 12),
-        // ====================
+
+        /// =========Departure and Return Date===========
         FlightsDateSelection(widget: widget),
         const SizedBox(height: 12),
-        // ====================
+
+        /// =========Travellers and Class===========
         Text(
           S.of(context).travellersAndClass,
           style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
         ),
         const SizedBox(height: 10),
-        // ====================
+
+        /// =========BottomSheet Chooser===========
         const TravellersAndClassChooser(),
         const SizedBox(height: 20),
-        // ====================
+
+        /// =========Search button===========
         SizedBox(
           width: double.infinity,
           child: CustomButton(

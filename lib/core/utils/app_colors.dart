@@ -70,6 +70,7 @@ abstract class AppColors {
   static const Color airplane = Color(0xfff77b39);
   static const Color carClr = Colors.green;
   static const Color orangeEdit = Color.fromARGB(255, 251, 162, 124);
+  static const Color orangeEdit2 = Color.fromARGB(207, 251, 162, 124);
   static const Color fillClr = Color.fromARGB(56, 150, 148, 144);
   static const Color appbarClr = Color.fromARGB(255, 250, 225, 212);
 }

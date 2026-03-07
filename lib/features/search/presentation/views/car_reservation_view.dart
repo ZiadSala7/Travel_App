@@ -26,6 +26,8 @@ class CarReservationView extends StatelessWidget {
       child: ListView(
         children: [
           const SizedBox(height: 20),
+
+          /// =========DropDown class type===========
           Text(
             S.of(context).selectCar,
             style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
@@ -36,6 +38,8 @@ class CarReservationView extends StatelessWidget {
             hint: S.of(context).bookCarType,
             onSelected: (String selectedClass) {},
           ),
+
+          /// =============DropDown class kind==============
           const SizedBox(height: 30),
           Text(
             S.of(context).typeOfCar,
@@ -47,11 +51,17 @@ class CarReservationView extends StatelessWidget {
             hint: S.of(context).selectCar,
             onSelected: (String selectedClass) {},
           ),
+
+          /// ===========CountryChooser=========
           const SizedBox(height: 30),
           const CountryAndCityForm(),
+
+          /// ===========LocationChooser========
           const SizedBox(height: 30),
           const LocationForm(),
           const SizedBox(height: 30),
+
+          /// ==========DateTimeChooser========
           PickUpOrDropOffDateTime(
             fstTitle: S.of(context).pickUpDate,
             scdTitle: S.of(context).pickUpTime,

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:travel_app/core/themes/light_theme.dart';
 
-import '../managers/theme_cubit/theme_cubit.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
@@ -31,11 +28,7 @@ class _CustomPasswordTextFormFieldState
   Widget build(BuildContext context) {
     return TextFormField(
       validator: widget.validator,
-      style: TextStyle(
-        color: context.read<ThemeCubit>().state == lightTheme
-            ? AppColors.black
-            : AppColors.white,
-      ),
+      style: const TextStyle(color: AppColors.black),
       cursorColor: AppColors.deepOrange,
       controller: widget.controller,
       obscureText: isClicked,
@@ -58,14 +51,18 @@ class _CustomPasswordTextFormFieldState
           color: AppColors.mediumGray,
         ),
         filled: true,
-        fillColor: AppColors.fillClr,
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.deepOrange),
-          borderRadius: BorderRadius.circular(10),
+        fillColor: AppColors.creamWhite,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(color: AppColors.mediumGray),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.greyShade, width: 0),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: Colors.grey[300]!),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(color: AppColors.airplane, width: 1),
         ),
       ),
     );

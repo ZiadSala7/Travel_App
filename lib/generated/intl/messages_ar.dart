@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Search": MessageLookupByLibrary.simpleMessage("البحث"),
     "acc": MessageLookupByLibrary.simpleMessage("موافق"),
+    "addTrip": MessageLookupByLibrary.simpleMessage("إضافة رحلة"),
     "adultAge": MessageLookupByLibrary.simpleMessage("14 سنة أو أكثر"),
     "adults": MessageLookupByLibrary.simpleMessage("البالغون"),
     "airCond": MessageLookupByLibrary.simpleMessage("تكييف هواء"),
@@ -97,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "darkTheme": MessageLookupByLibrary.simpleMessage("داكن"),
     "date": MessageLookupByLibrary.simpleMessage("اختر التاريخ"),
     "departure": MessageLookupByLibrary.simpleMessage("المغادرة:"),
+    "departureDate": MessageLookupByLibrary.simpleMessage("تاريخ المغادرة:"),
     "destination": MessageLookupByLibrary.simpleMessage("الوجهة"),
     "dialogTC": MessageLookupByLibrary.simpleMessage("عدد المسافرين - الفئة"),
     "dropOffDate": MessageLookupByLibrary.simpleMessage("تاريخ التسليم"),
@@ -171,6 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "إعادة تعيين كلمة المرور",
     ),
     "restaurants": MessageLookupByLibrary.simpleMessage("مطاعم"),
+    "returnDate": MessageLookupByLibrary.simpleMessage("تاريخ العودة:"),
     "rooms": MessageLookupByLibrary.simpleMessage("الغرف"),
     "round": MessageLookupByLibrary.simpleMessage("ذهاب وعودة"),
     "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),

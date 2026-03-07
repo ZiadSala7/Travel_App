@@ -1,50 +1,77 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
+import '../../../../../core/themes/light_theme.dart';
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
-class DrawerItems extends StatefulWidget {
+class DrawerItems extends StatelessWidget {
   const DrawerItems({super.key, required this.items});
 
-  final dynamic items;
+  final List<dynamic> items;
 
-  @override
-  State<DrawerItems> createState() => _DrawerItemsState();
-}
-
-class _DrawerItemsState extends State<DrawerItems> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: List.generate(
-        widget.items.length,
-        (index) => Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Column(
-            children: [
-              // drawer item ListTile
-              ListTile(
-                contentPadding: EdgeInsets.zero,
-                leading: Icon(widget.items[index]["icon"] as IconData),
-                title: Text(
-                  widget.items[index]["title"] as String,
-                  style: AppTextStyles.text18Med,
-                ),
-                trailing: widget.items[index]["value"] != null
-                    ? Text(
-                        widget.items[index]["value"] as String,
-                        style: const TextStyle(
-                          color: Colors.grey,
-                          fontSize: 15,
-                        ),
-                      )
-                    : const Icon(Icons.arrow_forward_ios, size: 16),
-                onTap: widget.items[index]["onPressed"],
+    final isLight = context.watch<ThemeCubit>().state == lightTheme;
+    final tileColor = isLight ? AppColors.white : AppColors.charcoalGray;
+    final textColor = isLight ? AppColors.charcoalGray : AppColors.white;
+    final valueColor = isLight ? AppColors.coolBlue : AppColors.calmBlue;
+
+    return ListView.separated(
+      padding: const EdgeInsets.fromLTRB(10, 0, 10, 12),
+      itemCount: items.length,
+      separatorBuilder: (_, __) => const SizedBox(height: 10),
+      itemBuilder: (context, index) {
+        return Material(
+          color: tileColor,
+          borderRadius: BorderRadius.circular(16),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: items[index]["onPressed"] as void Function()?,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              child: Row(
+                children: [
+                  Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                      color: isLight
+                          ? AppColors.offWhite
+                          : AppColors.deepCharcoal.withOpacity(0.55),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(
+                      items[index]["icon"] as IconData,
+                      size: 20,
+                      color: AppColors.primaryBlue,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      items[index]["title"] as String,
+                      style: AppTextStyles.text16med.copyWith(color: textColor),
+                    ),
+                  ),
+                  if (items[index]["value"] != null)
+                    Text(
+                      items[index]["value"] as String,
+                      style: AppTextStyles.text14med.copyWith(color: valueColor),
+                    )
+                  else
+                    Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 14,
+                      color: textColor.withOpacity(0.66),
+                    ),
+                ],
               ),
-              const Divider(),
-            ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

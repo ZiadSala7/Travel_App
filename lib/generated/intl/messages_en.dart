@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Search": MessageLookupByLibrary.simpleMessage("Search"),
     "acc": MessageLookupByLibrary.simpleMessage("Accept"),
+    "addTrip": MessageLookupByLibrary.simpleMessage("Add Trip"),
     "adultAge": MessageLookupByLibrary.simpleMessage("14 years or above"),
     "adults": MessageLookupByLibrary.simpleMessage("Adults"),
     "airCond": MessageLookupByLibrary.simpleMessage("Air Conditioning"),
@@ -35,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "automatic": MessageLookupByLibrary.simpleMessage("Automatic"),
     "baby": MessageLookupByLibrary.simpleMessage("Babies"),
     "babyAge": MessageLookupByLibrary.simpleMessage("< 2 years"),
+    "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
     "bestFlights": MessageLookupByLibrary.simpleMessage("Best Flights"),
     "bestHotel": MessageLookupByLibrary.simpleMessage("Best Hotels"),
     "bestOffers": MessageLookupByLibrary.simpleMessage("Best Offers"),
@@ -55,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choose your service",
     ),
     "city": MessageLookupByLibrary.simpleMessage("City"),
+    "cntinue": MessageLookupByLibrary.simpleMessage("Continue"),
     "cntryServ": MessageLookupByLibrary.simpleMessage("Country of service"),
     "comfortBeds": MessageLookupByLibrary.simpleMessage("Comfort Beds"),
     "confirmPass": MessageLookupByLibrary.simpleMessage("Confirm Password :"),
@@ -177,6 +180,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "promocode": MessageLookupByLibrary.simpleMessage("Promo code"),
     "qAbout": MessageLookupByLibrary.simpleMessage("Questions about"),
     "rehlaty": MessageLookupByLibrary.simpleMessage("My trips"),
+    "resetViaEmail": MessageLookupByLibrary.simpleMessage("Reset via Email"),
+    "resetViaPhone": MessageLookupByLibrary.simpleMessage("Reset via Phone"),
     "resetYoutPass": MessageLookupByLibrary.simpleMessage(
       "Reset your password",
     ),
@@ -206,6 +211,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tv": MessageLookupByLibrary.simpleMessage("TV"),
     "typeOfCar": MessageLookupByLibrary.simpleMessage("Select Car Type"),
+    "viaEmailDesc": MessageLookupByLibrary.simpleMessage(
+      "We will send a reset link to your email address",
+    ),
+    "viaPhoneDesc": MessageLookupByLibrary.simpleMessage(
+      "We will send a verification code to your phone",
+    ),
     "viewAll": MessageLookupByLibrary.simpleMessage("View all"),
     "website": MessageLookupByLibrary.simpleMessage("Web site"),
     "whoWe": MessageLookupByLibrary.simpleMessage("Who we are?"),

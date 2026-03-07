@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,17 +12,14 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupDependencies();
   runApp(
-    DevicePreview(
-      enabled: true,
-      builder: (_) => MultiBlocProvider(
-        providers: [
-          BlocProvider(create: (_) => ThemeCubit()..loadTheme()),
-          BlocProvider(create: (_) => LanguageCubit()..initLanguage()),
-          BlocProvider(create: (_) => CountryCubit()..loadSavedCountry()),
-          BlocProvider(create: (_) => CurrencyCubit()..loadSavedCurrency()),
-        ],
-        child: const TravelApp(),
-      ),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => ThemeCubit()..loadTheme()),
+        BlocProvider(create: (_) => LanguageCubit()..initLanguage()),
+        BlocProvider(create: (_) => CountryCubit()..loadSavedCountry()),
+        BlocProvider(create: (_) => CurrencyCubit()..loadSavedCurrency()),
+      ],
+      child: const TravelApp(),
     ),
   );
 }

@@ -25,6 +25,8 @@ class MultiCityTripDepartureAndDestination extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               CustomTextFormField(
+                style: const TextStyle(color: AppColors.black),
+
                 title: S.of(context).from,
                 prefixIcon: Icons.flight_takeoff,
               ),
@@ -43,6 +45,8 @@ class MultiCityTripDepartureAndDestination extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               CustomTextFormField(
+                style: const TextStyle(color: AppColors.black),
+
                 title: S.of(context).to,
                 prefixIcon: Icons.flight_takeoff,
               ),

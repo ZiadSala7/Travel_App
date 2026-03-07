@@ -6,7 +6,7 @@ class CustomTextFormField extends StatelessWidget {
   final String title;
   final IconData? prefixIcon;
   final Widget suffixIcon;
-  final bool isReserve;
+  final TextStyle? style;
   final TextEditingController? controller;
   final Function(String value)? onChange;
   final String? Function(String?)? validator;
@@ -14,37 +14,40 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     required this.title,
     this.prefixIcon,
-    this.isReserve = false,
     this.suffixIcon = const SizedBox(),
     this.controller,
     this.onChange,
     this.validator,
+    this.style,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       validator: validator,
+      cursorColor: AppColors.deepOrange,
       onChanged: onChange,
-      style: isReserve ? const TextStyle(color: AppColors.black) : null,
+      style: const TextStyle(color: AppColors.black),
       controller: controller,
       decoration: InputDecoration(
         hintText: title,
         filled: true,
-        hintStyle: isReserve
-            ? const TextStyle(color: AppColors.black)
-            : const TextStyle(color: AppColors.mediumGray),
-        fillColor: AppColors.fillClr,
+        hintStyle: const TextStyle(color: AppColors.mediumGray),
+        fillColor: AppColors.creamWhite,
         prefixIcon: prefixIcon != null
             ? Icon(prefixIcon, color: AppColors.deepOrange)
             : null,
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.deepOrange),
-          borderRadius: BorderRadius.circular(10),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(color: AppColors.mediumGray),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.greyShade, width: 0),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: Colors.grey[300]!),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(color: AppColors.airplane, width: 1),
         ),
       ),
     );

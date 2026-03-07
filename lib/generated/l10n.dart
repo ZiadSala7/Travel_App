@@ -1133,6 +1133,66 @@ class S {
   String get qAbout {
     return Intl.message('Questions about', name: 'qAbout', desc: '', args: []);
   }
+
+  /// `Add Trip`
+  String get addTrip {
+    return Intl.message('Add Trip', name: 'addTrip', desc: '', args: []);
+  }
+
+  /// `Reset via Email`
+  String get resetViaEmail {
+    return Intl.message(
+      'Reset via Email',
+      name: 'resetViaEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset via Phone`
+  String get resetViaPhone {
+    return Intl.message(
+      'Reset via Phone',
+      name: 'resetViaPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will send a reset link to your email address`
+  String get viaEmailDesc {
+    return Intl.message(
+      'We will send a reset link to your email address',
+      name: 'viaEmailDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will send a verification code to your phone`
+  String get viaPhoneDesc {
+    return Intl.message(
+      'We will send a verification code to your phone',
+      name: 'viaPhoneDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get cntinue {
+    return Intl.message('Continue', name: 'cntinue', desc: '', args: []);
+  }
+
+  /// `Back to Login`
+  String get backToLogin {
+    return Intl.message(
+      'Back to Login',
+      name: 'backToLogin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -16,7 +16,30 @@ class MulticityFlight extends StatefulWidget {
 }
 
 class _MulticityFlightState extends State<MulticityFlight> {
-  int cnt = 1;
+  List<TripItem> trips = [];
+  int _nextId = 0; // لتوليد IDs فريدة
+
+  @override
+  void initState() {
+    super.initState();
+    // أضف أول trip
+    _addTrip();
+  }
+
+  void _removeTrip(int id) {
+    if (trips.length > 1) {
+      setState(() {
+        trips.removeWhere((trip) => trip.id == id);
+      });
+    }
+  }
+
+  void _addTrip() {
+    setState(() {
+      trips.add(TripItem(id: _nextId++));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,35 +47,31 @@ class _MulticityFlightState extends State<MulticityFlight> {
       children: [
         Column(
           spacing: 15,
-          children: List.generate(
-            cnt,
-            (index) => MultiCityTrip(
-              onPressed: () {
-                setState(() {
-                  if (cnt > 1) {
-                    cnt--;
-                  }
-                });
-              },
-            ),
-          ),
+          children: trips.map((trip) {
+            return MultiCityTrip(
+              /// unique id ✅
+              key: ValueKey(trip.id),
+              onPressed: () => _removeTrip(trip.id),
+            );
+          }).toList(),
         ),
         const SizedBox(height: 20),
+
+        /// ==========AddTrip button===========
         Center(
           child: ShowDetailsButton(
-            onPressed: () {
-              setState(() {
-                cnt++;
-              });
-            },
-            txt: "Add trip",
+            onPressed: _addTrip,
+            txt: S.of(context).addTrip,
             icon: Icons.add,
           ),
         ),
         const SizedBox(height: 20),
+
+        /// ========BottomSheet Chooser========
         const TravellersAndClassChooser(),
         const SizedBox(height: 20),
-        // ====================
+
+        /// ========Search Button============
         SizedBox(
           width: double.infinity,
           child: CustomButton(
@@ -64,4 +83,10 @@ class _MulticityFlightState extends State<MulticityFlight> {
       ],
     );
   }
+}
+
+// ✅ Class بسيط لحفظ ID كل trip
+class TripItem {
+  final int id;
+  TripItem({required this.id});
 }
