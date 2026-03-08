@@ -8,6 +8,8 @@ class CarPassengersAndDoors extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final onSurface = Theme.of(context).colorScheme.onSurface;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -18,7 +20,7 @@ class CarPassengersAndDoors extends StatelessWidget {
             const Icon(Icons.person_2_outlined, color: AppColors.airplane),
             Text(
               "4",
-              style: AppTextStyles.text14Reg.copyWith(color: AppColors.black),
+              style: AppTextStyles.text14Reg.copyWith(color: onSurface),
             ),
           ],
         ),
@@ -28,7 +30,7 @@ class CarPassengersAndDoors extends StatelessWidget {
             const Icon(Icons.wallet_travel_rounded, color: AppColors.airplane),
             Text(
               "4",
-              style: AppTextStyles.text14Reg.copyWith(color: AppColors.black),
+              style: AppTextStyles.text14Reg.copyWith(color: onSurface),
             ),
           ],
         ),

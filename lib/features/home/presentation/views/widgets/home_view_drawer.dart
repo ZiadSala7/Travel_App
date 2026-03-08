@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import '../../../../../core/constants/constants.dart';
-import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
-import '../../../../../core/themes/light_theme.dart';
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../splash/presentation/views/widgets/app_logo.dart';
@@ -15,11 +11,16 @@ class HomeViewDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isLight = context.watch<ThemeCubit>().state == lightTheme;
-    final foreground = isLight ? AppColors.charcoalGray : AppColors.white;
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final foreground = theme.colorScheme.onSurface;
+    final lightHeaderGradient = [
+      const Color(0xFFFFFFFF),
+      const Color(0xFFF1F6FF),
+    ];
 
     return Drawer(
-      backgroundColor: isLight ? AppColors.offWhite : AppColors.deepCharcoal,
+      backgroundColor: isDark ? const Color(0xFF1A2638) : theme.colorScheme.surface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.horizontal(right: Radius.circular(26)),
       ),
@@ -34,9 +35,9 @@ class HomeViewDrawer extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: isLight
-                      ? [AppColors.orangeEdit, AppColors.appbarClr]
-                      : [const Color(0xFF0D1B2A), const Color(0xFF0D1B2A)],
+                  colors: isDark
+                      ? [const Color(0xFF2A3D58), const Color(0xFF24354D)]
+                      : lightHeaderGradient,
                 ),
                 boxShadow: const [
                   BoxShadow(
@@ -66,7 +67,7 @@ class HomeViewDrawer extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
               child: DecoratedBox(
                 decoration: BoxDecoration(
-                  color: isLight ? AppColors.white : AppColors.charcoalGray,
+                  color: isDark ? const Color(0xFF25354D) : theme.colorScheme.surface,
                   borderRadius: BorderRadius.circular(14),
                 ),
                 child: ListTile(

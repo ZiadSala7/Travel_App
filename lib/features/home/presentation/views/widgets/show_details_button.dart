@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
 class ShowDetailsButton extends StatelessWidget {
@@ -14,23 +13,28 @@ class ShowDetailsButton extends StatelessWidget {
     required this.onPressed,
     required this.txt,
     required this.icon,
-    this.bkgrnd = AppColors.deepOrange,
+    this.bkgrnd,
   });
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final background = bkgrnd ?? scheme.primary;
+    final foreground = scheme.onPrimary;
+
     return ElevatedButton.icon(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         padding: const EdgeInsets.all(10),
-        backgroundColor: bkgrnd,
+        backgroundColor: background,
+        foregroundColor: foreground,
       ),
-      label: Icon(icon, size: 15, color: AppColors.white),
+      label: Icon(icon, size: 15, color: foreground),
       icon: Text(
         txt,
         style: AppTextStyles.text16med.copyWith(
-          color: Colors.white,
+          color: foreground,
           fontSize: 12,
         ),
       ),

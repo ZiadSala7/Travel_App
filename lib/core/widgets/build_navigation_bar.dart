@@ -1,9 +1,8 @@
+import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/constants.dart';
-import '../utils/app_colors.dart';
 import '../../generated/l10n.dart';
-import 'floating_action_button_bottom_bar.dart';
+import '../constants/constants.dart';
 
 class BuildNavigationBar extends StatefulWidget {
   static const String id = 'buildNavigationBar';
@@ -14,95 +13,75 @@ class BuildNavigationBar extends StatefulWidget {
 }
 
 class _BuildNavigationBarState extends State<BuildNavigationBar> {
+  final NotchBottomBarController _notchController = NotchBottomBarController(
+    index: 0,
+  );
+
   int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
+    final labels = [
+      S.of(context).home,
+      S.of(context).rehlaty,
+      S.of(context).promocode,
+      S.of(context).profile,
+    ];
+
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-    final navBackground = isDark
-        ? const Color(0xFF0D1B2A)
-        : AppColors.orangeEdit2;
-    const selectedColor = AppColors.black;
+    final scheme = theme.colorScheme;
+    final navBackground = scheme.surface;
+    final selectedItemColor = scheme.primary;
+    final activeIconColor = scheme.onPrimary;
     // ignore: deprecated_member_use
-    final unselectedColor = Colors.white.withOpacity(isDark ? 0.68 : 0.78);
+    final inactiveIconColor = scheme.onSurface.withOpacity(0.68);
 
     return Scaffold(
-      body: pages[_currentIndex],
-      floatingActionButton: const FloatingActionButtonBottomBar(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
+      body: IndexedStack(index: _currentIndex, children: pages),
+      bottomNavigationBar: AnimatedNotchBottomBar(
+        notchBottomBarController: _notchController,
         color: navBackground,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: _buildNavItemRowList(selectedColor, unselectedColor),
-        ),
-      ),
-    );
-  }
-
-  List<Widget> _buildNavItemRowList(
-    Color selectedColor,
-    Color unselectedColor,
-  ) {
-    return [
-      _buildNavItem(
-        Icons.home,
-        S.of(context).home,
-        0,
-        selectedColor,
-        unselectedColor,
-      ),
-      _buildNavItem(
-        Icons.card_travel,
-        S.of(context).rehlaty,
-        1,
-        selectedColor,
-        unselectedColor,
-      ),
-      const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15),
-        child: SizedBox(width: 20),
-      ), // space for FAB
-      _buildNavItem(
-        Icons.qr_code_outlined,
-        S.of(context).promocode,
-        2,
-        selectedColor,
-        unselectedColor,
-      ),
-      _buildNavItem(
-        Icons.person_outline_sharp,
-        S.of(context).profile,
-        3,
-        selectedColor,
-        unselectedColor,
-      ),
-    ];
-  }
-
-  Widget _buildNavItem(
-    IconData icon,
-    String label,
-    int index,
-    Color selectedColor,
-    Color unselectedColor,
-  ) {
-    final isSelected = _currentIndex == index;
-    return InkWell(
-      onTap: () => setState(() => _currentIndex = index),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, color: isSelected ? selectedColor : unselectedColor),
-          const SizedBox(height: 4),
-          Text(
-            label,
-            style: TextStyle(
-              color: isSelected ? selectedColor : unselectedColor,
+        notchColor: selectedItemColor,
+        showShadow: false,
+        showLabel: true,
+        removeMargins: true,
+        durationInMilliSeconds: 220,
+        kBottomRadius: 16,
+        kIconSize: 24,
+        bottomBarItems: [
+          BottomBarItem(
+            inActiveItem: Icon(Icons.home_rounded, color: inactiveIconColor),
+            activeItem: Icon(Icons.home_rounded, color: activeIconColor),
+            itemLabel: labels[0],
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.card_travel_rounded,
+              color: inactiveIconColor,
             ),
+            activeItem: Icon(Icons.card_travel_rounded, color: activeIconColor),
+            itemLabel: labels[1],
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(
+              Icons.local_offer_outlined,
+              color: inactiveIconColor,
+            ),
+            activeItem: Icon(
+              Icons.local_offer_outlined,
+              color: activeIconColor,
+            ),
+            itemLabel: labels[2],
+          ),
+          BottomBarItem(
+            inActiveItem: Icon(Icons.person_rounded, color: inactiveIconColor),
+            activeItem: Icon(Icons.person_rounded, color: activeIconColor),
+            itemLabel: labels[3],
           ),
         ],
+        onTap: (index) {
+          setState(() => _currentIndex = index);
+        },
       ),
     );
   }

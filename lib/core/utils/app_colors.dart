@@ -73,4 +73,10 @@ abstract class AppColors {
   static const Color orangeEdit2 = Color.fromARGB(207, 251, 162, 124);
   static const Color fillClr = Color.fromARGB(56, 150, 148, 144);
   static const Color appbarClr = Color.fromARGB(255, 250, 225, 212);
+  //
+  static const Color primary = Color(0xFFFE6D3C);
+  static const Color primaryColor50 = Color(0x80FE6D3C); // 50% opacity
+  static const Color primaryBorder = Color(0x4DFE6D3C); // 30%
+  static const Color navbarBg = Color(0x80000000);
+  static const Color darknessMode = Color(0xFF0D1B2A);
 }

@@ -17,7 +17,7 @@ class FlightCard extends StatelessWidget {
       margin: const EdgeInsets.all(5),
       width: 350,
       padding: const EdgeInsets.all(12),
-      decoration: customContainerBoxDecoration(),
+      decoration: customContainerBoxDecoration(context),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

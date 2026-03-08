@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
 class CustomTextButton extends StatelessWidget {
@@ -14,14 +13,16 @@ class CustomTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final primary = Theme.of(context).colorScheme.primary;
+
     return TextButton(
       onPressed: onPressed,
       child: Text(
         title,
         style: AppTextStyles.text16Reg.copyWith(
-          color: AppColors.strongOrange,
+          color: primary,
           decoration: TextDecoration.underline,
-          decorationColor: AppColors.airplane,
+          decorationColor: primary,
         ),
       ),
     );

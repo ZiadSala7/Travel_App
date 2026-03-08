@@ -36,7 +36,7 @@ class ChooseServiceSliverAppBar extends StatelessWidget {
                 boxShadow: [
                   BoxShadow(
                     color: isDark
-                        ? Colors.black.withOpacity(0.36)
+                        ? const Color(0x5C000000)
                         : const Color(0x18060A1E),
                     blurRadius: isDark ? 10 : 16,
                     offset: const Offset(0, 6),

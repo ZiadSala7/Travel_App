@@ -8,6 +8,10 @@ class FlightClassAndRate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final onSurface = Theme.of(context).colorScheme.onSurface;
+    // ignore: deprecated_member_use
+    final secondaryText = onSurface.withOpacity(0.7);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -16,7 +20,7 @@ class FlightClassAndRate extends StatelessWidget {
             Text(
               "Boeing 777",
               style: AppTextStyles.text14med.copyWith(
-                color: AppColors.mediumGray,
+                color: secondaryText,
               ),
             ),
             Text(
@@ -33,7 +37,7 @@ class FlightClassAndRate extends StatelessWidget {
             const Icon(Icons.star, color: AppColors.airplane, size: 18),
             Text(
               "4.8",
-              style: AppTextStyles.text14Bold.copyWith(color: AppColors.black),
+              style: AppTextStyles.text14Bold.copyWith(color: onSurface),
             ),
           ],
         ),

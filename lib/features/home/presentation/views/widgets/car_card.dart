@@ -16,7 +16,7 @@ class CarCard extends StatelessWidget {
       margin: const EdgeInsets.all(5),
       width: 280,
       padding: const EdgeInsets.all(12),
-      decoration: customContainerBoxDecoration(),
+      decoration: customContainerBoxDecoration(context),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

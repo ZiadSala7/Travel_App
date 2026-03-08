@@ -17,19 +17,19 @@ class OnboardingModel {
 
 List<OnboardingModel> onboardingModels(BuildContext context) => [
   OnboardingModel(
-    image: AppAssets.assetsImagesOnbord1,
+    image: AppAssets.assetsImagesView2,
     title: S.of(context).onborO,
     subTitle: S.of(context).onborODes,
     index: 0,
   ),
   OnboardingModel(
-    image: AppAssets.assetsImagesOnbord2,
+    image: AppAssets.assetsImagesView6,
     title: S.of(context).onborT,
     subTitle: S.of(context).onborTDes,
     index: 1,
   ),
   OnboardingModel(
-    image: AppAssets.assetsImagesOnbord3,
+    image: AppAssets.assetsImagesView4,
     title: S.of(context).onborTh,
     subTitle: S.of(context).onborThDes,
     index: 2,

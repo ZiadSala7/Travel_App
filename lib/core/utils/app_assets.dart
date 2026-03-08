@@ -166,6 +166,34 @@ class AppAssets {
   /// assets/images/undraw_sign-here_lxua.png
   static const String assetsImagesUndrawSignHereLxua = "assets/images/undraw_sign-here_lxua.png";
 
+  /// Assets for assetsImagesView1
+  /// assets/images/view1.jfif
+  static const String assetsImagesView1 = "assets/images/view1.jfif";
+
+  /// Assets for assetsImagesView2
+  /// assets/images/view2.jfif
+  static const String assetsImagesView2 = "assets/images/view2.jfif";
+
+  /// Assets for assetsImagesView3
+  /// assets/images/view3.jfif
+  static const String assetsImagesView3 = "assets/images/view3.jfif";
+
+  /// Assets for assetsImagesView4
+  /// assets/images/view4.jfif
+  static const String assetsImagesView4 = "assets/images/view4.jfif";
+
+  /// Assets for assetsImagesView5
+  /// assets/images/view5.jfif
+  static const String assetsImagesView5 = "assets/images/view5.jfif";
+
+  /// Assets for assetsImagesView6
+  /// assets/images/view6.jfif
+  static const String assetsImagesView6 = "assets/images/view6.jfif";
+
+  /// Assets for assetsImagesView7
+  /// assets/images/view7.jpg
+  static const String assetsImagesView7 = "assets/images/view7.jpg";
+
   /// Assets for assetsImagesWelcome
   /// assets/images/welcome.png
   static const String assetsImagesWelcome = "assets/images/welcome.png";

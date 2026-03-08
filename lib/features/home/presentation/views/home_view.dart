@@ -8,11 +8,13 @@ import 'widgets/home_view_drawer.dart';
 
 class HomeView extends StatelessWidget {
   static const String id = 'homeView';
+
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<ServiceModel> services = serviceModels(context);
+    final List<ServiceModel> services = serviceModels(context);
+
     return Scaffold(
       drawer: const HomeViewDrawer(),
       body: CustomScrollView(

@@ -9,6 +9,10 @@ class FlightDescriptionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final onSurface = Theme.of(context).colorScheme.onSurface;
+    // ignore: deprecated_member_use
+    final secondaryText = onSurface.withOpacity(0.7);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -17,19 +21,19 @@ class FlightDescriptionSection extends StatelessWidget {
           children: [
             Text(
               "14:30",
-              style: AppTextStyles.text20Bold.copyWith(color: AppColors.black),
+              style: AppTextStyles.text20Bold.copyWith(color: onSurface),
             ),
             Text(
               "Dubai international",
               style: AppTextStyles.text14Reg.copyWith(
-                color: AppColors.mediumGray,
+                color: secondaryText,
                 overflow: TextOverflow.fade,
               ),
             ),
             Text(
               "Airport",
               style: AppTextStyles.text14Reg.copyWith(
-                color: AppColors.mediumGray,
+                color: secondaryText,
               ),
             ),
           ],
@@ -39,7 +43,7 @@ class FlightDescriptionSection extends StatelessWidget {
             Text(
               "3h 15m",
               style: AppTextStyles.text14Reg.copyWith(
-                color: AppColors.mediumGray,
+                color: secondaryText,
                 fontSize: 12,
               ),
             ),
@@ -60,7 +64,7 @@ class FlightDescriptionSection extends StatelessWidget {
             Text(
               "EK-203",
               style: AppTextStyles.text14Reg.copyWith(
-                color: AppColors.mediumGray,
+                color: secondaryText,
                 fontSize: 12,
               ),
             ),
@@ -71,19 +75,19 @@ class FlightDescriptionSection extends StatelessWidget {
           children: [
             Text(
               "17:45",
-              style: AppTextStyles.text20Bold.copyWith(color: AppColors.black),
+              style: AppTextStyles.text20Bold.copyWith(color: onSurface),
             ),
             Text(
               "Cairo international",
               style: AppTextStyles.text14Reg.copyWith(
-                color: AppColors.mediumGray,
+                color: secondaryText,
                 overflow: TextOverflow.fade,
               ),
             ),
             Text(
               "Airport",
               style: AppTextStyles.text14Reg.copyWith(
-                color: AppColors.mediumGray,
+                color: secondaryText,
               ),
             ),
           ],

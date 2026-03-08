@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/features/onboarding/data/model/onboarding_model.dart';
-import 'package:travel_app/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
 
+import '../../../data/model/onboarding_model.dart';
+import 'onboarding_view_body.dart';
 import '../../../../../core/constants/constants.dart';
 
 class OnboardingPageView extends StatelessWidget {
