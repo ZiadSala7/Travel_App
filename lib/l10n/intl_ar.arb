@@ -163,5 +163,8 @@
     "qAbout": "أسئلة عن",
     "departureDate": "تاريخ المغادرة:",
     "returnDate": "تاريخ العودة:",
-    "addTrip": "إضافة رحلة"
+    "addTrip": "إضافة رحلة",
+    "noTripsYet": "لا توجد رحلات بعد",
+    "myTrips": "رحلاتي",
+    "bookNow": "احجز الآن"
 }

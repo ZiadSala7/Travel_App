@@ -135,6 +135,15 @@ drawerItems(BuildContext context) => [
     },
   },
   {
+    "icon": Icons.help_outline_rounded,
+    "title": S.of(context).faq,
+    "onPressed": () {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => const FAQsView()),
+      );
+    },
+  },
+  {
     "icon": Icons.phone_outlined,
     "title": S.of(context).contact,
     "onPressed": () {

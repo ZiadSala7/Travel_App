@@ -168,5 +168,8 @@
     "viaEmailDesc": "We will send a reset link to your email address",
     "viaPhoneDesc": "We will send a verification code to your phone",
     "cntinue": "Continue",
-    "backToLogin": "Back to Login"
+    "backToLogin": "Back to Login",
+    "noTripsYet": "No trips yet",
+    "myTrips": "My Trips",
+    "bookNow": "Book Now"
 }

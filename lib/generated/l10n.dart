@@ -1193,6 +1193,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No trips yet`
+  String get noTripsYet {
+    return Intl.message('No trips yet', name: 'noTripsYet', desc: '', args: []);
+  }
+
+  /// `My Trips`
+  String get myTrips {
+    return Intl.message('My Trips', name: 'myTrips', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

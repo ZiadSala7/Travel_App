@@ -145,6 +145,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "meals": MessageLookupByLibrary.simpleMessage("Meals"),
     "more": MessageLookupByLibrary.simpleMessage("More"),
     "multicity": MessageLookupByLibrary.simpleMessage("Multicity"),
+    "myTrips": MessageLookupByLibrary.simpleMessage("My Trips"),
+    "noTripsYet": MessageLookupByLibrary.simpleMessage("No trips yet"),
     "notification": MessageLookupByLibrary.simpleMessage("Notification"),
     "numGuestsRooms": MessageLookupByLibrary.simpleMessage(
       "Number of Guests and Rooms",

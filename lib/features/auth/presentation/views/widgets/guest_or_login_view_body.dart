@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../core/widgets/build_navigation_bar.dart';
@@ -41,7 +40,6 @@ class GuestOrLoginViewBody extends StatelessWidget {
               },
               txt: S.of(context).continueLogin,
               icon: Icons.login,
-              bkgrnd: AppColors.charcoalGray,
             ),
           ),
         ],

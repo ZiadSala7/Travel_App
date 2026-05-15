@@ -138,6 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "meals": MessageLookupByLibrary.simpleMessage("وجبات"),
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "multicity": MessageLookupByLibrary.simpleMessage("وجهات متعددة"),
+    "myTrips": MessageLookupByLibrary.simpleMessage("رحلاتي"),
+    "noTripsYet": MessageLookupByLibrary.simpleMessage("لا توجد رحلات بعد"),
     "notification": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "numGuestsRooms": MessageLookupByLibrary.simpleMessage("عدد الضيوف والغرف"),
     "onborO": MessageLookupByLibrary.simpleMessage("اكتشف وجهات رائعة"),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../generated/l10n.dart';
 import '../constants/constants.dart';
+import '../utils/app_colors.dart';
 
 class BuildNavigationBar extends StatefulWidget {
   static const String id = 'buildNavigationBar';
@@ -31,10 +32,10 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final navBackground = scheme.surface;
-    final selectedItemColor = scheme.primary;
-    final activeIconColor = scheme.onPrimary;
+    const selectedItemColor = AppColors.primary;
+    const activeIconColor = AppColors.primary;
     // ignore: deprecated_member_use
-    final inactiveIconColor = scheme.onSurface.withOpacity(0.68);
+    final inactiveIconColor = scheme.onSurface.withValues(alpha: 0.68);
 
     return Scaffold(
       body: IndexedStack(index: _currentIndex, children: pages),
@@ -51,7 +52,7 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
         bottomBarItems: [
           BottomBarItem(
             inActiveItem: Icon(Icons.home_rounded, color: inactiveIconColor),
-            activeItem: Icon(Icons.home_rounded, color: activeIconColor),
+            activeItem: const Icon(Icons.home_rounded, color: activeIconColor),
             itemLabel: labels[0],
           ),
           BottomBarItem(
@@ -59,7 +60,7 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
               Icons.card_travel_rounded,
               color: inactiveIconColor,
             ),
-            activeItem: Icon(Icons.card_travel_rounded, color: activeIconColor),
+            activeItem: const Icon(Icons.card_travel_rounded, color: activeIconColor),
             itemLabel: labels[1],
           ),
           BottomBarItem(
@@ -67,7 +68,7 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
               Icons.local_offer_outlined,
               color: inactiveIconColor,
             ),
-            activeItem: Icon(
+            activeItem: const Icon(
               Icons.local_offer_outlined,
               color: activeIconColor,
             ),
@@ -75,7 +76,7 @@ class _BuildNavigationBarState extends State<BuildNavigationBar> {
           ),
           BottomBarItem(
             inActiveItem: Icon(Icons.person_rounded, color: inactiveIconColor),
-            activeItem: Icon(Icons.person_rounded, color: activeIconColor),
+            activeItem: const Icon(Icons.person_rounded, color: activeIconColor),
             itemLabel: labels[3],
           ),
         ],
