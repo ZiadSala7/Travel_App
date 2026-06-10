@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import '../../../../../core/constants/constants.dart';
-import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
-import '../../../../../core/themes/light_theme.dart';
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../generated/l10n.dart';
@@ -19,16 +15,20 @@ class TravellersAndClassDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     int adults = 1, children = 0, babies = 0;
     String defaultFlightClass = S.of(context).tc1;
+    final scheme = Theme.of(context).colorScheme;
+
     return Dialog(
-      backgroundColor: context.read<ThemeCubit>().state == lightTheme
-          ? AppColors.white
-          : AppColors.black,
+      backgroundColor: scheme.surface,
       insetPadding: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 15),
-          Text(S.of(context).dialogTC, style: AppTextStyles.text22Bold),
+          Text(
+            S.of(context).dialogTC,
+            style: AppTextStyles.text22Bold.copyWith(color: scheme.onSurface),
+          ),
           const Divider(),
           DialogTravellersListTile(
             range: 1,

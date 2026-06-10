@@ -25,19 +25,21 @@ class ShowDetailsButton extends StatelessWidget {
     return ElevatedButton.icon(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        padding: const EdgeInsets.all(10),
+        elevation: 0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 10, 0),
         backgroundColor: background,
         foregroundColor: foreground,
       ),
-      label: Icon(icon, size: 15, color: foreground),
       icon: Text(
         txt,
         style: AppTextStyles.text16med.copyWith(
           color: foreground,
           fontSize: 12,
+          fontWeight: FontWeight.w700,
         ),
       ),
+      label: Icon(icon, size: 15, color: foreground),
     );
   }
 }

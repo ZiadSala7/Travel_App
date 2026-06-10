@@ -5,8 +5,8 @@ import 'app_logo_sliver_flexible_space.dart';
 class AppLogoSliverAppBar extends StatelessWidget {
   const AppLogoSliverAppBar({super.key});
 
-  static const double _collapsedHeight = 92;
-  static const double _expandedHeight = 300;
+  static const double _collapsedHeight = 88;
+  static const double _expandedHeight = 390;
   static const Interval _expandedFadeOutCurve = Interval(
     0.0,
     0.72,

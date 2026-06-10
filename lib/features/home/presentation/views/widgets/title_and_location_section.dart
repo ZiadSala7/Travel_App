@@ -16,33 +16,41 @@ class TitleAndLocationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final onSurface = theme.colorScheme.onSurface;
-    // ignore: deprecated_member_use
-    final secondaryText = onSurface.withOpacity(0.7);
+    final scheme = theme.colorScheme;
+    final secondaryText = scheme.onSurface.withValues(alpha: 0.64);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // TITLE
         Text(
           title ?? "Malon Greens",
           style: AppTextStyles.text20Bold.copyWith(
-            color: isDetail != true ? onSurface : null,
+            color: isDetail != true ? scheme.onSurface : null,
+            fontSize: isDetail == true ? null : 18,
           ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
-        const SizedBox(height: 4),
-        // LOCATION ROW
+        const SizedBox(height: 6),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Icon(
               Icons.location_on_outlined,
-              size: 22,
+              size: 18,
               color: AppColors.airplane,
             ),
-            const SizedBox(width: 4),
-            Text(
-              location ?? "Mumbai, Maharashtra",
-              style: AppTextStyles.text14Reg.copyWith(color: secondaryText),
+            const SizedBox(width: 5),
+            Expanded(
+              child: Text(
+                location ?? "Mumbai, Maharashtra",
+                style: AppTextStyles.text14Reg.copyWith(
+                  color: secondaryText,
+                  height: 1.25,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ],
         ),

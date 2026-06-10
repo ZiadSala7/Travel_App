@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
 class CustomPasswordTextFormField extends StatefulWidget {
@@ -26,15 +25,18 @@ class _CustomPasswordTextFormFieldState
   bool isClicked = true;
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+
     return TextFormField(
       validator: widget.validator,
-      style: const TextStyle(color: AppColors.black),
-      cursorColor: AppColors.deepOrange,
+      style: TextStyle(color: scheme.onSurface),
+      cursorColor: scheme.primary,
       controller: widget.controller,
       obscureText: isClicked,
       decoration: InputDecoration(
         prefixIcon: widget.prefixIcon != null
-            ? Icon(widget.prefixIcon, color: AppColors.deepOrange)
+            ? Icon(widget.prefixIcon, color: scheme.primary)
             : null,
         suffixIcon: IconButton(
           onPressed: () {
@@ -43,26 +45,26 @@ class _CustomPasswordTextFormFieldState
             });
           },
           icon: isClicked
-              ? const Icon(Icons.visibility_off)
-              : const Icon(Icons.visibility, color: AppColors.warmOrange),
+              ? Icon(Icons.visibility_off, color: scheme.onSurfaceVariant)
+              : Icon(Icons.visibility, color: scheme.primary),
         ),
         hintText: widget.title,
         hintStyle: AppTextStyles.text16Reg.copyWith(
-          color: AppColors.mediumGray,
+          color: scheme.onSurface.withValues(alpha: 0.48),
         ),
         filled: true,
-        fillColor: AppColors.creamWhite,
+        fillColor: scheme.surface,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: AppColors.mediumGray),
+          borderSide: BorderSide(color: scheme.outline),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: Colors.grey[300]!),
+          borderSide: BorderSide(color: theme.dividerColor),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: const BorderSide(color: AppColors.airplane, width: 1),
+          borderSide: BorderSide(color: scheme.primary, width: 1.2),
         ),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/utils/travel_icons.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
 
@@ -10,6 +10,8 @@ class LocationForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Row(
       spacing: 10,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -23,14 +25,13 @@ class LocationForm extends StatelessWidget {
               Text(
                 S.of(context).pickUpLoc,
                 style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
+                  color: scheme.onSurface,
                 ),
               ),
               CustomTextFormField(
-                style: const TextStyle(color: AppColors.black),
                 title: S.of(context).city,
                 controller: TextEditingController(),
-                prefixIcon: Icons.place,
+                prefixIcon: TravelIcons.location,
               ),
             ],
           ),
@@ -40,16 +41,12 @@ class LocationForm extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: AppColors.black,
+              color: scheme.primary,
               borderRadius: BorderRadius.circular(100),
             ),
             child: const RotatedBox(
               quarterTurns: 1,
-              child: Icon(
-                Icons.import_export_sharp,
-                color: AppColors.white,
-                size: 20,
-              ),
+              child: Icon(TravelIcons.swap, color: Colors.white, size: 20),
             ),
           ),
         ),
@@ -62,14 +59,13 @@ class LocationForm extends StatelessWidget {
               Text(
                 S.of(context).dropOffLoc,
                 style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
+                  color: scheme.onSurface,
                 ),
               ),
               CustomTextFormField(
-                style: const TextStyle(color: AppColors.black),
                 title: S.of(context).country,
                 controller: TextEditingController(),
-                prefixIcon: Icons.location_city,
+                prefixIcon: TravelIcons.city,
               ),
             ],
           ),

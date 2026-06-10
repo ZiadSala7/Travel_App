@@ -12,6 +12,8 @@ class MultiCityTrip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -19,7 +21,7 @@ class MultiCityTrip extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           S.of(context).departureDate,
-          style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
+          style: AppTextStyles.text16Bold.copyWith(color: scheme.onSurface),
         ),
         const SizedBox(height: 10),
         CustomFormBuilderDateTimePicker(
@@ -31,7 +33,7 @@ class MultiCityTrip extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
-              color: AppColors.black,
+              color: scheme.primary,
             ),
             child: IconButton(
               onPressed: onPressed,

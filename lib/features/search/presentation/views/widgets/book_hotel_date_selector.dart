@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_form_builder_date_time_picker.dart';
 import '../../../../../generated/l10n.dart';
@@ -10,6 +9,8 @@ class BookHotelDateSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).colorScheme.onSurface;
+
     return Row(
       spacing: 12,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -21,9 +22,7 @@ class BookHotelDateSelector extends StatelessWidget {
             children: [
               Text(
                 S.of(context).arrivalDate,
-                style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
-                ),
+                style: AppTextStyles.text16Bold.copyWith(color: textColor),
               ),
               CustomFormBuilderDateTimePicker(
                 hint: S.of(context).date,
@@ -39,9 +38,7 @@ class BookHotelDateSelector extends StatelessWidget {
             children: [
               Text(
                 S.of(context).departureDate,
-                style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
-                ),
+                style: AppTextStyles.text16Bold.copyWith(color: textColor),
               ),
               CustomFormBuilderDateTimePicker(
                 hint: S.of(context).date,

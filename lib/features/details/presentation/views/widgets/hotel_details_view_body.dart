@@ -15,8 +15,12 @@ class HotelDetailsViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ImageDetailsSection(image: networkImgHotel),
-          const SizedBox(height: 15),
+          ImageDetailsSection(
+            image: networkImgHotel,
+            title: "Malon Greens",
+            subtitle: "Mumbai, Maharashtra",
+          ),
+          const SizedBox(height: 18),
           HotelDetailsSection(amenitiesAndServices: amenitiesAndServices),
         ],
       ),

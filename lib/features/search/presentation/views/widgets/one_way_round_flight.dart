@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/utils/travel_icons.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
@@ -25,19 +25,20 @@ class OneWayOrRoundFlight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).colorScheme.onSurface;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         /// ======Departure==========
         Text(
           S.of(context).departure,
-          style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
+          style: AppTextStyles.text16Bold.copyWith(color: textColor),
         ),
         const SizedBox(height: 10),
         CustomTextFormField(
-          style: const TextStyle(color: AppColors.black),
           title: S.of(context).from,
-          prefixIcon: Icons.flight_takeoff,
+          prefixIcon: TravelIcons.flight,
           controller: fromController,
         ),
         const SizedBox(height: 12),
@@ -45,13 +46,12 @@ class OneWayOrRoundFlight extends StatelessWidget {
         /// ======Destination========
         Text(
           S.of(context).destination,
-          style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
+          style: AppTextStyles.text16Bold.copyWith(color: textColor),
         ),
         const SizedBox(height: 10),
         CustomTextFormField(
-          style: const TextStyle(color: AppColors.black),
           title: S.of(context).to,
-          prefixIcon: Icons.flight_land,
+          prefixIcon: TravelIcons.flightArrival,
           controller: toController,
         ),
         const SizedBox(height: 12),
@@ -63,7 +63,7 @@ class OneWayOrRoundFlight extends StatelessWidget {
         /// =========Travellers and Class===========
         Text(
           S.of(context).travellersAndClass,
-          style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
+          style: AppTextStyles.text16Bold.copyWith(color: textColor),
         ),
         const SizedBox(height: 10),
 
@@ -77,7 +77,7 @@ class OneWayOrRoundFlight extends StatelessWidget {
           child: CustomButton(
             onPressed: () => context.read<ThemeCubit>().toggleTheme(),
             txt: S.of(context).Search,
-            icon: Icons.arrow_forward,
+            icon: TravelIcons.next,
           ),
         ),
       ],

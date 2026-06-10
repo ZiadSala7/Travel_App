@@ -11,9 +11,16 @@ class PromoCodeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text(S.of(context).promocode, style: AppTextStyles.text22Bold),
+        title: Text(
+          S.of(context).offers,
+          style: AppTextStyles.text22Bold.copyWith(color: Colors.white),
+        ),
         centerTitle: true,
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+        foregroundColor: Colors.white,
       ),
       body: const PromoCodeViewBody(),
     );

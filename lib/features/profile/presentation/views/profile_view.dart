@@ -9,10 +9,18 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
-        title: Text(S.of(context).profile, style: AppTextStyles.text22Bold),
+        title: Text(
+          S.of(context).profile,
+          style: AppTextStyles.text22Bold.copyWith(color: scheme.onSurface),
+        ),
         centerTitle: true,
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
       ),
       body: const ProfileViewBody(),
     );

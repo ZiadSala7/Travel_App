@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
 class CustomButton extends StatelessWidget {
@@ -37,6 +36,10 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final effectiveBackground = backgroundColor ?? scheme.primary;
+    final effectiveForeground = textColor ?? scheme.onPrimary;
+
     return Container(
       decoration: BoxDecoration(
         gradient: gradient,
@@ -44,9 +47,7 @@ class CustomButton extends StatelessWidget {
         boxShadow: elevation != null && elevation! > 0
             ? [
                 BoxShadow(
-                  color: (backgroundColor ?? AppColors.primary).withOpacity(
-                    0.3,
-                  ),
+                  color: effectiveBackground.withOpacity(0.3),
                   blurRadius: elevation!,
                   offset: Offset(0, elevation! / 2),
                 ),
@@ -55,9 +56,7 @@ class CustomButton extends StatelessWidget {
       ),
       child: Material(
         borderRadius: BorderRadius.circular(borderRadius ?? 16),
-        color: gradient != null
-            ? Colors.transparent
-            : (backgroundColor ?? AppColors.primary),
+        color: gradient != null ? Colors.transparent : effectiveBackground,
         child: InkWell(
           borderRadius: BorderRadius.circular(borderRadius ?? 16),
           onTap: isLoading ? null : onPressed,
@@ -72,7 +71,7 @@ class CustomButton extends StatelessWidget {
                     child: CircularProgressIndicator(
                       strokeWidth: 2,
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        textColor ?? Colors.white,
+                        effectiveForeground,
                       ),
                     ),
                   )
@@ -80,13 +79,13 @@ class CustomButton extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       if (icon != null) ...[
-                        Icon(icon, size: 20, color: textColor ?? Colors.white),
+                        Icon(icon, size: 20, color: effectiveForeground),
                         const SizedBox(width: 8),
                       ],
                       Text(
                         txt,
                         style: AppTextStyles.text20Med.copyWith(
-                          color: textColor ?? Colors.white,
+                          color: effectiveForeground,
                           fontSize: fontSize,
                           fontWeight: fontWeight,
                         ),

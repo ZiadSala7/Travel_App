@@ -10,7 +10,7 @@ import '../../features/promocode/presentation/views/promo_code_view.dart';
 import '../managers/theme_cubit/theme_cubit.dart';
 import '../themes/light_theme.dart';
 import '../../features/home/presentation/views/contact_view.dart';
-import '../managers/language_cubit/language_cubit.dart';
+import '../utils/travel_icons.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/profile/presentation/views/profile_view.dart';
 import '../../generated/l10n.dart';
@@ -102,18 +102,18 @@ List<String> homeViewTabs(BuildContext context) => [
 
 // items of profile view
 items(BuildContext context) => [
-  {"icon": Icons.edit_outlined, "title": S.of(context).editProf},
-  {"icon": Icons.lock_outline, "title": S.of(context).changePass},
-  {"icon": Icons.phone_outlined, "title": S.of(context).contact},
-  {"icon": Icons.group_outlined, "title": S.of(context).whoWe},
-  {"icon": Icons.description_outlined, "title": S.of(context).privacy},
-  {"icon": Icons.logout_outlined, "title": S.of(context).logout},
+  {"icon": TravelIcons.editProfile, "title": S.of(context).editProf},
+  {"icon": TravelIcons.lock, "title": S.of(context).changePass},
+  {"icon": TravelIcons.contact, "title": S.of(context).contact},
+  {"icon": TravelIcons.about, "title": S.of(context).whoWe},
+  {"icon": TravelIcons.privacy, "title": S.of(context).privacy},
+  {"icon": TravelIcons.logout, "title": S.of(context).logout},
 ];
 
 // drawer items for home view drawer
 drawerItems(BuildContext context) => [
   {
-    "icon": Icons.monetization_on_outlined,
+    "icon": TravelIcons.currency,
     "title": S.of(context).currency,
     "value": context.watch<CurrencyCubit>().state.currencyCode,
     "onPressed": () => openCurrencySheet(context),
@@ -122,12 +122,10 @@ drawerItems(BuildContext context) => [
     "icon": FontAwesomeIcons.language,
     "title": S.of(context).language,
     "value": S.of(context).langChanger,
-    "onPressed": () async {
-      await context.read<LanguageCubit>().changeLanguage();
-    },
+    "onPressed": () => openLanguageSheet(context),
   },
   {
-    "icon": Icons.flag_outlined,
+    "icon": TravelIcons.country,
     "title": S.of(context).country,
     "value": context.watch<CountryCubit>().state.countryName,
     "onPressed": () {
@@ -135,16 +133,16 @@ drawerItems(BuildContext context) => [
     },
   },
   {
-    "icon": Icons.help_outline_rounded,
+    "icon": TravelIcons.faq,
     "title": S.of(context).faq,
     "onPressed": () {
-      Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => const FAQsView()),
-      );
+      Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (context) => const FAQsView()));
     },
   },
   {
-    "icon": Icons.phone_outlined,
+    "icon": TravelIcons.contact,
     "title": S.of(context).contact,
     "onPressed": () {
       Navigator.of(context).pushNamed(ContactView.id);
@@ -152,15 +150,13 @@ drawerItems(BuildContext context) => [
   },
   {
     "icon": context.watch<ThemeCubit>().state == lightTheme
-        ? Icons.light_mode_outlined
-        : Icons.dark_mode_outlined,
+        ? TravelIcons.lightTheme
+        : TravelIcons.darkTheme,
     "title": S.of(context).theme,
     "value": context.watch<ThemeCubit>().state == lightTheme
         ? S.of(context).lightTheme
         : S.of(context).darkTheme,
-    "onPressed": () {
-      context.read<ThemeCubit>().toggleTheme();
-    },
+    "onPressed": () => openThemeSheet(context),
   },
 ];
 
@@ -171,7 +167,11 @@ contactViewItems(BuildContext context) => [
     "title": S.of(context).wts,
     "onPressed": () {},
   },
-  {"icon": Icons.phone, "title": S.of(context).phoneCont, "onPressed": () {}},
+  {
+    "icon": TravelIcons.contact,
+    "title": S.of(context).phoneCont,
+    "onPressed": () {},
+  },
   {
     "icon": FontAwesomeIcons.facebook,
     "title": S.of(context).facebook,
@@ -202,25 +202,24 @@ String networkImgHotel =
 String overView =
     "A hotel is a commercial establishment that provides accommodation, food, and various services to travelers and guests. Hotels vary widely in size, style, and quality—ranging from small family-run inns to large luxury resorts. Their main purpose is to offer a comfortable, safe, and convenient place for people to stay temporarily.";
 
-
 final categories = [
   {
     "title": "Flights",
     "subtitle": "Booking & Check-in",
     "color": const Color(0xFFE3F0FF),
-    "icon": Icons.flight_takeoff,
+    "icon": TravelIcons.flight,
   },
   {
     "title": "Hotels",
     "subtitle": "Stay & Reservations",
     "color": const Color(0xFFE8FFE9),
-    "icon": Icons.hotel,
+    "icon": TravelIcons.hotel,
   },
   {
     "title": "Cars",
     "subtitle": "Rental & Policies",
     "color": const Color(0xFFFFF1E7),
-    "icon": Icons.directions_car,
+    "icon": TravelIcons.car,
   },
 ];
 

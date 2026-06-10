@@ -22,6 +22,7 @@ class DrawerItems extends StatelessWidget {
     final iconColor = isDark ? AppColors.iceBlue : scheme.secondary;
 
     return ListView.separated(
+      shrinkWrap: true,
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 12),
       itemCount: items.length,
       separatorBuilder: (_, __) => const SizedBox(height: 10),
@@ -59,7 +60,9 @@ class DrawerItems extends StatelessWidget {
                   if (items[index]["value"] != null)
                     Text(
                       items[index]["value"] as String,
-                      style: AppTextStyles.text14med.copyWith(color: valueColor),
+                      style: AppTextStyles.text14med.copyWith(
+                        color: valueColor,
+                      ),
                     )
                   else
                     Icon(

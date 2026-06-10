@@ -20,7 +20,7 @@ class AppLogoCollapsedToolbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final surfaceColor = isDark
-        ? AppColors.darknessMode
+        ? AppColors.saferDarkSurface
         : Theme.of(context).colorScheme.surface;
 
     return Align(
@@ -31,29 +31,51 @@ class AppLogoCollapsedToolbar extends StatelessWidget {
           height: collapsedHeight,
           child: Transform.translate(
             offset: Offset(0, collapsedToolbarDy),
-            child: Container(
-              color: Color.lerp(
-                Colors.transparent,
-                surfaceColor,
-                collapsedOpacity,
-              ),
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(8, 12, 16, 8),
-                child: IgnorePointer(
-                  ignoring: collapsedOpacity < 0.1,
-                  child: Opacity(
-                    opacity: collapsedOpacity,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        _HeaderCircleButton(
-                          icon: Icons.menu_rounded,
-                          isDark: isDark,
-                          onPressed: () =>
-                              Scaffold.maybeOf(context)?.openDrawer(),
-                        ),
-                        const AppLogo(height: 60),
-                      ],
+            child: Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(14, 8, 14, 8),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color.lerp(
+                    Colors.transparent,
+                    surfaceColor.withValues(alpha: 0.94),
+                    collapsedOpacity,
+                  ),
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(
+                    color: Color.lerp(
+                      Colors.transparent,
+                      Theme.of(context).dividerColor.withValues(alpha: 0.55),
+                      collapsedOpacity,
+                    )!,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(
+                        alpha: isDark ? 0.26 : 0.10 * collapsedOpacity,
+                      ),
+                      blurRadius: 18,
+                      offset: const Offset(0, 8),
+                    ),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 6, 12, 6),
+                  child: IgnorePointer(
+                    ignoring: collapsedOpacity < 0.1,
+                    child: Opacity(
+                      opacity: collapsedOpacity,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _HeaderCircleButton(
+                            icon: Icons.menu_rounded,
+                            isDark: isDark,
+                            onPressed: () =>
+                                Scaffold.maybeOf(context)?.openDrawer(),
+                          ),
+                          const AppLogo(height: 52),
+                        ],
+                      ),
                     ),
                   ),
                 ),

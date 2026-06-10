@@ -9,35 +9,22 @@ class FlightDescriptionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final onSurface = Theme.of(context).colorScheme.onSurface;
-    // ignore: deprecated_member_use
-    final secondaryText = onSurface.withOpacity(0.7);
+    final scheme = Theme.of(context).colorScheme;
+    final secondaryText = scheme.onSurface.withValues(alpha: 0.62);
 
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Text(
-              "14:30",
-              style: AppTextStyles.text20Bold.copyWith(color: onSurface),
-            ),
-            Text(
-              "Dubai international",
-              style: AppTextStyles.text14Reg.copyWith(
-                color: secondaryText,
-                overflow: TextOverflow.fade,
-              ),
-            ),
-            Text(
-              "Airport",
-              style: AppTextStyles.text14Reg.copyWith(
-                color: secondaryText,
-              ),
-            ),
-          ],
+        Expanded(
+          child: _AirportTime(
+            time: "14:30",
+            airport: "Dubai International",
+            alignment: CrossAxisAlignment.start,
+            textColor: scheme.onSurface,
+            secondaryText: secondaryText,
+          ),
         ),
+        const SizedBox(width: 8),
         Column(
           children: [
             Text(
@@ -52,10 +39,14 @@ class FlightDescriptionSection extends StatelessWidget {
                 const Icon(Icons.circle, color: AppColors.deepOrange, size: 10),
                 SizedBox(
                   width: width,
-                  child: const Divider(endIndent: 3, indent: 3),
+                  child: Divider(
+                    endIndent: 3,
+                    indent: 3,
+                    color: scheme.outline.withValues(alpha: 0.42),
+                  ),
                 ),
                 const Icon(
-                  Icons.flight_outlined,
+                  Icons.flight_rounded,
                   color: AppColors.deepOrange,
                   size: 15,
                 ),
@@ -70,27 +61,61 @@ class FlightDescriptionSection extends StatelessWidget {
             ),
           ],
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "17:45",
-              style: AppTextStyles.text20Bold.copyWith(color: onSurface),
-            ),
-            Text(
-              "Cairo international",
-              style: AppTextStyles.text14Reg.copyWith(
-                color: secondaryText,
-                overflow: TextOverflow.fade,
-              ),
-            ),
-            Text(
-              "Airport",
-              style: AppTextStyles.text14Reg.copyWith(
-                color: secondaryText,
-              ),
-            ),
-          ],
+        const SizedBox(width: 8),
+        Expanded(
+          child: _AirportTime(
+            time: "17:45",
+            airport: "Cairo International",
+            alignment: CrossAxisAlignment.end,
+            textColor: scheme.onSurface,
+            secondaryText: secondaryText,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _AirportTime extends StatelessWidget {
+  const _AirportTime({
+    required this.time,
+    required this.airport,
+    required this.alignment,
+    required this.textColor,
+    required this.secondaryText,
+  });
+
+  final String time;
+  final String airport;
+  final CrossAxisAlignment alignment;
+  final Color textColor;
+  final Color secondaryText;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: alignment,
+      children: [
+        Text(time, style: AppTextStyles.text20Bold.copyWith(color: textColor)),
+        const SizedBox(height: 2),
+        Text(
+          airport,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          textAlign: alignment == CrossAxisAlignment.end
+              ? TextAlign.end
+              : TextAlign.start,
+          style: AppTextStyles.text14Reg.copyWith(
+            color: secondaryText,
+            fontSize: 12,
+          ),
+        ),
+        Text(
+          "Airport",
+          style: AppTextStyles.text14Reg.copyWith(
+            color: secondaryText,
+            fontSize: 12,
+          ),
         ),
       ],
     );

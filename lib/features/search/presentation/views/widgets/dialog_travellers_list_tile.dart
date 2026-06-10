@@ -31,6 +31,8 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       child: Row(
@@ -39,13 +41,18 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(widget.title, style: AppTextStyles.text18Reg),
+              Text(
+                widget.title,
+                style: AppTextStyles.text18Reg.copyWith(
+                  color: scheme.onSurface,
+                ),
+              ),
               if (widget.desc != null)
                 Text(
                   widget.desc!,
                   style: AppTextStyles.text16Reg.copyWith(
                     fontSize: 14,
-                    color: AppColors.mediumGray,
+                    color: scheme.onSurface.withValues(alpha: 0.58),
                   ),
                 ),
             ],
@@ -63,7 +70,7 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
                 icon: Container(
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: AppColors.airplane,
+                    color: scheme.primary,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: const Icon(Icons.add, color: AppColors.white),
@@ -71,7 +78,9 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
               ),
               Text(
                 cnt.toString().padLeft(2, "0"),
-                style: AppTextStyles.text16Reg,
+                style: AppTextStyles.text16Reg.copyWith(
+                  color: scheme.onSurface,
+                ),
               ),
               IconButton(
                 onPressed: () {
@@ -83,7 +92,7 @@ class _DialogTravellersListTileState extends State<DialogTravellersListTile> {
                 icon: Container(
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: AppColors.airplane,
+                    color: scheme.primary,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: const Icon(Icons.remove, color: AppColors.white),

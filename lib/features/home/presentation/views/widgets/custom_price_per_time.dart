@@ -16,34 +16,42 @@ class CustomPricePerTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final onSurface = Theme.of(context).colorScheme.onSurface;
-    // ignore: deprecated_member_use
-    final secondaryText = onSurface.withOpacity(0.7);
+    final scheme = Theme.of(context).colorScheme;
+    final secondaryText = scheme.onSurface.withValues(alpha: 0.64);
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(
-          children: [
-            Text(
-              price,
-              style: AppTextStyles.text20Bold.copyWith(color: onSurface),
-            ),
-            Text(
-              perTime,
-              style: AppTextStyles.text16Reg.copyWith(
-                color: secondaryText,
-                fontSize: 14,
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                price,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppTextStyles.text20Bold.copyWith(
+                  color: scheme.onSurface,
+                  fontSize: 19,
+                ),
               ),
-            ),
-          ],
+              Text(
+                perTime.trim(),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppTextStyles.text14med.copyWith(color: secondaryText),
+              ),
+            ],
+          ),
         ),
-        Flexible(
+        const SizedBox(width: 10),
+        SizedBox(
+          height: 40,
           child: ShowDetailsButton(
             onPressed: onPressed,
             txt: S.of(context).showDetails,
-            icon: Icons.arrow_forward,
+            icon: Icons.arrow_forward_rounded,
           ),
         ),
       ],

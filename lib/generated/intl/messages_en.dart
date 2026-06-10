@@ -30,13 +30,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "airCond": MessageLookupByLibrary.simpleMessage("Air Conditioning"),
     "amenities": MessageLookupByLibrary.simpleMessage("Amenities & Services"),
     "app": MessageLookupByLibrary.simpleMessage("App"),
+    "arabicLanguage": MessageLookupByLibrary.simpleMessage("Arabic"),
+    "arabicLanguageSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Use Arabic interface text",
+    ),
     "arrival": MessageLookupByLibrary.simpleMessage("Arrival"),
     "arrivalDate": MessageLookupByLibrary.simpleMessage("Arrival date:"),
+    "arrivalGateTitle": MessageLookupByLibrary.simpleMessage("Arrival"),
     "asAGuest": MessageLookupByLibrary.simpleMessage("Continue as a Guest"),
+    "auto": MessageLookupByLibrary.simpleMessage("Auto"),
     "automatic": MessageLookupByLibrary.simpleMessage("Automatic"),
+    "available": MessageLookupByLibrary.simpleMessage("Available"),
     "baby": MessageLookupByLibrary.simpleMessage("Babies"),
     "babyAge": MessageLookupByLibrary.simpleMessage("< 2 years"),
     "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
+    "bagsCount": MessageLookupByLibrary.simpleMessage("4 Bags"),
     "bestFlights": MessageLookupByLibrary.simpleMessage("Best Flights"),
     "bestHotel": MessageLookupByLibrary.simpleMessage("Best Hotels"),
     "bestOffers": MessageLookupByLibrary.simpleMessage("Best Offers"),
@@ -46,6 +54,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "bookNow": MessageLookupByLibrary.simpleMessage("Book Now"),
     "breakfast": MessageLookupByLibrary.simpleMessage("Breakfast"),
     "car": MessageLookupByLibrary.simpleMessage("Cars reserve"),
+    "carHeroSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Comfortable city car with flexible pickup",
+    ),
+    "carOverviewText": MessageLookupByLibrary.simpleMessage(
+      "Reliable and fuel-efficient for city drives, airport transfers, and short trips.",
+    ),
     "changePass": MessageLookupByLibrary.simpleMessage("Change your password"),
     "childAge": MessageLookupByLibrary.simpleMessage("2-13 years"),
     "children": MessageLookupByLibrary.simpleMessage("Children"),
@@ -53,8 +67,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choose your country",
     ),
     "chooseCurrency": MessageLookupByLibrary.simpleMessage("Choose Currency"),
+    "chooseCurrencySubtitle": MessageLookupByLibrary.simpleMessage(
+      "Choose the currency used for prices across the app.",
+    ),
+    "chooseLanguageSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Choose your preferred app language.",
+    ),
     "chooseService": MessageLookupByLibrary.simpleMessage(
       "Choose your service",
+    ),
+    "chooseThemeSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Switch between light and dark appearance.",
     ),
     "city": MessageLookupByLibrary.simpleMessage("City"),
     "cntinue": MessageLookupByLibrary.simpleMessage("Continue"),
@@ -98,19 +121,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "currency_sar": MessageLookupByLibrary.simpleMessage("Saudi Riyal"),
     "currency_usd": MessageLookupByLibrary.simpleMessage("US Dollar"),
     "darkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+    "darkThemeSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Low-light interface with deeper surfaces",
+    ),
     "date": MessageLookupByLibrary.simpleMessage("Select Date"),
     "departure": MessageLookupByLibrary.simpleMessage("Departure:"),
     "departureDate": MessageLookupByLibrary.simpleMessage("Departure Date:"),
+    "departureGateTitle": MessageLookupByLibrary.simpleMessage("Departure"),
     "destination": MessageLookupByLibrary.simpleMessage("Destination:"),
     "dialogTC": MessageLookupByLibrary.simpleMessage(
       "Number of travellers - Class",
     ),
+    "directFlight": MessageLookupByLibrary.simpleMessage("Direct flight"),
     "dropOffDate": MessageLookupByLibrary.simpleMessage("Drop-off date"),
     "dropOffLoc": MessageLookupByLibrary.simpleMessage("Drop-off Location"),
     "dropOffTime": MessageLookupByLibrary.simpleMessage("Drop-off time"),
+    "economy": MessageLookupByLibrary.simpleMessage("Economy"),
     "editProf": MessageLookupByLibrary.simpleMessage("Edit profile"),
     "egypt": MessageLookupByLibrary.simpleMessage("Egypt"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "englishLanguage": MessageLookupByLibrary.simpleMessage("English"),
+    "englishLanguageSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Use English interface text",
+    ),
     "enterName": MessageLookupByLibrary.simpleMessage("Full name :"),
     "enterPassword": MessageLookupByLibrary.simpleMessage("**********"),
     "enterYourPhoneNum": MessageLookupByLibrary.simpleMessage(
@@ -127,19 +160,34 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choose how you want to reset your password.",
     ),
     "forgetPass": MessageLookupByLibrary.simpleMessage("Forget Password ?"),
+    "fourBags": MessageLookupByLibrary.simpleMessage("4 bags"),
+    "fourSeats": MessageLookupByLibrary.simpleMessage("4 seats"),
     "from": MessageLookupByLibrary.simpleMessage("From :"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full name"),
     "gps": MessageLookupByLibrary.simpleMessage("GPS"),
     "guest": MessageLookupByLibrary.simpleMessage("Guests"),
+    "guestJourneySubtitle": MessageLookupByLibrary.simpleMessage(
+      "Browse freely as a guest or sign in for a personalized travel experience.",
+    ),
+    "guestJourneyTitle": MessageLookupByLibrary.simpleMessage(
+      "Start your journey your way",
+    ),
     "guestsAndRooms": MessageLookupByLibrary.simpleMessage("Guests and rooms:"),
     "gym": MessageLookupByLibrary.simpleMessage("Gym"),
+    "havePromoCode": MessageLookupByLibrary.simpleMessage("Have a promo code?"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
     "hotel": MessageLookupByLibrary.simpleMessage("Hotels"),
+    "hotelsFlights": MessageLookupByLibrary.simpleMessage("Hotels + Flights"),
     "howCanHelp": MessageLookupByLibrary.simpleMessage("How can we help you?"),
+    "insured": MessageLookupByLibrary.simpleMessage("Insured"),
     "langChanger": MessageLookupByLibrary.simpleMessage("Eng"),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
     "letsStart": MessageLookupByLibrary.simpleMessage("Let\'s Get Started"),
     "lightTheme": MessageLookupByLibrary.simpleMessage("Light"),
+    "lightThemeSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Bright interface for daytime use",
+    ),
+    "limitedOffer": MessageLookupByLibrary.simpleMessage("Limited offer"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "logout": MessageLookupByLibrary.simpleMessage("LogOut"),
     "meals": MessageLookupByLibrary.simpleMessage("Meals"),
@@ -151,6 +199,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "numGuestsRooms": MessageLookupByLibrary.simpleMessage(
       "Number of Guests and Rooms",
     ),
+    "offers": MessageLookupByLibrary.simpleMessage("Offers"),
     "onborO": MessageLookupByLibrary.simpleMessage(
       "Discover Beautiful Destinations",
     ),
@@ -169,16 +218,94 @@ class MessageLookup extends MessageLookupByLibrary {
     "overview": MessageLookupByLibrary.simpleMessage("Overview"),
     "parking": MessageLookupByLibrary.simpleMessage("Parking"),
     "password": MessageLookupByLibrary.simpleMessage("Password :"),
+    "perDay": MessageLookupByLibrary.simpleMessage("per day"),
+    "perNight": MessageLookupByLibrary.simpleMessage("per night"),
+    "perPerson": MessageLookupByLibrary.simpleMessage("per person"),
     "phone": MessageLookupByLibrary.simpleMessage("Phone"),
     "phoneCont": MessageLookupByLibrary.simpleMessage("Phone number"),
     "phoneNum": MessageLookupByLibrary.simpleMessage("Your phone number :"),
     "pickUpDate": MessageLookupByLibrary.simpleMessage("Pick-up date"),
     "pickUpLoc": MessageLookupByLibrary.simpleMessage("Pick-up Location"),
     "pickUpTime": MessageLookupByLibrary.simpleMessage("Pick-up time"),
+    "pickupLocationParis": MessageLookupByLibrary.simpleMessage(
+      "Pickup location: Charles de Gaulle Airport, Paris",
+    ),
+    "pool": MessageLookupByLibrary.simpleMessage("Pool"),
     "powerOutiet": MessageLookupByLibrary.simpleMessage("Power Outiet"),
     "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "privateBathroom": MessageLookupByLibrary.simpleMessage("Private Bathroom"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "promoAllDestinations": MessageLookupByLibrary.simpleMessage(
+      "All Destinations",
+    ),
+    "promoCarTitle": MessageLookupByLibrary.simpleMessage(
+      "Save on car reservations",
+    ),
+    "promoCuratedDestinationsLabel": MessageLookupByLibrary.simpleMessage(
+      "9 Curated Destinations",
+    ),
+    "promoDestinationsAccent": MessageLookupByLibrary.simpleMessage(
+      "Destinations",
+    ),
+    "promoDomestic": MessageLookupByLibrary.simpleMessage("Domestic"),
+    "promoDubaiDescription": MessageLookupByLibrary.simpleMessage(
+      "Flights, premium hotels, and car reservations for an easy Gulf getaway.",
+    ),
+    "promoDubaiSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Gulf city breaks",
+    ),
+    "promoDubaiTitle": MessageLookupByLibrary.simpleMessage("Dubai"),
+    "promoEgyptTitle": MessageLookupByLibrary.simpleMessage(
+      "20% OFF on Trips to Egypt",
+    ),
+    "promoEurope": MessageLookupByLibrary.simpleMessage("Europe"),
+    "promoGulf": MessageLookupByLibrary.simpleMessage("Gulf"),
+    "promoHandpickedTitle": MessageLookupByLibrary.simpleMessage("Handpicked"),
+    "promoHeroBadge": MessageLookupByLibrary.simpleMessage("EXCLUSIVE OFFERS"),
+    "promoHeroDescription": MessageLookupByLibrary.simpleMessage(
+      "Enjoy exceptional travel experiences and competitive prices that suit every travel style.",
+    ),
+    "promoHeroTagline": MessageLookupByLibrary.simpleMessage(
+      "Explore handpicked destinations with care",
+    ),
+    "promoHeroTitle": MessageLookupByLibrary.simpleMessage("Exclusive Offers"),
+    "promoHeroTitleAccent": MessageLookupByLibrary.simpleMessage(
+      "For Your Next Trip",
+    ),
+    "promoIstanbulDescription": MessageLookupByLibrary.simpleMessage(
+      "Explore historic streets, cultural tours, and selected hotel deals.",
+    ),
+    "promoIstanbulSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Heritage and culture",
+    ),
+    "promoIstanbulTitle": MessageLookupByLibrary.simpleMessage("Istanbul"),
+    "promoJeddahDescription": MessageLookupByLibrary.simpleMessage(
+      "Coastal hotels, airport transfers, and curated stays for your next Jeddah trip.",
+    ),
+    "promoJeddahSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Red Sea escapes and city stays",
+    ),
+    "promoJeddahTitle": MessageLookupByLibrary.simpleMessage("Jeddah"),
+    "promoLuxuryHolidays": MessageLookupByLibrary.simpleMessage(
+      "Luxury Holidays",
+    ),
+    "promoMaldivesDescription": MessageLookupByLibrary.simpleMessage(
+      "Resort stays, transfers, and handpicked island experiences for couples and families.",
+    ),
+    "promoMaldivesSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Luxury holidays",
+    ),
+    "promoMaldivesTitle": MessageLookupByLibrary.simpleMessage("Maldives"),
+    "promoQatarTitle": MessageLookupByLibrary.simpleMessage(
+      "35% OFF on Trips to Qatar",
+    ),
+    "promoRiyadhDescription": MessageLookupByLibrary.simpleMessage(
+      "Luxury hotels, world-class events, and exceptional experiences in Saudi Arabia's capital.",
+    ),
+    "promoRiyadhSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Discover the Heart of the Kingdom",
+    ),
+    "promoRiyadhTitle": MessageLookupByLibrary.simpleMessage("Riyadh"),
     "promocode": MessageLookupByLibrary.simpleMessage("Promo code"),
     "qAbout": MessageLookupByLibrary.simpleMessage("Questions about"),
     "rehlaty": MessageLookupByLibrary.simpleMessage("My trips"),
@@ -191,6 +318,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "returnDate": MessageLookupByLibrary.simpleMessage("Return Date:"),
     "rooms": MessageLookupByLibrary.simpleMessage("Rooms"),
     "round": MessageLookupByLibrary.simpleMessage("Round"),
+    "saved": MessageLookupByLibrary.simpleMessage("Saved"),
+    "seatsCount": MessageLookupByLibrary.simpleMessage("5 Seats"),
     "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
     "selectCar": MessageLookupByLibrary.simpleMessage("Select your car"),
     "selectClass": MessageLookupByLibrary.simpleMessage("Class"),
@@ -206,13 +335,30 @@ class MessageLookup extends MessageLookupByLibrary {
     "theme": MessageLookupByLibrary.simpleMessage("Theme"),
     "to": MessageLookupByLibrary.simpleMessage("To :"),
     "topQ": MessageLookupByLibrary.simpleMessage("Top Questions"),
+    "topStay": MessageLookupByLibrary.simpleMessage("Top stay"),
     "travel": MessageLookupByLibrary.simpleMessage("Travel"),
     "travellers": MessageLookupByLibrary.simpleMessage("Travellers"),
     "travellersAndClass": MessageLookupByLibrary.simpleMessage(
       "Travellers and class",
     ),
+    "trips": MessageLookupByLibrary.simpleMessage("Trips"),
     "tv": MessageLookupByLibrary.simpleMessage("TV"),
     "typeOfCar": MessageLookupByLibrary.simpleMessage("Select Car Type"),
+    "unlockDealsSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Save on flights, hotels, and car reservations with curated travel offers.",
+    ),
+    "unlockDealsTitle": MessageLookupByLibrary.simpleMessage(
+      "Unlock better trip deals",
+    ),
+    "validAirportTransfers": MessageLookupByLibrary.simpleMessage(
+      "Valid on selected airport transfers",
+    ),
+    "validUntilDec2025": MessageLookupByLibrary.simpleMessage(
+      "Valid until Dec 31, 2025",
+    ),
+    "verifiedTraveller": MessageLookupByLibrary.simpleMessage(
+      "Verified traveller",
+    ),
     "viaEmailDesc": MessageLookupByLibrary.simpleMessage(
       "We will send a reset link to your email address",
     ),

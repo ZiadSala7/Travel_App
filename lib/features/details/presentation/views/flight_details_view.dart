@@ -9,13 +9,32 @@ class FlightDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Scaffold(
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: CustomButton(
-          onPressed: () {},
-          txt: S.of(context).bookNow,
-          icon: Icons.arrow_forward,
+      bottomNavigationBar: SafeArea(
+        top: false,
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: scheme.surface,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.10),
+                blurRadius: 18,
+                offset: const Offset(0, -6),
+              ),
+            ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
+            child: CustomButton(
+              onPressed: () {},
+              txt: S.of(context).bookNow,
+              icon: Icons.arrow_forward_rounded,
+              borderRadius: 18,
+              elevation: 10,
+            ),
+          ),
         ),
       ),
       body: const FlightDetailsViewBody(),

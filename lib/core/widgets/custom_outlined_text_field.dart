@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 
-import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
 class CustomOutlinedTextField extends StatelessWidget {
@@ -76,12 +75,12 @@ class CustomOutlinedTextField extends StatelessWidget {
           color: scheme.onSurface.withOpacity(0.4),
         ),
         prefixIcon: prefixIcon != null
-            ? Icon(prefixIcon, color: AppColors.primary)
+            ? Icon(prefixIcon, color: scheme.primary)
             : null,
         suffixIcon: suffixIcon != null
             ? GestureDetector(
                 onTap: onSuffixIconTap,
-                child: Icon(suffixIcon, color: AppColors.primary),
+                child: Icon(suffixIcon, color: scheme.primary),
               )
             : null,
         filled: true,
@@ -103,7 +102,7 @@ class CustomOutlinedTextField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius ?? 12),
           borderSide: BorderSide(
-            color: focusedBorderColor ?? AppColors.primary,
+            color: focusedBorderColor ?? scheme.primary,
             width: 1.5,
           ),
         ),

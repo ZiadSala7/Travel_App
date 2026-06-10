@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 
-final ColorScheme _lightColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color(0xFFF07E48),
-  brightness: Brightness.light,
-).copyWith(
-  primary: const Color(0xFFF07E48),
-  onPrimary: const Color(0xFFFFFFFF),
-  secondary: const Color(0xFF3F6FB6),
-  onSecondary: const Color(0xFFFFFFFF),
-  surface: const Color(0xFFFFFFFF),
-  onSurface: const Color(0xFF1A2533),
-);
+import '../utils/app_colors.dart';
+
+final ColorScheme _lightColorScheme =
+    ColorScheme.fromSeed(
+      seedColor: AppColors.saferPrimary,
+      brightness: Brightness.light,
+    ).copyWith(
+      primary: AppColors.saferPrimary,
+      onPrimary: AppColors.white,
+      secondary: AppColors.saferSecondary,
+      onSecondary: AppColors.white,
+      tertiary: AppColors.saferAccent,
+      onTertiary: AppColors.white,
+      surface: AppColors.saferLight,
+      onSurface: AppColors.saferText,
+      outline: AppColors.saferBorder,
+      surfaceContainerHighest: AppColors.saferMuted,
+    );
 
 final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
-  scaffoldBackgroundColor: const Color(0xFFF4F7FB),
-  canvasColor: const Color(0xFFF4F7FB),
+  scaffoldBackgroundColor: AppColors.saferMuted,
+  canvasColor: AppColors.saferMuted,
   cardColor: _lightColorScheme.surface,
-  dividerColor: const Color(0xFFD6DFEA),
+  dividerColor: AppColors.saferBorder,
   appBarTheme: AppBarTheme(
     foregroundColor: _lightColorScheme.onSurface,
     backgroundColor: _lightColorScheme.surface,
@@ -30,20 +37,32 @@ final ThemeData lightTheme = ThemeData(
   drawerTheme: const DrawerThemeData(backgroundColor: Color(0xFFFFFFFF)),
   iconTheme: IconThemeData(color: _lightColorScheme.onSurface),
   primaryIconTheme: IconThemeData(color: _lightColorScheme.onSurface),
+  tabBarTheme: TabBarThemeData(
+    labelColor: _lightColorScheme.primary,
+    unselectedLabelColor: AppColors.saferTextMuted,
+    indicatorColor: _lightColorScheme.primary,
+  ),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: _lightColorScheme.surface,
+    selectedItemColor: _lightColorScheme.primary,
+    unselectedItemColor: AppColors.saferTextMuted,
+    type: BottomNavigationBarType.fixed,
+    elevation: 0,
+  ),
   textTheme: ThemeData(brightness: Brightness.light).textTheme.apply(
     bodyColor: _lightColorScheme.onSurface,
     displayColor: _lightColorScheme.onSurface,
   ),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
-    fillColor: const Color(0xFFF9FBFF),
-    hintStyle: const TextStyle(color: Color(0xFF70849C)),
+    fillColor: AppColors.saferLight,
+    hintStyle: const TextStyle(color: AppColors.saferTextMuted),
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(color: Color(0xFFD8E2EF)),
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(color: AppColors.saferBorder),
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(12),
       borderSide: BorderSide(color: _lightColorScheme.primary, width: 1.3),
     ),
   ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/constants.dart';
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../home/presentation/views/widgets/rating_row.dart';
@@ -17,44 +16,69 @@ class HotelDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 18),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ratingRow(5),
-          const SizedBox(height: 15),
-          const TitleAndLocationSection(isDetail: true),
-          const SizedBox(height: 10),
-          const Divider(thickness: 0.7),
+          DecoratedBox(
+            decoration: BoxDecoration(
+              color: scheme.surface,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: scheme.outline.withValues(alpha: 0.14)),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TitleAndLocationSection(isDetail: true),
+                  SizedBox(height: 12),
+                  _RatingWrap(),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 14),
           DropDownListTile(
             widget: Text(
               overView,
               style: AppTextStyles.text16Reg.copyWith(
-                color: AppColors.mediumGray,
+                color: scheme.onSurface.withValues(alpha: 0.70),
+                height: 1.45,
               ),
             ),
             title: S.of(context).overview,
           ),
-          const Divider(thickness: 0.7),
+          const SizedBox(height: 14),
           DropDownListTile(
             widget: GridView.builder(
-              padding: EdgeInsets.zero, // ← prevents extra top padding
+              padding: EdgeInsets.zero,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: amenitiesAndServices.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
-                childAspectRatio: 3.5 / 4,
+                childAspectRatio: 0.82,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
               ),
               itemBuilder: (context, index) =>
                   CustomAmenitiesCard(amenity: amenitiesAndServices[index]),
             ),
             title: S.of(context).amenities,
           ),
-          const Divider(thickness: 0.7),
         ],
       ),
     );
   }
+}
+
+class _RatingWrap extends StatelessWidget {
+  const _RatingWrap();
+
+  @override
+  Widget build(BuildContext context) => ratingRow(5);
 }

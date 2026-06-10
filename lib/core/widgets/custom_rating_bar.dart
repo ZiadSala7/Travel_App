@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import '../utils/app_colors.dart';
 
 class CustomRatingBar extends StatelessWidget {
   final double rating;
@@ -44,7 +43,7 @@ class CustomRatingBar extends StatelessWidget {
                   : Icons.star_border_rounded,
               size: size,
               color: index < rating
-                  ? (filledColor ?? AppColors.primary)
+                  ? (filledColor ?? scheme.primary)
                   : (emptyColor ?? scheme.outline.withOpacity(0.4)),
             ),
           );

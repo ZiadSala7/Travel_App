@@ -1203,6 +1203,606 @@ class S {
   String get myTrips {
     return Intl.message('My Trips', name: 'myTrips', desc: '', args: []);
   }
+
+  /// `Start your journey your way`
+  String get guestJourneyTitle {
+    return Intl.message(
+      'Start your journey your way',
+      name: 'guestJourneyTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Browse freely as a guest or sign in for a personalized travel experience.`
+  String get guestJourneySubtitle {
+    return Intl.message(
+      'Browse freely as a guest or sign in for a personalized travel experience.',
+      name: 'guestJourneySubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verified traveller`
+  String get verifiedTraveller {
+    return Intl.message(
+      'Verified traveller',
+      name: 'verifiedTraveller',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trips`
+  String get trips {
+    return Intl.message('Trips', name: 'trips', desc: '', args: []);
+  }
+
+  /// `Saved`
+  String get saved {
+    return Intl.message('Saved', name: 'saved', desc: '', args: []);
+  }
+
+  /// `Offers`
+  String get offers {
+    return Intl.message('Offers', name: 'offers', desc: '', args: []);
+  }
+
+  /// `Choose the currency used for prices across the app.`
+  String get chooseCurrencySubtitle {
+    return Intl.message(
+      'Choose the currency used for prices across the app.',
+      name: 'chooseCurrencySubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your preferred app language.`
+  String get chooseLanguageSubtitle {
+    return Intl.message(
+      'Choose your preferred app language.',
+      name: 'chooseLanguageSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Switch between light and dark appearance.`
+  String get chooseThemeSubtitle {
+    return Intl.message(
+      'Switch between light and dark appearance.',
+      name: 'chooseThemeSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get englishLanguage {
+    return Intl.message('English', name: 'englishLanguage', desc: '', args: []);
+  }
+
+  /// `Use English interface text`
+  String get englishLanguageSubtitle {
+    return Intl.message(
+      'Use English interface text',
+      name: 'englishLanguageSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabicLanguage {
+    return Intl.message('Arabic', name: 'arabicLanguage', desc: '', args: []);
+  }
+
+  /// `Use Arabic interface text`
+  String get arabicLanguageSubtitle {
+    return Intl.message(
+      'Use Arabic interface text',
+      name: 'arabicLanguageSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bright interface for daytime use`
+  String get lightThemeSubtitle {
+    return Intl.message(
+      'Bright interface for daytime use',
+      name: 'lightThemeSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low-light interface with deeper surfaces`
+  String get darkThemeSubtitle {
+    return Intl.message(
+      'Low-light interface with deeper surfaces',
+      name: 'darkThemeSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unlock better trip deals`
+  String get unlockDealsTitle {
+    return Intl.message(
+      'Unlock better trip deals',
+      name: 'unlockDealsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save on flights, hotels, and car reservations with curated travel offers.`
+  String get unlockDealsSubtitle {
+    return Intl.message(
+      'Save on flights, hotels, and car reservations with curated travel offers.',
+      name: 'unlockDealsSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EXCLUSIVE OFFERS`
+  String get promoHeroBadge {
+    return Intl.message(
+      'EXCLUSIVE OFFERS',
+      name: 'promoHeroBadge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exclusive Offers`
+  String get promoHeroTitle {
+    return Intl.message(
+      'Exclusive Offers',
+      name: 'promoHeroTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For Your Next Trip`
+  String get promoHeroTitleAccent {
+    return Intl.message(
+      'For Your Next Trip',
+      name: 'promoHeroTitleAccent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore handpicked destinations with care`
+  String get promoHeroTagline {
+    return Intl.message(
+      'Explore handpicked destinations with care',
+      name: 'promoHeroTagline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoy exceptional travel experiences and competitive prices that suit every travel style.`
+  String get promoHeroDescription {
+    return Intl.message(
+      'Enjoy exceptional travel experiences and competitive prices that suit every travel style.',
+      name: 'promoHeroDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `9 Curated Destinations`
+  String get promoCuratedDestinationsLabel {
+    return Intl.message(
+      '9 Curated Destinations',
+      name: 'promoCuratedDestinationsLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Handpicked`
+  String get promoHandpickedTitle {
+    return Intl.message(
+      'Handpicked',
+      name: 'promoHandpickedTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Destinations`
+  String get promoDestinationsAccent {
+    return Intl.message(
+      'Destinations',
+      name: 'promoDestinationsAccent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Destinations`
+  String get promoAllDestinations {
+    return Intl.message(
+      'All Destinations',
+      name: 'promoAllDestinations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domestic`
+  String get promoDomestic {
+    return Intl.message('Domestic', name: 'promoDomestic', desc: '', args: []);
+  }
+
+  /// `Gulf`
+  String get promoGulf {
+    return Intl.message('Gulf', name: 'promoGulf', desc: '', args: []);
+  }
+
+  /// `Europe`
+  String get promoEurope {
+    return Intl.message('Europe', name: 'promoEurope', desc: '', args: []);
+  }
+
+  /// `Luxury Holidays`
+  String get promoLuxuryHolidays {
+    return Intl.message(
+      'Luxury Holidays',
+      name: 'promoLuxuryHolidays',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Riyadh`
+  String get promoRiyadhTitle {
+    return Intl.message('Riyadh', name: 'promoRiyadhTitle', desc: '', args: []);
+  }
+
+  /// `Discover the Heart of the Kingdom`
+  String get promoRiyadhSubtitle {
+    return Intl.message(
+      'Discover the Heart of the Kingdom',
+      name: 'promoRiyadhSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Luxury hotels, world-class events, and exceptional experiences in Saudi Arabia's capital.`
+  String get promoRiyadhDescription {
+    return Intl.message(
+      'Luxury hotels, world-class events, and exceptional experiences in Saudi Arabia\'s capital.',
+      name: 'promoRiyadhDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jeddah`
+  String get promoJeddahTitle {
+    return Intl.message('Jeddah', name: 'promoJeddahTitle', desc: '', args: []);
+  }
+
+  /// `Red Sea escapes and city stays`
+  String get promoJeddahSubtitle {
+    return Intl.message(
+      'Red Sea escapes and city stays',
+      name: 'promoJeddahSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coastal hotels, airport transfers, and curated stays for your next Jeddah trip.`
+  String get promoJeddahDescription {
+    return Intl.message(
+      'Coastal hotels, airport transfers, and curated stays for your next Jeddah trip.',
+      name: 'promoJeddahDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dubai`
+  String get promoDubaiTitle {
+    return Intl.message('Dubai', name: 'promoDubaiTitle', desc: '', args: []);
+  }
+
+  /// `Gulf city breaks`
+  String get promoDubaiSubtitle {
+    return Intl.message(
+      'Gulf city breaks',
+      name: 'promoDubaiSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flights, premium hotels, and car reservations for an easy Gulf getaway.`
+  String get promoDubaiDescription {
+    return Intl.message(
+      'Flights, premium hotels, and car reservations for an easy Gulf getaway.',
+      name: 'promoDubaiDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Istanbul`
+  String get promoIstanbulTitle {
+    return Intl.message(
+      'Istanbul',
+      name: 'promoIstanbulTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Heritage and culture`
+  String get promoIstanbulSubtitle {
+    return Intl.message(
+      'Heritage and culture',
+      name: 'promoIstanbulSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore historic streets, cultural tours, and selected hotel deals.`
+  String get promoIstanbulDescription {
+    return Intl.message(
+      'Explore historic streets, cultural tours, and selected hotel deals.',
+      name: 'promoIstanbulDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maldives`
+  String get promoMaldivesTitle {
+    return Intl.message(
+      'Maldives',
+      name: 'promoMaldivesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Luxury holidays`
+  String get promoMaldivesSubtitle {
+    return Intl.message(
+      'Luxury holidays',
+      name: 'promoMaldivesSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resort stays, transfers, and handpicked island experiences for couples and families.`
+  String get promoMaldivesDescription {
+    return Intl.message(
+      'Resort stays, transfers, and handpicked island experiences for couples and families.',
+      name: 'promoMaldivesDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Have a promo code?`
+  String get havePromoCode {
+    return Intl.message(
+      'Have a promo code?',
+      name: 'havePromoCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Valid until Dec 31, 2025`
+  String get validUntilDec2025 {
+    return Intl.message(
+      'Valid until Dec 31, 2025',
+      name: 'validUntilDec2025',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Valid on selected airport transfers`
+  String get validAirportTransfers {
+    return Intl.message(
+      'Valid on selected airport transfers',
+      name: 'validAirportTransfers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `20% OFF on Trips to Egypt`
+  String get promoEgyptTitle {
+    return Intl.message(
+      '20% OFF on Trips to Egypt',
+      name: 'promoEgyptTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `35% OFF on Trips to Qatar`
+  String get promoQatarTitle {
+    return Intl.message(
+      '35% OFF on Trips to Qatar',
+      name: 'promoQatarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save on car reservations`
+  String get promoCarTitle {
+    return Intl.message(
+      'Save on car reservations',
+      name: 'promoCarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hotels + Flights`
+  String get hotelsFlights {
+    return Intl.message(
+      'Hotels + Flights',
+      name: 'hotelsFlights',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Limited offer`
+  String get limitedOffer {
+    return Intl.message(
+      'Limited offer',
+      name: 'limitedOffer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Top stay`
+  String get topStay {
+    return Intl.message('Top stay', name: 'topStay', desc: '', args: []);
+  }
+
+  /// `Pool`
+  String get pool {
+    return Intl.message('Pool', name: 'pool', desc: '', args: []);
+  }
+
+  /// `Auto`
+  String get auto {
+    return Intl.message('Auto', name: 'auto', desc: '', args: []);
+  }
+
+  /// `Insured`
+  String get insured {
+    return Intl.message('Insured', name: 'insured', desc: '', args: []);
+  }
+
+  /// `Direct flight`
+  String get directFlight {
+    return Intl.message(
+      'Direct flight',
+      name: 'directFlight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available`
+  String get available {
+    return Intl.message('Available', name: 'available', desc: '', args: []);
+  }
+
+  /// `Pickup location: Charles de Gaulle Airport, Paris`
+  String get pickupLocationParis {
+    return Intl.message(
+      'Pickup location: Charles de Gaulle Airport, Paris',
+      name: 'pickupLocationParis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comfortable city car with flexible pickup`
+  String get carHeroSubtitle {
+    return Intl.message(
+      'Comfortable city car with flexible pickup',
+      name: 'carHeroSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reliable and fuel-efficient for city drives, airport transfers, and short trips.`
+  String get carOverviewText {
+    return Intl.message(
+      'Reliable and fuel-efficient for city drives, airport transfers, and short trips.',
+      name: 'carOverviewText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `5 Seats`
+  String get seatsCount {
+    return Intl.message('5 Seats', name: 'seatsCount', desc: '', args: []);
+  }
+
+  /// `4 Bags`
+  String get bagsCount {
+    return Intl.message('4 Bags', name: 'bagsCount', desc: '', args: []);
+  }
+
+  /// `Economy`
+  String get economy {
+    return Intl.message('Economy', name: 'economy', desc: '', args: []);
+  }
+
+  /// `Departure`
+  String get departureGateTitle {
+    return Intl.message(
+      'Departure',
+      name: 'departureGateTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrival`
+  String get arrivalGateTitle {
+    return Intl.message(
+      'Arrival',
+      name: 'arrivalGateTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `4 seats`
+  String get fourSeats {
+    return Intl.message('4 seats', name: 'fourSeats', desc: '', args: []);
+  }
+
+  /// `4 bags`
+  String get fourBags {
+    return Intl.message('4 bags', name: 'fourBags', desc: '', args: []);
+  }
+
+  /// `per night`
+  String get perNight {
+    return Intl.message('per night', name: 'perNight', desc: '', args: []);
+  }
+
+  /// `per day`
+  String get perDay {
+    return Intl.message('per day', name: 'perDay', desc: '', args: []);
+  }
+
+  /// `per person`
+  String get perPerson {
+    return Intl.message('per person', name: 'perPerson', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

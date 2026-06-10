@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:travel_app/core/widgets/custom_button.dart';
 
 import '../../../../core/constants/constants.dart';
-import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../../../generated/l10n.dart';
 import 'widgets/country_and_city_form.dart';
@@ -15,13 +14,24 @@ class CarReservationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final isDark = theme.brightness == Brightness.dark;
+
     return Container(
       margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.white,
+        color: scheme.surface,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: customBoxShadowList,
+        border: Border.all(color: scheme.outline.withValues(alpha: 0.18)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: isDark ? 0.28 : 0.10),
+            blurRadius: 24,
+            offset: const Offset(0, 12),
+          ),
+        ],
       ),
       child: ListView(
         children: [
@@ -30,7 +40,7 @@ class CarReservationView extends StatelessWidget {
           /// =========DropDown class type===========
           Text(
             S.of(context).selectCar,
-            style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
+            style: AppTextStyles.text16Bold.copyWith(color: scheme.onSurface),
           ),
           const SizedBox(height: 10),
           CustomDropDownButton(
@@ -43,7 +53,7 @@ class CarReservationView extends StatelessWidget {
           const SizedBox(height: 30),
           Text(
             S.of(context).typeOfCar,
-            style: AppTextStyles.text16Bold.copyWith(color: AppColors.black),
+            style: AppTextStyles.text16Bold.copyWith(color: scheme.onSurface),
           ),
           const SizedBox(height: 10),
           CustomDropDownButton(

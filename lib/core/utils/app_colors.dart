@@ -1,6 +1,22 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
+  // ===== Safer Be Website Tokens =====
+  static const Color saferPrimary = Color(0xFFF46E26);
+  static const Color saferAccent = Color(0xFFD08915);
+  static const Color saferSecondary = Color(0xFF154A85);
+  static const Color saferLight = Color(0xFFFFFFFF);
+  static const Color saferMuted = Color(0xFFF8FAFC);
+  static const Color saferText = Color(0xFF0F172A);
+  static const Color saferTextMuted = Color(0xFF475569);
+  static const Color saferBorder = Color(0xFFE2E8F0);
+  static const Color saferDarkBg = Color(0xFF051B36);
+  static const Color saferDarkSurface = Color(0xFF0C2C55);
+  static const Color saferDarkPanel = Color(0xFF091E36);
+  static const Color saferDarkMuted = Color(0xFF1A1A1A);
+  static const Color saferDarkText = Color(0xFFF1F5F9);
+  static const Color saferDarkTextMuted = Color(0xFF94A3B8);
+
   // ===== Primary Blues =====
   static const Color primaryBlue = Color(0xFF1855AD);
   static const Color deepBlue = Color(0xFF080E1E);

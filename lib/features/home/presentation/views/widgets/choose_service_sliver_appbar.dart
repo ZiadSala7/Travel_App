@@ -11,6 +11,7 @@ class ChooseServiceSliverAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
     final isDark = theme.brightness == Brightness.dark;
 
     return SliverAppBar(
@@ -22,17 +23,20 @@ class ChooseServiceSliverAppBar extends StatelessWidget {
       surfaceTintColor: Colors.transparent,
       backgroundColor: theme.scaffoldBackgroundColor,
       automaticallyImplyLeading: false,
-      expandedHeight: 112,
-      toolbarHeight: 112,
+      expandedHeight: 92,
+      toolbarHeight: 92,
       flexibleSpace: FlexibleSpaceBar(
         background: SafeArea(
           bottom: false,
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(12, 8, 12, 12),
+            padding: const EdgeInsets.fromLTRB(14, 6, 14, 14),
             child: DecoratedBox(
               decoration: BoxDecoration(
-                color: theme.cardColor,
-                borderRadius: BorderRadius.circular(18),
+                color: theme.cardColor.withValues(alpha: isDark ? 0.88 : 0.96),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: scheme.primary.withValues(alpha: isDark ? 0.18 : 0.14),
+                ),
                 boxShadow: [
                   BoxShadow(
                     color: isDark
@@ -44,14 +48,17 @@ class ChooseServiceSliverAppBar extends StatelessWidget {
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                padding: const EdgeInsets.all(6),
                 child: Row(
                   children: List.generate(
                     services.length,
                     (index) => Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 4),
-                        child: CustomServiceChooser(model: services[index]),
+                        child: CustomServiceChooser(
+                          model: services[index],
+                          isActive: index == 0,
+                        ),
                       ),
                     ),
                   ),

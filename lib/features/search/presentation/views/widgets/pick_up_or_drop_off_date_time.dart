@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/utils/travel_icons.dart';
 import '../../../../../core/widgets/custom_form_builder_date_time_picker.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 
@@ -15,6 +15,8 @@ class PickUpOrDropOffDateTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).colorScheme.onSurface;
+
     return Row(
       spacing: 15,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,9 +29,7 @@ class PickUpOrDropOffDateTime extends StatelessWidget {
             children: [
               Text(
                 fstTitle,
-                style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
-                ),
+                style: AppTextStyles.text16Bold.copyWith(color: textColor),
               ),
               const SizedBox(height: 10),
               CustomFormBuilderDateTimePicker(
@@ -48,15 +48,13 @@ class PickUpOrDropOffDateTime extends StatelessWidget {
             children: [
               Text(
                 scdTitle,
-                style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
-                ),
+                style: AppTextStyles.text16Bold.copyWith(color: textColor),
               ),
               const SizedBox(height: 10),
               CustomTextFormField(
                 title: "8:00",
                 controller: TextEditingController(),
-                prefixIcon: Icons.access_time,
+                prefixIcon: TravelIcons.time,
               ),
             ],
           ),

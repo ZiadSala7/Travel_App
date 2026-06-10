@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import '../../../../../core/managers/theme_cubit/theme_cubit.dart';
-import '../../../../../core/themes/light_theme.dart';
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../generated/l10n.dart';
@@ -14,16 +10,20 @@ class HottelFormBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Dialog(
-      backgroundColor: context.read<ThemeCubit>().state == lightTheme
-          ? AppColors.white
-          : AppColors.black,
+      backgroundColor: scheme.surface,
       insetPadding: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 15),
-          Text(S.of(context).numGuestsRooms, style: AppTextStyles.text22Bold),
+          Text(
+            S.of(context).numGuestsRooms,
+            style: AppTextStyles.text22Bold.copyWith(color: scheme.onSurface),
+          ),
           const Divider(),
           DialogTravellersListTile(
             range: 1,

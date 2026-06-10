@@ -142,6 +142,11 @@ class AppAssets {
   /// assets/images/saferBe_e.png
   static const String assetsImagesSaferBeE = "assets/images/saferBe_e.png";
 
+  /// Assets for assetsImagesSaferBeHero
+  /// assets/images/safer_be_hero.jpg
+  static const String assetsImagesSaferBeHero =
+      "assets/images/safer_be_hero.jpg";
+
   /// Assets for assetsImagesSagferBeA
   /// assets/images/sagferBe_a.png
   static const String assetsImagesSagferBeA = "assets/images/sagferBe_a.png";
@@ -206,4 +211,3 @@ class AppAssets {
   /// assets/images/wts.png
   static const String assetsImagesWts = "assets/images/wts.png";
 }
-

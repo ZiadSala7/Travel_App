@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/travel_icons.dart';
 import '../../../../generated/l10n.dart';
 import '../../../search/presentation/views/search_view.dart';
 
 class ServiceModel {
-  final String image, title;
+  final String title;
+  final IconData icon;
   final Color color;
   final Function() onPressed;
 
   ServiceModel({
-    required this.image,
     required this.title,
+    required this.icon,
     required this.color,
     required this.onPressed,
   });
@@ -20,32 +21,38 @@ class ServiceModel {
 
 List<ServiceModel> serviceModels(BuildContext context) => [
   ServiceModel(
-    image: AppAssets.assetsImagesBuild,
-    title: S.of(context).hotel,
-    color: AppColors.building,
-    onPressed: () {
-      Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => const SearchView(initialTab: 2)),
-      );
-    },
-  ),
-  ServiceModel(
-    image: AppAssets.assetsImagesNobkgrndPlane,
     title: S.of(context).flights,
-    color: AppColors.airplane,
+    icon: TravelIcons.flight,
+    color: AppColors.saferPrimary,
     onPressed: () {
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => const SearchView(initialTab: 1)),
+        MaterialPageRoute(
+          builder: (context) => const SearchView(initialTab: 1),
+        ),
       );
     },
   ),
   ServiceModel(
-    image: AppAssets.assetsImagesNobkgrndCar,
-    title: S.of(context).car,
-    color: AppColors.steelBlue,
+    title: S.of(context).hotel,
+    icon: TravelIcons.hotel,
+    color: AppColors.saferSecondary,
     onPressed: () {
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => const SearchView(initialTab: 0)),
+        MaterialPageRoute(
+          builder: (context) => const SearchView(initialTab: 2),
+        ),
+      );
+    },
+  ),
+  ServiceModel(
+    title: S.of(context).car,
+    icon: TravelIcons.car,
+    color: AppColors.saferTextMuted,
+    onPressed: () {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const SearchView(initialTab: 0),
+        ),
       );
     },
   ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/functions/custom_container_box_decoration.dart';
 import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../details/presentation/views/car_details_view.dart';
 import 'car_passengers_and_doors.dart';
 import 'custom_price_per_time.dart';
@@ -12,6 +14,8 @@ class CarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Container(
       margin: const EdgeInsets.all(5),
       width: 280,
@@ -20,11 +24,10 @@ class CarCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // IMAGE + HEART BUTTON
           Stack(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(16),
                 child: Image.asset(
                   AppAssets.assetsImagesOnlineCar,
                   height: 160,
@@ -32,24 +35,43 @@ class CarCard extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+              Positioned(
+                top: 10,
+                left: 10,
+                child: _CardBadge(
+                  icon: Icons.local_gas_station_rounded,
+                  label: S.of(context).auto,
+                  color: AppColors.carClr,
+                ),
+              ),
+              Positioned(
+                right: 10,
+                bottom: 10,
+                child: _CardBadge(
+                  icon: Icons.security_rounded,
+                  label: S.of(context).insured,
+                  color: scheme.primary,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 12),
-          // PASSENGERS AND
-          const SizedBox(height: 6),
-          // TITLE AND LOCATION SECTION
-          const TitleAndLocationSection(
+          TitleAndLocationSection(
             title: "Toyota Corolla",
-            location: "Pickup location:\nCharles de Gaulle Airport, paris",
+            location: S.of(context).pickupLocationParis,
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 12),
           const CarPassengersAndDoors(),
-          const Divider(thickness: 0.7),
           const SizedBox(height: 10),
-          // PRICE SECTION
+          Divider(
+            height: 1,
+            thickness: 0.7,
+            color: scheme.outline.withValues(alpha: 0.20),
+          ),
+          const SizedBox(height: 10),
           CustomPricePerTime(
             price: '500 EGP',
-            perTime: ' per day',
+            perTime: S.of(context).perDay,
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const CarDetailsView()),
@@ -57,6 +79,49 @@ class CarCard extends StatelessWidget {
             },
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _CardBadge extends StatelessWidget {
+  const _CardBadge({
+    required this.icon,
+    required this.label,
+    required this.color,
+  });
+
+  final IconData icon;
+  final String label;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: scheme.surface.withValues(alpha: 0.92),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, color: color, size: 14),
+            const SizedBox(width: 4),
+            Text(
+              label,
+              style: TextStyle(
+                color: scheme.onSurface,
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 0,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

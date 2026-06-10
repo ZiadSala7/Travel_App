@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/functions/custom_container_box_decoration.dart';
 import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../details/presentation/views/flight_details_view.dart';
 import 'country_positioned.dart';
 import 'custom_price_per_time.dart';
@@ -13,6 +15,8 @@ class FlightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Container(
       margin: const EdgeInsets.all(5),
       width: 350,
@@ -21,34 +25,58 @@ class FlightCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // IMAGE + location
           Stack(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(16),
                 child: Image.asset(
                   AppAssets.assetsImagesFlight,
-                  height: 160,
+                  height: 150,
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
               ),
+              Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.black.withValues(alpha: 0.04),
+                        Colors.black.withValues(alpha: 0.36),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               const CountryPositioned(),
+              Positioned(
+                left: 10,
+                bottom: 10,
+                child: _CardBadge(
+                  icon: Icons.flight_takeoff_rounded,
+                  label: S.of(context).directFlight,
+                  color: AppColors.airplane,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 12),
-          // DESCRIPTION SECTION
-          const FlightDescriptionSection(),
-          const SizedBox(height: 15),
-          const Divider(thickness: 0.7),
+          const FlightDescriptionSection(width: 64),
+          const SizedBox(height: 12),
+          Divider(
+            height: 1,
+            thickness: 0.7,
+            color: scheme.outline.withValues(alpha: 0.20),
+          ),
           const SizedBox(height: 10),
-          // CLASS AND RATE
           const FlightClassAndRate(),
-          const SizedBox(height: 15),
-          // PRICE SECTION
+          const SizedBox(height: 12),
           CustomPricePerTime(
             price: '500 EGP',
-            perTime: ' per person',
+            perTime: S.of(context).perPerson,
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -58,6 +86,49 @@ class FlightCard extends StatelessWidget {
             },
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _CardBadge extends StatelessWidget {
+  const _CardBadge({
+    required this.icon,
+    required this.label,
+    required this.color,
+  });
+
+  final IconData icon;
+  final String label;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: scheme.surface.withValues(alpha: 0.92),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, color: color, size: 14),
+            const SizedBox(width: 4),
+            Text(
+              label,
+              style: TextStyle(
+                color: scheme.onSurface,
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 0,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

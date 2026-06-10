@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/utils/travel_icons.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
 
@@ -10,6 +10,8 @@ class CountryAndCityForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textColor = Theme.of(context).colorScheme.onSurface;
+
     return Row(
       spacing: 15,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -22,15 +24,12 @@ class CountryAndCityForm extends StatelessWidget {
             children: [
               Text(
                 S.of(context).cntryServ,
-                style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
-                ),
+                style: AppTextStyles.text16Bold.copyWith(color: textColor),
               ),
               CustomTextFormField(
-                style: const TextStyle(color: AppColors.black),
                 title: S.of(context).country,
                 controller: TextEditingController(),
-                prefixIcon: Icons.place,
+                prefixIcon: TravelIcons.location,
               ),
             ],
           ),
@@ -43,15 +42,12 @@ class CountryAndCityForm extends StatelessWidget {
             children: [
               Text(
                 S.of(context).ctyServ,
-                style: AppTextStyles.text16Bold.copyWith(
-                  color: AppColors.black,
-                ),
+                style: AppTextStyles.text16Bold.copyWith(color: textColor),
               ),
               CustomTextFormField(
-                style: const TextStyle(color: AppColors.black),
                 title: S.of(context).city,
                 controller: TextEditingController(),
-                prefixIcon: Icons.location_city,
+                prefixIcon: TravelIcons.city,
               ),
             ],
           ),

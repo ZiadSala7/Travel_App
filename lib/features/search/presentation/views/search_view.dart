@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../splash/presentation/views/widgets/app_logo.dart';
-import '../../../../core/utils/app_colors.dart';
 import 'book_hotel_view.dart';
 import 'car_reservation_view.dart';
 import 'book_flight_view.dart';
@@ -32,6 +31,8 @@ class _SearchViewState extends State<SearchView>
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -41,8 +42,9 @@ class _SearchViewState extends State<SearchView>
           automaticallyImplyLeading: false,
           bottom: TabBar(
             controller: _controller,
-            indicatorColor: AppColors.deepOrange,
-            labelColor: AppColors.deepOrange,
+            indicatorColor: scheme.primary,
+            labelColor: scheme.primary,
+            unselectedLabelColor: scheme.onSurface.withValues(alpha: 0.58),
             tabs: searchViewTabsList(context),
           ),
         ),
